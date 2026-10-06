@@ -1,0 +1,39 @@
+<!doctype html>
+<title>Tabela Hash</title>
+
+{% with msgs = get_flashed_messages() %}
+  {% for m in msgs %}<p><b>{{ m }}</b></p>{% endfor %}
+{% endwith %}
+
+<h2>Inserir</h2>
+<form method="post" action="{{ url_for('inserir') }}">
+  <input name="codigo" placeholder="Código" required>
+  <input name="nome" placeholder="Nome" required>
+  <button>Inserir</button>
+</form>
+
+<h2>Atualizar</h2>
+<form method="post" action="{{ url_for('atualizar') }}">
+  <input name="codigo" placeholder="Código" required>
+  <input name="nome" placeholder="Novo nome" required>
+  <button>Atualizar</button>
+</form>
+
+<p>Itens: {{ quantidade }} | Colisões: {{ colisoes }} | Fator de carga: {{ "%.2f"|format(fator) }}</p>
+
+<table border="1">
+  <tr><th>Código</th><th>Dados</th><th>Ação</th></tr>
+  {% for codigo, dados in itens %}
+  <tr>
+    <td>{{ codigo }}</td>
+    <td>{{ dados.nome }}</td>
+    <td>
+      <form method="post" action="{{ url_for('remover', codigo=codigo) }}">
+        <button>Remover</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+<a href="{{ url_for('ocupacao') }}">Ver ocupação dos baldes</a>
