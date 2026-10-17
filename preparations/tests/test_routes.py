@@ -70,3 +70,11 @@ class CountryRoutesTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             create_app(self.config)
         self.assertEqual(self.path.read_text(), '{broken')
+
+    def test_edit_form_displays_existing_country(self):
+        create_response = self.client.post("/countries/new", data=self.record)
+        self.assertEqual(create_response.status_code, 303)
+        edit_response = self.client.get("/countries/BR/edit")
+        self.assertEqual(edit_response.status_code, 200)
+        page_content = edit_response.get_data(as_text=True)
+        self.assertIn('value="Brasil"', page_content)
