@@ -78,3 +78,19 @@ class CountryRoutesTests(unittest.TestCase):
         self.assertEqual(edit_response.status_code, 200)
         page_content = edit_response.get_data(as_text=True)
         self.assertIn('value="Brasil"', page_content)
+
+    def test_create_rejects_blank_technology(self):
+        invalid_country = self.record.copy()
+        invalid_country["tecnologia"] = " "
+        response = self.client.post("/countries/new", data=invalid_country)
+        self.assertEqual(response.status_code, 400)
+        country = self.app.extensions["countries"].find("BR")
+        self.assertIsNone(country)
+
+    def test_create_rejects_missing_technology(self):
+        invalid_country = self.record.copy()
+        del invalid_country["tecnologia"]
+        response = self.client.post("/countries/new", data=invalid_country)
+        self.assertEqual(response.status_code, 400)
+        country = self.app.extensions["countries"].find("BR")
+        self.assertIsNone(country)
