@@ -1,0 +1,12 @@
+<h2>Ocupação dos baldes</h2>
+<table border="1">
+  <tr><th>Balde</th><th>Qtd</th><th></th></tr>
+  {% for qtd in baldes %}
+  <tr>
+    <td>{{ loop.index0 }}</td>
+    <td>{{ qtd }}</td>
+    <td>{{ "█" * qtd }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<a href="/">Voltar</a>
