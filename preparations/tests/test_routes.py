@@ -94,3 +94,13 @@ class CountryRoutesTests(unittest.TestCase):
         self.assertEqual(response.status_code, 400)
         country = self.app.extensions["countries"].find("BR")
         self.assertIsNone(country)
+
+    def test_create_uses_post_redirect_get(self):
+        response = self.client.post("/countries/new", data=self.record, follow_redirects=False)
+        self.assertEqual(response.status_code, 303)
+        self.assertEqual(response.headers["Location"], "/countries")
+        page = self.client.get(response.headers["Location"])
+        self.assertEqual(page.status_code, 200)
+        self.assertIn("Brasil", page.get_data(as_text=True))
+        countries = self.app.extensions["countries"].list_all()
+        self.assertEqual(len(countries), 1)
