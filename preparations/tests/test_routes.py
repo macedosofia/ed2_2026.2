@@ -70,3 +70,37 @@ class CountryRoutesTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             create_app(self.config)
         self.assertEqual(self.path.read_text(), '{broken')
+
+    def test_edit_form_displays_existing_country(self):
+        create_response = self.client.post("/countries/new", data=self.record)
+        self.assertEqual(create_response.status_code, 303)
+        edit_response = self.client.get("/countries/BR/edit")
+        self.assertEqual(edit_response.status_code, 200)
+        page_content = edit_response.get_data(as_text=True)
+        self.assertIn('value="Brasil"', page_content)
+
+    def test_create_rejects_blank_technology(self):
+        invalid_country = self.record.copy()
+        invalid_country["tecnologia"] = " "
+        response = self.client.post("/countries/new", data=invalid_country)
+        self.assertEqual(response.status_code, 400)
+        country = self.app.extensions["countries"].find("BR")
+        self.assertIsNone(country)
+
+    def test_create_rejects_missing_technology(self):
+        invalid_country = self.record.copy()
+        del invalid_country["tecnologia"]
+        response = self.client.post("/countries/new", data=invalid_country)
+        self.assertEqual(response.status_code, 400)
+        country = self.app.extensions["countries"].find("BR")
+        self.assertIsNone(country)
+
+    def test_create_uses_post_redirect_get(self):
+        response = self.client.post("/countries/new", data=self.record, follow_redirects=False)
+        self.assertEqual(response.status_code, 303)
+        self.assertEqual(response.headers["Location"], "/countries")
+        page = self.client.get(response.headers["Location"])
+        self.assertEqual(page.status_code, 200)
+        self.assertIn("Brasil", page.get_data(as_text=True))
+        countries = self.app.extensions["countries"].list_all()
+        self.assertEqual(len(countries), 1)
