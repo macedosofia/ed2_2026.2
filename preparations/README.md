@@ -7,6 +7,7 @@ O GlobalSIM simula uma empresa de serviços internacionais de Internet móvel po
 O desenvolvimento está dividido em três etapas:
 
 | Etapa | Estrutura principal | Funcionalidades |
+|---|---|---|
 | 1 | Tabela Hash | Gerenciamento de países e consulta de cobertura |
 | 2 | Árvore B | Gerenciamento de clientes, eSIMs e pacotes |
 | 3 | Grafo | Rede internacional e cálculo de rotas de menor latência |
@@ -37,6 +38,7 @@ A aplicação utiliza uma Tabela Hash implementada pela equipe, com tratamento d
 Cada país possui os seguintes campos:
 
 | Campo | Descrição | Exemplo |
+|---|---|---|
 | `codigo` | Código internacional de duas letras | BR |
 | `pais` | Nome do país | Brasil |
 | `regiao` | Região geográfica | América do Sul |
@@ -147,6 +149,7 @@ Arquivos JSON inválidos interrompem a inicialização sem serem sobrescritos au
 A implementação da Etapa 1 utiliza uma arquitetura modular, com separação entre rotas, modelos, serviços, estruturas de dados, persistência e interface.
 
 | Caminho | Responsabilidade |
+|---|---|
 | `app.py` | Fábrica Flask e inicialização da aplicação |
 | `models/country.py` | Validação e normalização dos dados dos países |
 | `structures/hash_table.py` | Implementação da Tabela Hash e instrumentação |
@@ -212,6 +215,7 @@ A interface apresentada ao usuário permanece em português.
 ## 5. Rotas da aplicação
 
 | Método | URL | Operação |
+|---|---|---|
 | GET | `/` | Página inicial |
 | GET | `/countries` | Listagem de países |
 | GET | `/countries/new` | Formulário de cadastro |
@@ -251,6 +255,7 @@ Entre as verificações implementadas estão:
 Os principais códigos de resposta HTTP utilizados são:
 
 | Código | Significado | Aplicação |
+|---|---|---|
 | 200 | OK | Consultas e páginas carregadas corretamente |
 | 303 | See Other | Redirecionamento após mutações bem-sucedidas |
 | 400 | Bad Request | Dados inválidos ou código duplicado |
@@ -529,6 +534,7 @@ Em seguida, analisará os pacotes cadastrados.
 Considerando, para fins de exemplo, que Europa Basic, Europa Plus e Global cobrem os três destinos:
 
 | Pacote | Dados | Validade | Elegível |
+|---|---|---|---|
 | Europa Basic | 5 GB | 15 dias | Não |
 | Europa Plus | 10 GB | 30 dias | Sim |
 | Global | 20 GB | 30 dias | Sim |
@@ -548,6 +554,7 @@ A cobertura geográfica utilizada nesse exemplo é ilustrativa e deverá ser def
 O diferencial será desenvolvido de forma incremental.
 
 | Estrutura | Utilização no planejador |
+|---|---|
 | Tabela Hash | Verificar a cobertura de cada destino |
 | Árvore B | Recuperar os dados do cliente e seu pacote atual |
 | Grafo | Calcular rotas de menor latência entre os destinos |
