@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{% block title %}GlobalSIM{% endblock %}</title><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></head>
+<body><header><a class="brand" href="{{ url_for('countries.index') }}">GlobalSIM</a><nav aria-label="Navegação principal"><a href="{{ url_for('countries.country_list') }}">Países</a><a href="{{ url_for('countries.create') }}">Cadastrar país</a><a href="{{ url_for('countries.coverage') }}">Consultar cobertura</a><a href="{{ url_for('countries.instrumentation') }}">Tabela Hash</a></nav></header>
+<main>{% for category, message in get_flashed_messages(with_categories=true) %}<p class="message {{ category }}" role="alert">{{ message }}</p>{% endfor %}{% block content %}{% endblock %}</main></body></html>
