@@ -1,6 +1,6 @@
 # Diferencial GlobalSIM — Planejador Multidestinos com Recomendação Automática de Pacotes eSIM
 
-**Status:** Escolhido pela equipe — aguardando aprovação da professora.
+**Status:** Escolhido pela equipe e submetido à professora — aguardando aprovação.
 
 **Etapa atual:** Etapa 1 — Definição e documentação do diferencial.
 
@@ -54,6 +54,7 @@ Nas etapas seguintes, a funcionalidade também permitirá consultar os dados do 
 O usuário deverá informar:
 
 | Campo | Descrição | Exemplo |
+|---|---|---|
 | Origem | País de origem da viagem | BR |
 | Destinos | Lista ordenada de países a visitar | PT, FR, IT |
 | Duração | Duração total da viagem, em dias | 25 |
@@ -152,6 +153,7 @@ possuem cobertura disponível.
 Considerando que os três países estejam cadastrados, o resultado será:
 
 | País | Cobertura |
+|---|---|
 | Portugal | Disponível |
 | França | Disponível |
 | Itália | Disponível |
@@ -161,6 +163,7 @@ Considerando que os três países estejam cadastrados, o resultado será:
 Para fins de exemplo, considera-se que os pacotes Europa Basic, Europa Plus e Global oferecem cobertura nos três destinos.
 
 | Pacote | Dados | Validade | Elegível |
+|---|---|---|---|
 | Europa Basic | 5 GB | 15 dias | Não |
 | Europa Plus | 10 GB | 30 dias | Sim |
 | Global | 20 GB | 30 dias | Sim |
@@ -266,6 +269,7 @@ Funcionalidades adicionais poderão ser consideradas apenas após a conclusão e
 A funcionalidade será considerada adequada quando os seguintes cenários forem atendidos:
 
 | Cenário | Resultado esperado |
+|---|---|
 | Todos os destinos possuem cobertura | Prosseguir com a análise dos pacotes |
 | Destino sem cobertura cadastrada | Informar o destino não atendido |
 | Pacote com dados insuficientes | Descartar o pacote |
@@ -283,6 +287,7 @@ Os testes serão implementados progressivamente, acompanhando as etapas correspo
 ## 11. Cronograma de implementação
 
 | Etapa | Entrega prevista | Prazo |
+|---|---|---|
 | 1 | Documentação do diferencial e integração planejada | 20/10/2026 |
 | 2 | Recomendador funcional e integração com clientes | 24/11/2026 |
 | 3 | Integração com Grafo e conectividade do roteiro | 01/12/2026 |
@@ -304,8 +309,14 @@ A definir, caso seja solicitada uma alternativa pela professora.
 **Responsáveis:**
 A distribuição específica das atividades do diferencial será confirmada pela equipe, respeitando o cronograma geral do projeto.
 
+**Submissão à professora:**
+Proposta enviada em outubro de 2026.
+
 **Aprovação da professora:**
-Pendente.
+Aguardando retorno.
+
+**Situação da implementação:**
+A implementação do diferencial está prevista para as Etapas 2 e 3, após a definição final do escopo.
 
 ## 13. Checklist de acompanhamento
 
@@ -325,10 +336,14 @@ Pendente.
 
 ### Entrega da Etapa 1
 
-- [ ] Submeter a proposta à professora.
-- [ ] Registrar o retorno da professora.
+- [x] Escolher o diferencial da equipe.
+- [x] Documentar o problema e a solução proposta.
+- [x] Descrever a integração com Hash, Árvore B e Grafo.
+- [x] Submeter a proposta à professora.
 - [x] Incorporar a descrição do diferencial ao README.
-- [ ] Integrar a documentação aprovada à branch dev.
+- [x] Integrar a documentação inicial à branch dev.
+- [ ] Registrar o retorno da professora.
+- [ ] Atualizar o documento caso a professora solicite alterações.
 
 ### Implementação futura
 
