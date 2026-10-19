@@ -6,7 +6,7 @@ Projeto acadêmico desenvolvido para a disciplina de Estruturas de Dados II.
 
 ## Equipe
 
-- Anderson
+- Anderson de Jesus Soledade Filho
 - João Cleber Freire Ramos Pinto
 - Sofia Macêdo Costa
 
