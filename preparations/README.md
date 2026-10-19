@@ -68,23 +68,20 @@ As estruturas de dados principais são implementadas pela equipe, sem substitui�
 
 ### 3.1. Clonar o repositório
 
+Clone o repositório:
+
 ```bash
 git clone https://github.com/macedosofia/ed2_2026.2.git
 ```
 
-Acesse o diretório do projeto:
+Acesse o diretório:
 
 ```bash
 cd ed2_2026.2
 ```
 
-A implementação modular da Etapa 1 está localizada na pasta `preparations`.
-
-Para acessar a versão de desenvolvimento:
-
-```bash
-git switch dev
-```
+A implementação oficial da Etapa 1 está localizada na pasta
+`preparations`.
 
 Entre na pasta da aplicação:
 
@@ -92,7 +89,7 @@ Entre na pasta da aplicação:
 cd preparations
 ```
 
-Os comandos seguintes devem ser executados dentro de `preparations`.
+Os próximos comandos deverão ser executados dentro de `preparations`.
 
 ### 3.2. Criar o ambiente virtual
 
@@ -141,6 +138,82 @@ As consultas são realizadas na Hash, e não diretamente no arquivo JSON.
 As operações de cadastro, atualização e remoção são persistidas no arquivo.
 
 Arquivos JSON inválidos interrompem a inicialização sem serem sobrescritos automaticamente.
+
+### 3.6. Dados de demonstração
+
+O projeto disponibiliza um conjunto de dados para facilitar a apresentação e os testes manuais.
+
+O arquivo:
+
+```text
+data/countries.demo.json
+```
+
+contém os oito países sugeridos no enunciado:
+
+- Brasil (BR)
+- Portugal (PT)
+- Espanha (ES)
+- França (FR)
+- Itália (IT)
+- Estados Unidos (US)
+- Canadá (CA)
+- Japão (JP)
+
+Os nomes das operadoras são fictícios e utilizados apenas para fins acadêmicos.
+
+#### Carregar os dados de demonstração
+
+Antes de realizar o procedimento, interrompa o servidor Flask.
+
+Dentro da pasta `preparations`, crie uma cópia de segurança do arquivo atual:
+
+```bash
+backup_file=$(mktemp /tmp/globalsim-countries-XXXXXX.json)
+cp data/countries.json "$backup_file"
+echo "Backup: $backup_file"
+```
+
+Guarde o caminho do backup apresentado no terminal.
+
+Em seguida, copie os dados de demonstração:
+
+```bash
+cp data/countries.demo.json data/countries.json
+```
+
+Inicie a aplicação:
+
+```bash
+python app.py
+```
+
+Acesse:
+
+http://127.0.0.1:5000/countries
+
+A aplicação carregará os oito países na Tabela Hash durante a inicialização.
+
+Também é possível observar as métricas da estrutura em:
+
+http://127.0.0.1:5000/instrumentation
+
+#### Restaurar os dados anteriores
+
+Após a demonstração, interrompa o servidor Flask.
+
+No mesmo terminal em que a variável `backup_file` foi criada,
+execute:
+
+```bash
+cp "$backup_file" data/countries.json
+```
+
+O procedimento restaura o conteúdo anterior do JSON.
+
+**Atenção:** a cópia de demonstração substitui o conteúdo do arquivo principal. Por isso, é importante preservar um backup antes da operação.
+
+O arquivo `countries.demo.json` deve permanecer inalterado para permitir a reprodução dos exemplos.
 
 ---
 
@@ -673,9 +746,9 @@ etapa-3
 
 ---
 
-## 12. Pendências da Etapa 1
+## 12. Checklist de conclusão da Etapa 1
 
-Antes da entrega final, a equipe deverá verificar:
+### Implementação
 
 - [x] Implementação da Tabela Hash.
 - [x] Cadastro de países.
@@ -684,17 +757,26 @@ Antes da entrega final, a equipe deverá verificar:
 - [x] Edição e remoção.
 - [x] Persistência JSON.
 - [x] Instrumentação da Hash.
+- [x] Validações e tratamento de erros.
 - [x] Testes automatizados das funcionalidades principais.
 - [x] Testes manuais das operações Web.
+
+### Documentação e diferencial
+
 - [x] Escolha do diferencial pela equipe.
 - [x] Documentação inicial do diferencial.
-- [ ] Confirmar os critérios definitivos de recomendação.
-- [ ] Definir a cobertura geográfica dos pacotes para as próximas etapas.
-- [ ] Submeter o diferencial à professora.
-- [ ] Registrar o retorno da professora.
-- [ ] Preparar ou confirmar os dados de demonstração.
-- [ ] Revisar a documentação com a equipe.
-- [ ] Executar os testes finais na versão integrada.
-- [ ] Preparar a versão de entrega da Etapa 1.
+- [x] Descrição da integração futura com as três estruturas.
+- [x] Submissão da proposta à professora.
+- [x] Documentação do diferencial no README.
+- [x] Preparação dos dados de demonstração.
+- [x] Identificação da equipe no README principal.
+- [ ] Registro do retorno da professora.
 
-O desenvolvimento das próximas etapas deverá preservar a implementação da Tabela Hash e manter a separação entre estruturas de dados, regras da aplicação e interface Web.
+### Versionamento e entrega
+
+- [x] Integração das funcionalidades à branch dev.
+- [x] Preparação da versão estável na branch main.
+- [x] Criação da tag etapa-1.
+- [x] Revisão da documentação da Etapa 1.
+- [x] Execução dos testes automatizados.
+- [ ] Confirmação da submissão oficial pelo canal da disciplina.
