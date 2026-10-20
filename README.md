@@ -42,6 +42,10 @@ A Etapa 1 implementa:
 A implementação oficial da Etapa 1 está na pasta
 [`preparations/`](preparations/).
 
+A base inicial já contém os oito países de demonstração. A versão final
+é identificada pela tag `etapa-1-final`; a tag `etapa-1` preserva o marco
+anterior da equipe.
+
 ## Como executar
 
 Requer Python 3.10 ou superior.
@@ -68,6 +72,9 @@ Dentro de `preparations`:
 python -m unittest discover -s tests -v
 ```
 
+Validação em 20/10/2026: **25 testes aprovados**, incluindo validação dos
+registros, falhas de persistência, colisões e os oito países de demonstração.
+
 ## Diferencial da equipe
 
 **Planejador Multidestinos com Recomendação Automática
@@ -84,5 +91,6 @@ Nas etapas seguintes, o planejamento será integrado à
 
 - [Documentação da Etapa 1](preparations/README.md)
 - [Descrição do diferencial](preparations/docs/differential.md)
+- [Checklist e roteiro da primeira entrega](preparations/docs/delivery_1.md)
 
 O projeto será desenvolvido incrementalmente, preservando as funcionalidades das etapas anteriores.
