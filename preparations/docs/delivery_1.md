@@ -1,51 +1,83 @@
-# Roteiro da entrega 1 — prazo 20/10/2026
+# Primeira entrega — prazo 20/10/2026
 
-O enunciado define os requisitos; o cronograma distribui o trabalho. O núcleo de países já foi implementado e possui testes automatizados. Este checklist permanece como roteiro de aceite da equipe, incluindo preparação dos dados, revisão e demonstração ainda pendentes.
+Revisão técnica em **20/10/2026**. A aplicação oficial está em
+`preparations/`, com oito países na base inicial e **25 testes aprovados**.
+Este checklist foi conferido com o código, os testes e a documentação
+presente no repositório. O enunciado original continua sendo a referência
+para os critérios de avaliação da disciplina.
 
-Atualização em 07/10/2026: os seis testes automatizados passaram. Itens marcados correspondem à implementação e às verificações técnicas; apresentação e revisão por integrantes permanecem pendentes.
+## Implementação e validação
 
-## Etapa 1 — alinhar módulos
+- [x] Hash, modelo, serviço, persistência, rotas e templates separados.
+- [x] Contratos revisados contra a implementação em `contracts.md`.
+- [x] Página inicial, cadastro, consulta, listagem, edição e remoção.
+- [x] Todos os campos obrigatórios validados; códigos normalizados e únicos.
+- [x] Código imutável na edição e tratamento de país inexistente.
+- [x] Hash própria com encadeamento separado e instrumentação.
+- [x] Consultas pela Hash, sem leitura direta do JSON.
+- [x] Carga inicial e persistência de cadastro, edição e remoção após reinício.
+- [x] JSON inválido rejeitado sem sobrescrever o arquivo.
+- [x] Falhas de gravação preservam registros, arquivo anterior e métricas.
+- [x] Gravação atômica e limpeza dos temporários verificadas.
+- [x] Mutações por POST e redirecionamento 303; remoção por GET recusada.
+- [x] Uso de request, render_template, redirect, Jinja e formulários HTML.
+- [x] Testes separados de modelo, serviço e persistência concluídos.
+- [x] Oito países em `data/countries.json` e cópia em `countries.demo.json`.
+- [x] Cobertura dos oito países validada nas rotas Web.
+- [x] Colisão IT/DE e métricas antes/depois verificadas nas páginas renderizadas.
+- [x] Remoção de DE sem perder IT e reinício com os oito países verificados.
 
-- [x] Modularizar Hash, modelo, serviço, persistência, Flask e templates.
-- [x] Implementar os módulos e documentar seus contratos em `contracts.md`.
-- [ ] Executar revisões cruzadas previstas no README.
+Para repetir a validação, dentro de `preparations`, com o ambiente virtual ativo:
 
-## Etapa 2 — integrar e instrumentar
+```bash
+python -m unittest discover -s tests -v
+```
 
-- [x] Integrar o fluxo JSON → Hash → serviço → rotas → templates.
-- [x] Verificar operações de países, gravação e reinício por testes automatizados.
-- [x] Implementar a página de instrumentação e testar colisões e remoção na Hash.
-- [x] Testar arquivo inválido, falha de gravação e consultas sem leitura direta do JSON.
-- [ ] Completar os testes separados de modelo, serviço e persistência, cujos arquivos estão vazios.
-- [ ] Demonstrar na interface uma colisão e as métricas antes e depois das operações.
+São 4 testes de modelo, 5 de serviço, 1 de demonstração, 1 de Hash,
+5 de persistência e 9 de rotas. As bases de teste são temporárias.
 
-## Etapa 3 — conferir critérios de aceite
+## Documentação e versão
 
-- [x] Página inicial disponível.
-- [x] Cadastro, consulta por código, listagem, alteração e remoção funcionando.
-- [x] Campos do país validados e códigos duplicados/inexistentes tratados.
-- [x] Tabela Hash própria utilizada efetivamente, com colisões tratadas.
-- [x] Instrumentação básica implementada na interface e descrita no README.
-- [x] Carga dos registros JSON na Hash ao iniciar, verificada nos testes.
-- [ ] JSON preenchido com os oito países de demonstração; atualmente contém uma lista vazia.
-- [x] Persistência verificada após recriar a aplicação nos testes.
-- [x] Alterações por POST e fluxo Post/Redirect/Get verificado.
-- [x] Uso de request, render_template, redirect, Jinja e formulários HTML implementado.
-- [x] Estrutura separada das rotas e consultas sem busca direta no JSON.
-- [x] README com instalação, execução, rotas e descrição da estrutura.
-- [ ] README com identificação da equipe e diferencial escolhido.
-- [x] Proposta inicial de diferencial e integração futura documentada.
-- [ ] Descrição inicial do diferencial definida e situação da aprovação registrada.
-- [x] Seis testes automatizados executados com sucesso.
-- [ ] Cenários de testes revisados por outro integrante.
-- [ ] Todos conseguem explicar a Hash, a aplicação e a persistência.
+- [x] README com equipe, instalação, execução, rotas e estrutura.
+- [x] Diferencial escolhido e integração futura documentados.
+- [x] Situação da proposta registrada: submetida, aguardando retorno.
+- [x] Dados e roteiro de demonstração prontos.
+- [x] Documentação atualizada para a base preenchida e os 25 testes.
 
-## Etapa 4 — demonstrar
+A versão final é identificada por `etapa-1-final`. A tag anterior `etapa-1`
+permanece preservada. A implementação do recomendador, da Árvore B e do
+Grafo pertence às próximas etapas, conforme o escopo documentado.
 
-1. Iniciar com a base dos oito países e abrir a página inicial e a listagem.
-2. Consultar IT e um código válido ainda não cadastrado; mostrar os diferentes resultados.
-3. Cadastrar um novo país, tentar duplicá-lo, alterar seus dados e conferir a cobertura.
-4. Demonstrar duas chaves que colidem na função implementada e remover uma sem perder a outra.
-5. Mostrar as métricas antes e depois das operações.
-6. Reiniciar, conferir os dados persistidos e explicar a carga na Hash.
-7. Apresentar a descrição do diferencial e sua integração planejada.
+## Roteiro de apresentação
+
+1. Dentro de `preparations`, execute `python app.py`. Abra a página inicial
+   e `/countries`; a base inicial apresenta BR, PT, ES, FR, IT, US, CA e JP.
+2. Consulte IT e depois DE: inicialmente, IT tem cobertura e DE não está cadastrado.
+3. Em `/instrumentation`, observe 8 países, fator de carga `8/17` e zero
+   colisões nas inserções posteriores à carga. A ocupação é o estado atual;
+   os contadores de colisões acumulam eventos.
+4. Cadastre DE, Alemanha, Europa, Operadora DE, 5G. IT e DE usam o balde 1.
+   A quantidade passa a 9, o fator a `9/17` e surge uma colisão de operação.
+5. Tente cadastrar DE novamente. A duplicata é recusada sem alterar a quantidade.
+6. Edite a operadora de DE e consulte sua cobertura para conferir a mudança.
+7. Remova DE com a confirmação do formulário. IT continua disponível; a
+   quantidade volta a 8. A contagem acumulada de colisões não diminui.
+8. Reinicie o servidor. IT continua presente e DE continua ausente. Os
+   contadores de eventos são reinicializados e as colisões de carga recalculadas.
+9. Apresente o diferencial documentado e sua integração futura com as três estruturas.
+
+Se a base tiver sido modificada, siga [as instruções de restauração](../data/README.md)
+antes da apresentação, preservando uma cópia dos dados atuais.
+
+## Confirmações externas
+
+- [ ] Registrar o retorno da professora sobre o diferencial.
+- [ ] Confirmar a submissão oficial pelo canal da disciplina: endereço e
+  procedimento não constam no repositório. Publicar no GitHub não comprova essa submissão.
+- [ ] Confirmar a revisão cruzada por outro integrante e o ensaio de apresentação.
+
+A revisão técnica e os testes acima foram executados. A participação de
+outro integrante e o domínio oral de cada pessoa não podem ser atestados
+pela execução automatizada. Para o ensaio, todos devem conseguir explicar
+a função Hash, as colisões, as métricas, o fluxo HTTP, a persistência e a
+recuperação em caso de falha.
