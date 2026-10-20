@@ -2,7 +2,7 @@
 
 Contratos da implementação inicial. Os nomes abaixo refletem a organização em inglês; as mensagens e os campos do enunciado permanecem em português.
 
-## Checklist de implementação — atualizado em 07/10/2026
+## Checklist de implementação — revisado em 20/10/2026
 
 - [x] Modelo com campos obrigatórios, normalização e código imutável na edição.
 - [x] Tabela Hash própria com inserção, busca, atualização, remoção e listagem.
@@ -13,7 +13,7 @@ Contratos da implementação inicial. Os nomes abaixo refletem a organização e
 - [x] Preservação do arquivo JSON inválido.
 - [x] Rotas e templates integrados, com mutações por POST e redirecionamento 303.
 - [x] Testes de integração com aplicação e arquivos temporários isolados.
-- [ ] Revisão dos contratos.
+- [x] Revisão técnica dos contratos contra o código e os testes da Etapa 1.
 
 ## Etapa 1 — definir os dados
 
