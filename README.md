@@ -87,7 +87,7 @@ A recomendação utilizará critérios determinísticos para selecionar um únic
 
 Nas etapas seguintes, o planejamento será integrado à Árvore B e ao Grafo.
 
-**Status:** Proposta submetida à professora, aguardando aprovação.
+**Status:** Proposta aprovada pela professora.
 
 ## Documentação
 
