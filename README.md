@@ -57,8 +57,7 @@ Na raiz do repositório:
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-cd globalsim
-python -m flask --app app:create_app run --debug
+python -m flask --app globalsim.app:create_app run --debug
 ```
 
 Abra:
@@ -67,7 +66,7 @@ http://127.0.0.1:5000
 
 ## Como executar os testes
 
-Com o ambiente virtual ativado, dentro de `globalsim/`:
+Com o ambiente virtual ativado, na raiz do repositório:
 
 ```bash
 python -m unittest discover -s tests -v

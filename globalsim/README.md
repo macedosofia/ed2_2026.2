@@ -35,8 +35,7 @@ cd ed2_2026.2
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-cd globalsim
-python -m flask --app app:create_app run --debug
+python -m flask --app globalsim.app:create_app run --debug
 ```
 
 Abra http://127.0.0.1:5000. Para parar o servidor, pressione `Ctrl+C`.
@@ -86,7 +85,7 @@ O serviço preserva o estado anterior da Hash e restaura registros e métricas s
 
 ## 8. Testes
 
-Execute dentro de `globalsim/`, com o ambiente virtual ativado:
+Execute na raiz do repositório, com o ambiente virtual ativado:
 
 ```bash
 python -m unittest discover -s tests -v
@@ -98,12 +97,12 @@ Após a refatoração da Tabela Hash para `dict`, em 23/10/2026, foram executado
 
 | Arquivo | Testes |
 |---|---:|
-| `tests/test_country.py` | 4 |
-| `tests/test_country_service.py` | 5 |
-| `tests/test_demo.py` | 1 |
-| `tests/test_hash_table.py` | 6 |
-| `tests/test_persistence.py` | 5 |
-| `tests/test_routes.py` | 9 |
+| `../tests/test_country.py` | 4 |
+| `../tests/test_country_service.py` | 5 |
+| `../tests/test_demo.py` | 1 |
+| `../tests/test_hash_table.py` | 6 |
+| `../tests/test_persistence.py` | 5 |
+| `../tests/test_routes.py` | 9 |
 | **Total** | **30** |
 
 Os testes verificam normalização, dados inválidos e duplicados, persistência Unicode, falhas de gravação e restauração do estado, cobertura dos oito países, operações da Tabela Hash, métricas renderizadas e reinicialização. Todos os cenários que alteram dados utilizam bases temporárias. Os testes cobrem os comportamentos descritos, sem afirmar ausência de todo defeito possível.

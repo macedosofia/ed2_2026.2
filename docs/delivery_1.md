@@ -42,7 +42,7 @@ Atualizações posteriores à entrega:
 - [x] Reorganização da aplicação para a pasta `globalsim/`.
 - [x] Validação da versão refatorada com 30 testes aprovados.
 
-Para repetir a validação atual, dentro de `globalsim/`, com o ambiente virtual ativo:
+Para repetir a validação atual, na raiz do repositório, com o ambiente virtual ativo:
 
 ```bash
 python -m unittest discover -s tests -v
@@ -72,7 +72,7 @@ próximas etapas, conforme o escopo documentado.
 
 Roteiro atualizado para a implementação atual com `dict`:
 
-1. Dentro de `globalsim/`, com o ambiente virtual ativo, execute `python -m flask --app app:create_app run --debug`. Abra a página inicial e `/countries`; a base inicial apresenta BR, PT, ES, FR, IT, US, CA e JP.
+1. Na raiz do repositório, com o ambiente virtual ativo, execute `python -m flask --app globalsim.app:create_app run --debug`.
 2. Consulte IT e depois DE: inicialmente, IT tem cobertura e DE não está cadastrado.
 3. Em `/instrumentation`, observe os 8 países cadastrados, os registros carregados inicialmente e as métricas de buscas, inserções, atualizações e remoções.
 4. Cadastre DE, Alemanha, Europa, Operadora DE, 5G. A quantidade de países passa de 8 para 9 e a instrumentação registra a inserção.
