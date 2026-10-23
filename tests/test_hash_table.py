@@ -1,6 +1,6 @@
 import unittest
 
-from structures.hash_table import HashTable
+from globalsim.structures.hash_table import HashTable
 
 
 class HashTableTests(unittest.TestCase):

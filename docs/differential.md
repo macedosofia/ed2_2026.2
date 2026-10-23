@@ -1,6 +1,6 @@
 # Diferencial GlobalSIM — Planejador Multidestinos com Recomendação Automática de Pacotes eSIM
 
-**Status:** Escolhido pela equipe e submetido à professora — aguardando aprovação.
+**Status:** Escolhido pela equipe e aprovado pela professora.
 
 **Etapa atual:** Etapa 1 — Definição e documentação do diferencial.
 
@@ -313,7 +313,7 @@ A distribuição específica das atividades do diferencial será confirmada pela
 Proposta enviada em outubro de 2026.
 
 **Aprovação da professora:**
-Aguardando retorno.
+Proposta aprovada pela professora.
 
 **Situação da implementação:**
 A implementação do diferencial está prevista para as Etapas 2 e 3, após a definição final do escopo.

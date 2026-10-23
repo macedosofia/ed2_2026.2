@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from services.countries import CountryService
+from globalsim.services.countries import CountryService
 
 
 class CountryServiceTests(unittest.TestCase):
@@ -24,7 +24,7 @@ class CountryServiceTests(unittest.TestCase):
         self.assertEqual(stats["loaded_records"], stats["size"])
         self.assertEqual(stats["insertions"], 0)
         self.assertEqual(stats["lookups"], 0)
-        with patch('services.countries.countries_json.load', side_effect=AssertionError('file read')):
+        with patch('globalsim.services.countries.countries_json.load', side_effect=AssertionError('file read')):
             self.assertEqual(service.find(' it '), self.record)
             self.assertEqual([record['codigo'] for record in service.list_all()], ['DE', 'IT'])
 
@@ -61,7 +61,7 @@ class CountryServiceTests(unittest.TestCase):
             (service.update, ('IT', dict(self.record, pais='Changed'))),
             (service.remove, ('IT',)),
         ]
-        with patch('services.countries.countries_json.save', side_effect=OSError('disk error')):
+        with patch('globalsim.services.countries.countries_json.save', side_effect=OSError('disk error')):
             for operation, args in operations:
                 with self.subTest(operation=operation.__name__):
                     with self.assertRaises(OSError):
