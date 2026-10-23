@@ -15,14 +15,15 @@ class CountryServiceTests(unittest.TestCase):
         self.record = dict(codigo='IT', pais='Itália', regiao='Europa',
                            operadora='Operadora IT', tecnologia='5G')
 
-    def test_loads_records_into_hash_and_separates_initial_collisions(self):
+    def test_loads_records_into_dict_and_tracks_initial_load(self):
         records = [self.record, dict(self.record, codigo='DE', pais='Alemanha')]
         self.path.write_text(json.dumps(records), encoding='utf-8')
         service = CountryService(self.path)
         stats = service.statistics()
         self.assertEqual(stats['size'], 2)
-        self.assertEqual(stats['load_collisions'], 1)
-        self.assertEqual(stats['operation_collisions'], 0)
+        self.assertEqual(stats["loaded_records"], stats["size"])
+        self.assertEqual(stats["insertions"], 0)
+        self.assertEqual(stats["lookups"], 0)
         with patch('services.countries.countries_json.load', side_effect=AssertionError('file read')):
             self.assertEqual(service.find(' it '), self.record)
             self.assertEqual([record['codigo'] for record in service.list_all()], ['DE', 'IT'])

@@ -12,7 +12,7 @@ class CountryService:
         self.lock = RLock()
         for record in countries_json.load(path):
             self.table.insert(validate_country(record))
-        self.table.load_collisions = self.table.collisions
+        self.table.mark_loaded()
 
     def find(self, code):
         with self.lock:

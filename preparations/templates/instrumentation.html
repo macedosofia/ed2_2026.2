@@ -1,1 +1,44 @@
-{% extends "base.html" %}{% block content %}<h1>Instrumentação da Tabela Hash</h1><dl><dt>Capacidade</dt><dd>{{ stats.capacity }}</dd><dt>Países</dt><dd>{{ stats.size }}</dd><dt>Fator de carga</dt><dd>{{ '%.3f'|format(stats.load_factor) }}</dd><dt>Colisões na carga inicial</dt><dd>{{ stats.load_collisions }}</dd><dt>Colisões nas inserções posteriores</dt><dd>{{ stats.operation_collisions }}</dd><dt>Último índice calculado</dt><dd>{{ stats.last_index if stats.last_index is not none else 'Nenhuma operação' }}</dd></dl><p>Uma colisão é contada a cada inserção bem-sucedida em um balde ocupado. O fator de carga é o número de países dividido pela capacidade.</p><table><thead><tr><th>Balde</th><th>Ocupação atual</th></tr></thead><tbody>{% for size in stats.occupancy %}<tr><td>{{ loop.index0 }}</td><td>{{ size }}</td></tr>{% endfor %}</tbody></table>{% endblock %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Instrumentação da Tabela Hash</h1>
+
+<p>
+    A aplicação utiliza o dicionário nativo do Python
+    para armazenar e consultar países por código.
+</p>
+
+<h2>Estatísticas</h2>
+
+<ul>
+    <li>Países cadastrados: {{ stats.size }}</li>
+
+    <li>Países carregados do JSON: {{ stats.loaded_records }}</li>
+
+    <li>Total de buscas: {{ stats.lookups }}</li>
+
+    <li>Buscas bem-sucedidas: {{ stats.hits }}</li>
+
+    <li>Buscas sem resultado: {{ stats.misses }}</li>
+
+    <li>Inserções: {{ stats.insertions }}</li>
+
+    <li>Atualizações: {{ stats.updates }}</li>
+
+    <li>Remoções: {{ stats.removals }}</li>
+</ul>
+
+<h2>Chaves cadastradas</h2>
+
+<p>
+    {{ stats["keys"] | join(", ") if stats["keys"] else "Nenhum país cadastrado" }}
+</p>
+
+<p>
+    O dict utiliza uma tabela hash internamente,
+    mas não disponibiliza diretamente informações
+    sobre seus baldes e colisões.
+</p>
+
+{% endblock %}
