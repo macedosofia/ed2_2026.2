@@ -33,18 +33,19 @@ A Etapa 1 implementa:
 - Consulta de cobertura.
 - Listagem de países.
 - Edição e remoção.
-- Tabela Hash com encadeamento separado.
+- Tabela Hash utilizando o dicionário nativo (`dict`) do Python.
 - Persistência em JSON.
 - Instrumentação da estrutura.
 - Validações e tratamento de erros.
 - Testes automatizados.
 
-A implementação oficial da Etapa 1 está na pasta
-[`globalsim/`](globalsim/).
+A implementação oficial da Etapa 1 está na pasta [`globalsim/`](globalsim/).
 
-A base inicial já contém os oito países de demonstração. A versão final
-é identificada pela tag `etapa-1-final`; a tag `etapa-1` preserva o marco
-anterior da equipe.
+A Tabela Hash utiliza o `dict` do Python para armazenar os países, utilizando seus códigos internacionais como chaves. A classe `HashTable` encapsula as operações de inserção, busca, atualização e remoção, com complexidade média esperada O(1).
+
+A instrumentação permite acompanhar a quantidade de países, buscas realizadas, buscas bem-sucedidas, buscas sem resultado, inserções, atualizações e remoções.
+
+A base inicial já contém os oito países de demonstração. A versão final da entrega original é identificada pela tag `etapa-1-final`; a tag `etapa-1` preserva o marco anterior da equipe.
 
 ## Como executar
 
@@ -53,11 +54,11 @@ Requer Python 3.10 ou superior.
 Na raiz do repositório:
 
 ```bash
-cd preparations
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-python app.py
+cd globalsim
+python -m flask --app app:create_app run --debug
 ```
 
 Abra:
@@ -66,24 +67,25 @@ http://127.0.0.1:5000
 
 ## Como executar os testes
 
-Dentro de `preparations`:
+Com o ambiente virtual ativado, dentro de `globalsim/`:
 
 ```bash
 python -m unittest discover -s tests -v
 ```
 
-Validação em 20/10/2026: **25 testes aprovados**, incluindo validação dos
-registros, falhas de persistência, colisões e os oito países de demonstração.
+Validação em 20/10/2026: **25 testes aprovados**, incluindo validação dos registros, falhas de persistência e os oito países de demonstração.
+
+Após a refatoração da Tabela Hash para `dict`, em 23/10/2026, foram executados **30 testes com sucesso**, incluindo operações da estrutura, instrumentação, persistência JSON e rotas Flask.
 
 ## Diferencial da equipe
 
-**Planejador Multidestinos com Recomendação Automática
-de Pacotes eSIM.**
+**Planejador Multidestinos com Recomendação Automática de Pacotes eSIM.**
 
 A funcionalidade permitirá analisar múltiplos destinos internacionais, verificar cobertura e recomendar um pacote adequado à duração e ao consumo estimado da viagem.
 
-Nas etapas seguintes, o planejamento será integrado à
-Árvore B e ao Grafo.
+A recomendação utilizará critérios determinísticos para selecionar um único pacote que atenda aos destinos, à quantidade de dados e à validade necessária.
+
+Nas etapas seguintes, o planejamento será integrado à Árvore B e ao Grafo.
 
 **Status:** Proposta submetida à professora, aguardando aprovação.
 
