@@ -2,8 +2,8 @@ import os
 import secrets
 from pathlib import Path
 from flask import Flask
-from routes.countries import blueprint
-from services.countries import CountryService
+from globalsim.routes.countries import blueprint
+from globalsim.services.countries import CountryService
 
 
 def create_app(config=None):
