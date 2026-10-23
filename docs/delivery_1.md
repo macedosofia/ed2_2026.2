@@ -1,7 +1,7 @@
 # Primeira entrega — prazo 20/10/2026
 
 Revisão técnica em **20/10/2026**. A aplicação oficial está em
-`preparations/`, com oito países na base inicial e **25 testes aprovados**.
+`globalsim/`, com oito países na base inicial e **25 testes aprovados**.
 Este checklist foi conferido com o código, os testes e a documentação
 presente no repositório. O enunciado original continua sendo a referência
 para os critérios de avaliação da disciplina.

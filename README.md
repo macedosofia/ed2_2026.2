@@ -40,7 +40,7 @@ A Etapa 1 implementa:
 - Testes automatizados.
 
 A implementação oficial da Etapa 1 está na pasta
-[`preparations/`](preparations/).
+[`globalsim/`](globalsim/).
 
 A base inicial já contém os oito países de demonstração. A versão final
 é identificada pela tag `etapa-1-final`; a tag `etapa-1` preserva o marco
@@ -89,8 +89,8 @@ Nas etapas seguintes, o planejamento será integrado à
 
 ## Documentação
 
-- [Documentação da Etapa 1](preparations/README.md)
-- [Descrição do diferencial](preparations/docs/differential.md)
-- [Checklist e roteiro da primeira entrega](preparations/docs/delivery_1.md)
+- [Documentação da Etapa 1](globalsim/README.md)
+- [Descrição do diferencial](docs/differential.md)
+- [Checklist e roteiro da primeira entrega](docs/delivery_1.md)
 
 O projeto será desenvolvido incrementalmente, preservando as funcionalidades das etapas anteriores.
