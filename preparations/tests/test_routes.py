@@ -55,7 +55,7 @@ class CountryRoutesTests(unittest.TestCase):
                 self.assertEqual(self.client.post(url, data=data).status_code, 503)
                 self.assertEqual(service.list_all(), [self.record])
                 self.assertEqual(self.path.read_bytes(), previous)
-        self.assertEqual(service.statistics()['collisions'], before['collisions'])
+        self.assertEqual(service.statistics()["insertions"], before["insertions"])
 
     def test_queries_use_hash_without_reading_json(self):
         self.client.post('/countries/new', data=self.record)

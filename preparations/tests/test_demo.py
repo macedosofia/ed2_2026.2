@@ -6,7 +6,7 @@ from app import create_app
 
 
 class DemoTests(unittest.TestCase):
-    def test_demo_coverage_collision_metrics_and_restart(self):
+    def test_demo_coverage_metrics_and_restart(self):
         demo_path = Path(__file__).resolve().parents[1] / 'data' / 'countries.demo.json'
         original_demo = demo_path.read_bytes()
         with tempfile.TemporaryDirectory() as directory:
@@ -29,12 +29,12 @@ class DemoTests(unittest.TestCase):
                            operadora='Operadora DE', tecnologia='5G')
             self.assertEqual(client.post('/countries/new', data=germany).status_code, 303)
             after = service.statistics()
-            self.assertEqual(after['occupancy'][1], before['occupancy'][1] + 1)
-            self.assertEqual(after['collisions'], before['collisions'] + 1)
+            self.assertEqual(after["size"], before["size"] + 1)
+            self.assertEqual(after["insertions"], before["insertions"] + 1)
             page = client.get('/instrumentation')
             self.assertEqual(page.status_code, 200)
-            self.assertIn('<dt>Países</dt><dd>9</dd>', page.text)
-            self.assertIn('<dt>Colisões nas inserções posteriores</dt><dd>1</dd>', page.text)
+            self.assertIn('<li>Países cadastrados: 9</li>', page.text)
+            self.assertIn('<li>Inserções: 1</li>', page.text)
             self.assertEqual(client.post('/countries/DE/delete').status_code, 303)
             restarted = create_app(config)
             self.assertEqual(restarted.extensions['countries'].statistics()['size'], 8)
