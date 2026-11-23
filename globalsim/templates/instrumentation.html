@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Instrumentação da Tabela Hash</h1>
+
+<p>
+    A aplicação utiliza o dicionário nativo do Python
+    para armazenar e consultar países por código.
+</p>
+
+<h2>Estatísticas</h2>
+
+<ul>
+    <li>Países cadastrados: {{ stats.size }}</li>
+
+    <li>Países carregados do JSON: {{ stats.loaded_records }}</li>
+
+    <li>Total de buscas: {{ stats.lookups }}</li>
+
+    <li>Buscas bem-sucedidas: {{ stats.hits }}</li>
+
+    <li>Buscas sem resultado: {{ stats.misses }}</li>
+
+    <li>Inserções: {{ stats.insertions }}</li>
+
+    <li>Atualizações: {{ stats.updates }}</li>
+
+    <li>Remoções: {{ stats.removals }}</li>
+</ul>
+
+<h2>Chaves cadastradas</h2>
+
+<p>
+    {{ stats["keys"] | join(", ") if stats["keys"] else "Nenhum país cadastrado" }}
+</p>
+
+<p>
+    O dict utiliza uma tabela hash internamente,
+    mas não disponibiliza diretamente informações
+    sobre seus baldes e colisões.
+</p>
+
+{% endblock %}

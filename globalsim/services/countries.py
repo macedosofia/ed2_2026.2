@@ -1,8 +1,8 @@
 from copy import deepcopy
 from threading import RLock
-from models.country import normalize_code, validate_country
-from persistence import countries_json
-from structures.hash_table import HashTable
+from globalsim.models.country import normalize_code, validate_country
+from globalsim.persistence import countries_json
+from globalsim.structures.hash_table import HashTable
 
 
 class CountryService:
@@ -12,7 +12,7 @@ class CountryService:
         self.lock = RLock()
         for record in countries_json.load(path):
             self.table.insert(validate_country(record))
-        self.table.load_collisions = self.table.collisions
+        self.table.mark_loaded()
 
     def find(self, code):
         with self.lock:

@@ -1,12 +1,12 @@
 # Contratos implementados — entrega 1
 
-Contratos da implementação inicial. Os nomes abaixo refletem a organização em inglês; as mensagens e os campos do enunciado permanecem em português.
+Contratos da implementação inicial, atualizados após a refatoração da Tabela Hash para o `dict` do Python. Os nomes abaixo refletem a organização em inglês; as mensagens e os campos do enunciado permanecem em português.
 
-## Checklist de implementação — revisado em 20/10/2026
+## Checklist de implementação — revisado em 23/10/2026
 
 - [x] Modelo com campos obrigatórios, normalização e código imutável na edição.
-- [x] Tabela Hash própria com inserção, busca, atualização, remoção e listagem.
-- [x] Tratamento de colisões e instrumentação da estrutura.
+- [x] Tabela Hash baseada em `dict`, com inserção, busca, atualização, remoção e listagem.
+- [x] Instrumentação das operações da estrutura.
 - [x] Carga JSON na Hash durante a inicialização.
 - [x] Consultas e mutações pelo serviço, usando a Hash.
 - [x] Persistência após mutações e restauração do estado anterior em caso de falha.
@@ -27,12 +27,12 @@ Adotar registros com `codigo`, `pais`, `regiao`, `operadora` e `tecnologia`. Nor
 | find(code) | Retornar cópia do registro ou ausência |
 | update(code, record) | Alterar campos sem mudar a chave; sinalizar ausência |
 | remove(code) | Retornar registro removido; sinalizar ausência |
-| list_all() | Retornar cópias de todos os registros percorrendo os baldes |
-| statistics() | Retornar capacidade, elementos, fator de carga, ocupação, colisões e último índice |
+| list_all() | Retornar cópias de todos os registros armazenados |
+| statistics() | Retornar quantidade de registros, chaves e métricas das operações |
 
-`insert` e `update` retornam `None` em caso de sucesso; `find` retorna um registro ou `None`; `remove` retorna o registro removido; `list_all` retorna uma lista; `statistics` retorna um dicionário de métricas. Duplicidade e troca de chave geram `ValueError`; atualização e remoção de chave ausente geram `LookupError`. A implementação usa vetor de baldes com listas para encadeamento separado, capacidade padrão de 17 e hash polinomial de base 31. Dicionários representam registros e métricas.
+`insert` e `update` retornam `None` em caso de sucesso; `find` retorna um registro ou `None`; `remove` retorna o registro removido; `list_all` retorna uma lista; `statistics` retorna um dicionário de métricas. Duplicidade e troca de chave geram `ValueError`; atualização e remoção de chave ausente geram `LookupError`. A implementação utiliza o dicionário nativo (`dict`) do Python para armazenar os registros, utilizando os códigos dos países como chaves.
 
-Contar uma colisão para cada inserção bem-sucedida em balde já ocupado. Duplicatas recusadas, buscas e atualizações não incrementam esse contador. Apresentar separadamente colisões de carga e de operações posteriores. A ocupação descreve o estado atual; a contagem acumulada descreve eventos. O fator de carga é elementos/capacidade e pode superar 1 com encadeamento.
+A instrumentação registra a quantidade de países cadastrados (`size`), as chaves existentes (`keys`), os registros carregados inicialmente (`loaded_records`), as buscas realizadas (`lookups`), as buscas bem-sucedidas (`hits`), as buscas sem resultado (`misses`), as inserções (`insertions`), as atualizações (`updates`) e as remoções (`removals`). Como o `dict` gerencia internamente seus baldes e colisões, essas informações não são contabilizadas diretamente pela aplicação.
 
 ## Etapa 3 — integrar persistência e serviço
 
