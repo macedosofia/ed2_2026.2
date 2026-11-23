@@ -1,5 +1,5 @@
 from flask import Blueprint, current_app, flash, redirect, render_template, request, url_for
-from models.country import FIELDS
+from globalsim.models.country import FIELDS
 
 blueprint = Blueprint("countries", __name__)
 

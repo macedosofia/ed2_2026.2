@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from app import create_app
+from globalsim.app import create_app
 
 
 class CountryRoutesTests(unittest.TestCase):
@@ -50,7 +50,7 @@ class CountryRoutesTests(unittest.TestCase):
         previous = self.path.read_bytes()
         service = self.app.extensions['countries']
         before = service.table.statistics()
-        with patch('services.countries.countries_json.save', side_effect=OSError('disk error')):
+        with patch('globalsim.services.countries.countries_json.save', side_effect=OSError('disk error')):
             for url, data in [('/countries/new', dict(self.record, codigo='PT')), ('/countries/BR/edit', dict(self.record, pais='Changed')), ('/countries/BR/delete', {})]:
                 self.assertEqual(self.client.post(url, data=data).status_code, 503)
                 self.assertEqual(service.list_all(), [self.record])
@@ -59,7 +59,7 @@ class CountryRoutesTests(unittest.TestCase):
 
     def test_queries_use_hash_without_reading_json(self):
         self.client.post('/countries/new', data=self.record)
-        with patch('services.countries.countries_json.load', side_effect=AssertionError('unexpected file read')):
+        with patch('globalsim.services.countries.countries_json.load', side_effect=AssertionError('unexpected file read')):
             with patch.object(self.app.extensions['countries'].table, 'find', wraps=self.app.extensions['countries'].table.find) as find:
                 self.assertIn('Brasil', self.client.get('/coverage?codigo=BR').text)
                 find.assert_called_once_with('BR')

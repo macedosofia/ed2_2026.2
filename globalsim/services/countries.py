@@ -1,8 +1,8 @@
 from copy import deepcopy
 from threading import RLock
-from models.country import normalize_code, validate_country
-from persistence import countries_json
-from structures.hash_table import HashTable
+from globalsim.models.country import normalize_code, validate_country
+from globalsim.persistence import countries_json
+from globalsim.structures.hash_table import HashTable
 
 
 class CountryService:

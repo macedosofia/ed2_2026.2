@@ -5,20 +5,16 @@ PT/Portugal, ES/Espanha, FR/França, IT/Itália, US/Estados Unidos,
 CA/Canadá e JP/Japão. Cada registro inclui `codigo`, `pais`, `regiao`,
 `operadora` e `tecnologia`. As operadoras são fictícias.
 
-`countries.demo.json` preserva os mesmos oito registros para restaurar a
-demonstração. A aplicação carrega a base de uso na Hash ao iniciar, consulta
-a estrutura em memória e persiste as alterações aprovadas. As consultas
-não usam a lista JSON como mecanismo de busca.
+`countries.demo.json` preserva os mesmos oito registros para restaurar a demonstração. A aplicação carrega a base de uso na Hash ao iniciar, consulta a estrutura em memória e persiste as alterações aprovadas. As consultas não usam a lista JSON como mecanismo de busca.
 
-Para restaurar a demonstração, interrompa o servidor e, dentro de `preparations`,
-preserve os dados atuais antes da substituição:
+Para restaurar a demonstração, interrompa o servidor e, na raiz do repositório (`ed2_2026.2/`), com o ambiente virtual ativado, preserve os dados atuais antes da substituição:
 
 ```bash
 backup_file=$(mktemp /tmp/globalsim-countries-XXXXXX.json)
-cp data/countries.json "$backup_file"
+cp globalsim/data/countries.json "$backup_file"
 echo "Backup: $backup_file"
-cp data/countries.demo.json data/countries.json
-python app.py
+cp globalsim/data/countries.demo.json globalsim/data/countries.json
+env -u PYTHONPATH python -m flask --app globalsim.app:create_app run --debug
 ```
 
 Para recuperar os dados anteriores, pare o servidor e execute, no mesmo terminal:

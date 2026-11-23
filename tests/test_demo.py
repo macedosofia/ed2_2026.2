@@ -2,12 +2,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from app import create_app
+from globalsim.app import create_app
 
 
 class DemoTests(unittest.TestCase):
     def test_demo_coverage_metrics_and_restart(self):
-        demo_path = Path(__file__).resolve().parents[1] / 'data' / 'countries.demo.json'
+        demo_path = Path(__file__).resolve().parents[1] / 'globalsim' / 'data' / 'countries.demo.json'
         original_demo = demo_path.read_bytes()
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / 'countries.json'
