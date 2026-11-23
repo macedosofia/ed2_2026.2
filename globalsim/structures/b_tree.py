@@ -63,3 +63,48 @@ class BTree:
         parent.keys.insert(index, median_key)
         parent.records.insert(index, median_record)
         parent.children.insert(index + 1, new_child)
+
+    def insert(self, record):
+        if not isinstance(record, dict):
+            raise ValueError("O cliente deve ser um dicionário.")
+
+        client_id = record.get("id")
+
+        if type(client_id) is not int:
+            raise ValueError("O ID do cliente deve ser um número inteiro.")
+
+        if self.find(client_id) is not None:
+            raise ValueError("Já existe um cliente com esse ID.")
+
+        if len(self.root.keys) == 2 * self.min_degree - 1:
+            old_root = self.root
+
+            new_root = BTreeNode(leaf=False)
+            new_root.children.append(old_root)
+
+            self._split_child(new_root, 0)
+
+            self.root = new_root
+
+        self._insert_non_full(self.root, record.copy())
+
+    def _insert_non_full(self, node, record):
+        client_id = record["id"]
+
+        index = 0
+
+        while index < len(node.keys) and client_id > node.keys[index]:
+            index += 1
+
+        if node.leaf:
+            node.keys.insert(index, client_id)
+            node.records.insert(index, record)
+            return
+
+        if len(node.children[index].keys) == 2 * self.min_degree - 1:
+            self._split_child(node, index)
+
+            if client_id > node.keys[index]:
+                index += 1
+
+        self._insert_non_full(node.children[index], record)

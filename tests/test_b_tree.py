@@ -189,3 +189,203 @@ class BTreeSplitTests(unittest.TestCase):
 
         for key in [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]:
             self.assertEqual(self.tree.find(key), {"id": key})
+
+
+class BTreeInsertionTests(unittest.TestCase):
+
+    def setUp(self):
+        self.tree = BTree(min_degree=3)
+
+    def test_insert_first_client(self):
+        self.tree.insert({"id": 10, "nome": "Ana"})
+
+        self.assertEqual(
+            self.tree.find(10),
+            {"id": 10, "nome": "Ana"}
+        )
+
+    def test_insert_multiple_clients(self):
+        ids = [30, 10, 50, 20, 40]
+
+        for client_id in ids:
+            self.tree.insert({"id": client_id})
+
+        self.assertEqual(
+            self.tree.root.keys,
+            [10, 20, 30, 40, 50]
+        )
+
+        for client_id in ids:
+            self.assertEqual(
+                self.tree.find(client_id),
+                {"id": client_id}
+            )
+
+    def test_insert_causes_root_split(self):
+        ids = [10, 20, 30, 40, 50, 60]
+
+        for client_id in ids:
+            self.tree.insert({"id": client_id})
+
+        self.assertEqual(self.tree.root.keys, [30])
+        self.assertFalse(self.tree.root.leaf)
+
+        self.assertEqual(
+            self.tree.root.children[0].keys,
+            [10, 20]
+        )
+
+        self.assertEqual(
+            self.tree.root.children[1].keys,
+            [40, 50, 60]
+        )
+
+    def test_duplicate_id(self):
+        self.tree.insert({"id": 10})
+
+        with self.assertRaises(ValueError):
+            self.tree.insert({"id": 10})
+
+    def test_many_insertions(self):
+        for client_id in range(1, 101):
+            self.tree.insert({"id": client_id})
+
+        for client_id in range(1, 101):
+            self.assertEqual(
+                self.tree.find(client_id),
+                {"id": client_id}
+            )
+
+        self.assertIsNone(self.tree.find(101))
+
+    def test_insert_copies_record(self):
+        record = {"id": 10, "nome": "Ana"}
+
+        self.tree.insert(record)
+        record["nome"] = "Alterado"
+
+        self.assertEqual(
+            self.tree.find(10)["nome"],
+            "Ana"
+        )
+
+    def test_rejects_invalid_record(self):
+        with self.assertRaises(ValueError):
+            self.tree.insert(None)
+
+        with self.assertRaises(ValueError):
+            self.tree.insert({"id": "10"})
+
+
+class BTreeInvariantTests(unittest.TestCase):
+
+    def assert_valid_tree(self, tree):
+        t = tree.min_degree
+        leaf_depths = set()
+
+        def check_node(node, minimum, maximum, depth, is_root=False):
+            key_count = len(node.keys)
+
+            self.assertEqual(key_count, len(node.records))
+
+            self.assertLessEqual(key_count, 2 * t - 1)
+
+            if not is_root:
+                self.assertGreaterEqual(key_count, t - 1)
+            elif not node.leaf:
+                self.assertGreaterEqual(key_count, 1)
+
+            self.assertEqual(node.keys, sorted(node.keys))
+
+            for index, key in enumerate(node.keys):
+
+                self.assertEqual(node.records[index]["id"], key)
+
+                if minimum is not None:
+                    self.assertGreater(key, minimum)
+
+                if maximum is not None:
+                    self.assertLess(key, maximum)
+
+                if index > 0:
+                    self.assertGreater(key, node.keys[index - 1])
+
+            if node.leaf:
+                self.assertEqual(node.children, [])
+                leaf_depths.add(depth)
+                return key_count
+
+            self.assertEqual(len(node.children), key_count + 1)
+
+            total = key_count
+
+            boundaries = [minimum] + node.keys + [maximum]
+
+            for index, child in enumerate(node.children):
+                total += check_node(
+                    child,
+                    boundaries[index],
+                    boundaries[index + 1],
+                    depth + 1
+                )
+
+            return total
+
+        total = check_node(
+            tree.root,
+            None,
+            None,
+            0,
+            is_root=True
+        )
+
+        self.assertEqual(len(leaf_depths), 1)
+
+        return total
+
+    def test_preserves_invariants_with_1000_clients(self):
+        import random
+
+        for degree in [2, 3, 4]:
+            for order in ["ascending", "descending", "random"]:
+
+                with self.subTest(degree=degree, order=order):
+                    tree = BTree(min_degree=degree)
+
+                    ids = list(range(1, 1001))
+
+                    if order == "descending":
+                        ids.reverse()
+
+                    elif order == "random":
+                        random.Random(2026).shuffle(ids)
+
+                    for client_id in ids:
+                        tree.insert({"id": client_id})
+
+                    total = self.assert_valid_tree(tree)
+
+                    self.assertEqual(total, 1000)
+
+                    for client_id in range(1, 1001):
+                        self.assertEqual(
+                            tree.find(client_id),
+                            {"id": client_id}
+                        )
+
+                    self.assertIsNone(tree.find(1001))
+
+    def test_preserves_invariants_after_every_insertion(self):
+        import random
+
+        tree = BTree(min_degree=3)
+
+        ids = list(range(1, 121))
+        random.Random(42).shuffle(ids)
+
+        for expected_total, client_id in enumerate(ids, start=1):
+            tree.insert({"id": client_id})
+
+            total = self.assert_valid_tree(tree)
+
+            self.assertEqual(total, expected_total)    
