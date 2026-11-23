@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}Planejador multidestinos | GlobalSIM{% endblock %}
+{% block content %}
+<h1>Planejador multidestinos</h1>
+
+{% if error %}
+<p class="message error" role="alert">{{ error }}</p>
+{% endif %}
+
+<form method="post" action="{{ url_for('trip_planner.plan_trip') }}">
+    <label for="origin">País de origem (código)</label>
+    <input id="origin" name="origin" value="{{ form.get('origin', '') }}"
+           placeholder="BR" required>
+
+    <label for="destinations">Destinos (códigos separados por vírgula)</label>
+    <input id="destinations" name="destinations" value="{{ form.get('destinations', '') }}"
+           placeholder="PT, FR, IT" required>
+
+    <label for="duration_days">Duração da viagem (dias)</label>
+    <input id="duration_days" name="duration_days" value="{{ form.get('duration_days', '') }}"
+           inputmode="numeric" required>
+
+    <label for="data_gb">Consumo estimado (GB)</label>
+    <input id="data_gb" name="data_gb" value="{{ form.get('data_gb', '') }}"
+           inputmode="decimal" placeholder="8,5" required>
+
+    <label for="client_id">ID do cliente (opcional)</label>
+    <input id="client_id" name="client_id" value="{{ form.get('client_id', '') }}"
+           inputmode="numeric">
+
+    <p><button type="submit">Consultar recomendação</button></p>
+</form>
+
+{% if result %}
+<section aria-labelledby="trip">
+    <h2 id="trip">Roteiro</h2>
+    <dl>
+        <dt>Origem</dt><dd>{{ result.origem }}</dd>
+        <dt>Duração</dt><dd>{{ result.duracao_dias }} dias</dd>
+        <dt>Consumo estimado</dt><dd>{{ result.consumo_gb|string|replace('.', ',') }} GB</dd>
+    </dl>
+
+    <h3>Cobertura dos destinos</h3>
+    <ul>
+        {% for destination in result.destinos %}
+        <li>
+            {{ destination.codigo }}{% if destination.pais %} ({{ destination.pais }}){% endif %}
+            · {{ "Cobertura cadastrada" if destination.cobertura else "Sem cobertura cadastrada" }}
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section aria-labelledby="recommendation">
+    <h2 id="recommendation">Recomendação</h2>
+    {% if result.pacote_recomendado %}
+    {% set package = result.pacote_recomendado %}
+    <dl>
+        <dt>Pacote recomendado</dt><dd>{{ package.nome }} ({{ package.codigo }})</dd>
+        <dt>Franquia</dt><dd>{{ package.dados_gb }} GB</dd>
+        <dt>Validade</dt><dd>{{ package.validade_dias }} dias</dd>
+    </dl>
+    {% endif %}
+    <p role="status">{{ result.justificativa }}</p>
+</section>
+
+{% if result.cliente_id is not none %}
+<section aria-labelledby="client">
+    <h2 id="client">Cliente</h2>
+    {% if result.cliente %}
+    <dl>
+        <dt>Nome</dt><dd>{{ result.cliente.nome }}</dd>
+        <dt>Status</dt><dd>{{ result.cliente.status }}</dd>
+        <dt>eSIM atual</dt><dd>{{ result.cliente.esim or "Sem eSIM associado" }}</dd>
+        <dt>Pacote atual</dt>
+        <dd>
+            {% if result.pacote_atual %}
+                {% set current = result.pacote_atual %}
+                {{ current.nome }} ({{ current.codigo }}), {{ current.dados_gb }} GB por
+                {{ current.validade_dias }} dias
+            {% elif result.cliente.pacote is not none %}
+                Pacote {{ result.cliente.pacote }} indisponível no catálogo.
+            {% else %}
+                Sem pacote associado.
+            {% endif %}
+        </dd>
+    </dl>
+    {% elif result.status_cliente == "nao_encontrado" %}
+    <p>Cliente {{ result.cliente_id }} não encontrado.</p>
+    {% elif result.status_cliente == "consulta_indisponivel" %}
+    <p>Consulta de cliente indisponível.</p>
+    {% endif %}
+</section>
+{% endif %}
+{% endif %}
+{% endblock %}
