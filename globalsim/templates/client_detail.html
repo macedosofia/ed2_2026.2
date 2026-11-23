@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Detalhes do cliente</h1>
+
+<table>
+    <tbody>
+        <tr>
+            <th>ID</th>
+            <td>{{ client.id }}</td>
+        </tr>
+        <tr>
+            <th>Nome</th>
+            <td>{{ client.nome }}</td>
+        </tr>
+        <tr>
+            <th>E-mail</th>
+            <td>{{ client.email }}</td>
+        </tr>
+        <tr>
+            <th>eSIM</th>
+            <td>{{ client.esim or 'Não associado' }}</td>
+        </tr>
+        <tr>
+            <th>Pacote</th>
+            <td>{{ client.pacote or 'Não associado' }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ client.status }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    <a href="{{ url_for('clients.client_list') }}">
+        Voltar para a lista de clientes
+    </a>
+</p>
+{% endblock %}

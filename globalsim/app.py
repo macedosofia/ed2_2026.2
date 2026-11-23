@@ -3,7 +3,8 @@ import os
 import secrets
 from pathlib import Path
 from flask import Flask
-from globalsim.routes.countries import blueprint
+from globalsim.routes.countries import blueprint as countries_blueprint
+from globalsim.routes.clients import blueprint as clients_blueprint
 from globalsim.services.countries import CountryService
 from globalsim.services.clients import ClientService
 from globalsim.services.packages import PackageService
@@ -24,7 +25,9 @@ def create_app(config=None):
     app.extensions["clients"] = ClientService(app.config["CLIENTS_PATH"])
     app.extensions["packages"] = PackageService(app.config["PACKAGES_PATH"])
 
-    app.register_blueprint(blueprint)
+    app.register_blueprint(countries_blueprint)
+    app.register_blueprint(clients_blueprint)
+
     return app
 
 
