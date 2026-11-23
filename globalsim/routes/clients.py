@@ -244,7 +244,7 @@ def coverage():
     raw_id = request.args.get("client_id", "").strip()
     code = request.args.get("codigo", "").strip()
 
-    searched = searched = "codigo" in request.args
+    searched = "codigo" in request.args
 
     client = None
     country = None
@@ -315,3 +315,10 @@ def coverage():
         code=code,
         searched=searched,
     ), status
+
+@blueprint.get("/clients/instrumentation")
+def instrumentation():
+    return render_template(
+        "client_instrumentation.html",
+        stats=service().statistics(),
+    )

@@ -973,6 +973,282 @@ class ClientRoutesTests(unittest.TestCase):
         )
 
 
+    def create_instrumentation_clients(self):
+        for client_id in range(1, 7):
+            self.create_sample_client(
+                client_id=client_id,
+                name=f"Cliente {client_id}",
+            )
+
+    def test_instrumentation_empty_tree(self):
+        response = self.client.get(
+            "/clients/instrumentation"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        html = response.get_data(as_text=True)
+
+        self.assertIn("Instrumentação da Árvore B", html)
+        self.assertIn("Clientes cadastrados: 0", html)
+        self.assertIn("Altura da árvore: 0", html)
+        self.assertIn("Quantidade de nós: 0", html)
+        self.assertIn("Divisões de nós: 0", html)
+        self.assertIn("Total de buscas: 0", html)
+
+        self.assertIn(
+            "Nenhum cliente cadastrado na Árvore B.",
+            html,
+        )
+
+        self.assertFalse(self.clients_path.exists())
+
+    def test_instrumentation_single_client(self):
+        self.create_sample_client()
+
+        response = self.client.get(
+            "/clients/instrumentation"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        html = response.get_data(as_text=True)
+
+        self.assertIn("Clientes cadastrados: 1", html)
+        self.assertIn("Altura da árvore: 1", html)
+        self.assertIn("Quantidade de nós: 1", html)
+        self.assertIn("Divisões de nós: 0", html)
+        self.assertIn("Total de buscas: 0", html)
+
+    def test_instrumentation_after_node_split(self):
+        self.create_instrumentation_clients()
+
+        response = self.client.get(
+            "/clients/instrumentation"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        html = response.get_data(as_text=True)
+
+        self.assertIn("Clientes cadastrados: 6", html)
+        self.assertIn("Altura da árvore: 2", html)
+        self.assertIn("Quantidade de nós: 3", html)
+        self.assertIn("Divisões de nós: 1", html)
+
+        self.assertNotIn(
+            "Nenhum cliente cadastrado na Árvore B.",
+            html,
+        )
+
+    def test_instrumentation_counts_lookups(self):
+        self.create_instrumentation_clients()
+
+        found = self.client.get(
+            "/clients/search?id=3"
+        )
+
+        missing = self.client.get(
+            "/clients/search?id=999"
+        )
+
+        detail = self.client.get(
+            "/clients/3"
+        )
+
+        self.assertEqual(found.status_code, 302)
+        self.assertEqual(missing.status_code, 404)
+        self.assertEqual(detail.status_code, 200)
+
+        response = self.client.get(
+            "/clients/instrumentation"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertIn(
+            "Total de buscas: 3",
+            response.get_data(as_text=True),
+        )
+
+    def test_instrumentation_does_not_change_statistics(self):
+        self.create_instrumentation_clients()
+
+        service = self.app.extensions["clients"]
+
+        service.find(3)
+        service.find(999)
+
+        before = service.statistics()
+
+        for _ in range(3):
+            response = self.client.get(
+                "/clients/instrumentation"
+            )
+
+            self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(
+            service.statistics(),
+            before,
+        )
+
+    def test_instrumentation_navigation_links(self):
+        home = self.client.get("/")
+        listing = self.client.get("/clients")
+
+        metrics = self.client.get(
+            "/clients/instrumentation"
+        )
+
+        self.assertEqual(home.status_code, 200)
+        self.assertEqual(listing.status_code, 200)
+        self.assertEqual(metrics.status_code, 200)
+
+        self.assertIn(
+            b'href="/clients/instrumentation"',
+            home.data,
+        )
+
+        self.assertIn(
+            "Consultar estatísticas da Árvore B",
+            listing.get_data(as_text=True),
+        )
+
+        self.assertIn(
+            "Voltar para a lista de clientes",
+            metrics.get_data(as_text=True),
+        )
+
+        self.assertIn(
+            b'href="/clients"',
+            metrics.data,
+        )
+
+        self.assertEqual(
+            self.client.get("/instrumentation").status_code,
+            200,
+        )
+
+    def test_instrumentation_rejects_post(self):
+        response = self.client.post(
+            "/clients/instrumentation"
+        )
+
+        self.assertEqual(response.status_code, 405)
+
+    def test_instrumentation_uses_btree_statistics(self):
+        self.create_instrumentation_clients()
+
+        service = self.app.extensions["clients"]
+
+        with patch.object(
+            service.tree,
+            "statistics",
+            wraps=service.tree.statistics,
+        ) as statistics:
+
+            response = self.client.get(
+                "/clients/instrumentation"
+            )
+
+            self.assertEqual(response.status_code, 200)
+
+            statistics.assert_called_once_with()
+
+    def test_instrumentation_does_not_reload_json(self):
+        self.create_instrumentation_clients()
+
+        targets = (
+            "globalsim.services.clients.clients_json.load",
+            "globalsim.services.countries.countries_json.load",
+            "globalsim.services.packages.packages_json.load",
+        )
+
+        for target in targets:
+            with self.subTest(target=target):
+                with patch(
+                    target,
+                    side_effect=AssertionError(
+                        "JSON recarregado indevidamente"
+                    ),
+                ) as loader:
+
+                    response = self.client.get(
+                        "/clients/instrumentation"
+                    )
+
+                    self.assertEqual(
+                        response.status_code,
+                        200,
+                    )
+
+                    loader.assert_not_called()
+
+    def test_instrumentation_does_not_list_all_clients(self):
+        self.create_instrumentation_clients()
+
+        service = self.app.extensions["clients"]
+
+        with patch.object(
+            service.tree,
+            "list_all",
+            side_effect=AssertionError(
+                "Listagem indevida dos clientes"
+            ),
+        ) as listing:
+
+            response = self.client.get(
+                "/clients/instrumentation"
+            )
+
+            self.assertEqual(response.status_code, 200)
+
+            listing.assert_not_called()
+
+    def test_instrumentation_preserves_records_and_json(self):
+        self.create_instrumentation_clients()
+        self.create_coverage_country()
+
+        service = self.app.extensions["clients"]
+
+        records_before = service.list_all()
+        stats_before = service.statistics()
+
+        clients_before = self.clients_path.read_bytes()
+        countries_before = self.countries_path.read_bytes()
+        packages_before = self.packages_path.read_bytes()
+
+        response = self.client.get(
+            "/clients/instrumentation"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(
+            service.list_all(),
+            records_before,
+        )
+
+        self.assertEqual(
+            service.statistics(),
+            stats_before,
+        )
+
+        self.assertEqual(
+            self.clients_path.read_bytes(),
+            clients_before,
+        )
+
+        self.assertEqual(
+            self.countries_path.read_bytes(),
+            countries_before,
+        )
+
+        self.assertEqual(
+            self.packages_path.read_bytes(),
+            packages_before,
+        )
 
 if __name__ == "__main__":
     unittest.main()
