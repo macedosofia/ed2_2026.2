@@ -1,0 +1,79 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Gerenciamento de clientes</h1>
+
+<p>
+    <a href="{{ url_for('clients.create') }}">
+        Cadastrar cliente
+    </a>
+</p>
+
+<h2>Buscar cliente por ID</h2>
+
+<form method="get" action="{{ url_for('clients.search') }}">
+    <label for="search_id">ID do cliente</label>
+    <input
+        type="number"
+        id="search_id"
+        name="id"
+        min="1"
+        value="{{ search_id | default('') }}"
+        required
+    >
+    <button type="submit">Buscar</button>
+    <a href="{{ url_for('clients.client_list') }}">Limpar busca</a>
+</form>
+
+<p>
+    <a href="{{ url_for('clients.coverage') }}">
+        Consultar cobertura de clientes
+    </a>
+</p>
+
+<p>
+    <a href="{{ url_for('clients.instrumentation') }}">
+        Consultar estatísticas da Árvore B
+    </a>
+</p>
+
+<h2>Clientes cadastrados</h2>
+{% if clients %}
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>eSIM</th>
+            <th>Pacote</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for client in clients %}
+        <tr>
+            <td>{{ client.id }}</td>
+            <td>{{ client.nome }}</td>
+            <td>{{ client.email }}</td>
+            <td>{{ client.esim or 'Não associado' }}</td>
+            <td>{{ client.pacote or 'Não associado' }}</td>
+            <td>{{ client.status }}</td>
+            <td>
+                <a href="{{ url_for('clients.detail', client_id=client.id) }}">
+                    Visualizar
+                </a>
+                <a href="{{ url_for('clients.edit', client_id=client.id) }}">
+                    Editar
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% elif search_id is not defined %}
+<p>Nenhum cliente cadastrado.</p>
+{% endif %}
+{% endblock %}
