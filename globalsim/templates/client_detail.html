@@ -40,6 +40,12 @@
 </p>
 
 <p>
+    <a href="{{ url_for('clients.coverage', client_id=client.id) }}">
+        Consultar cobertura deste cliente
+    </a>
+</p>
+
+<p>
     <a href="{{ url_for('clients.client_list') }}">
         Voltar para a lista de clientes
     </a>

@@ -1,0 +1,176 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Consulta integrada de cobertura</h1>
+
+<p>
+    Consulte os dados de um cliente e a cobertura de um país.
+</p>
+
+<form method="get"
+      action="{{ url_for('clients.coverage') }}">
+
+    <label for="client_id">ID do cliente</label>
+    <input
+        type="number"
+        id="client_id"
+        name="client_id"
+        min="1"
+        value="{{ search_id }}"
+        placeholder="58372"
+        required
+    >
+
+    <label for="codigo">Código do país</label>
+    <input
+        type="text"
+        id="codigo"
+        name="codigo"
+        value="{{ code }}"
+        placeholder="IT"
+        maxlength="2"
+        pattern="[A-Za-z]{2}"
+        required
+    >
+
+    <p>
+        <button type="submit">
+            Consultar cobertura
+        </button>
+
+        <a href="{{ url_for('clients.coverage') }}">
+            Limpar consulta
+        </a>
+    </p>
+
+</form>
+
+{% if searched %}
+
+    {% if client %}
+        <section>
+            <h2>Dados do cliente</h2>
+
+            <p>Consulta pela Árvore B.</p>
+
+            <dl>
+                <dt>ID</dt>
+                <dd>{{ client.id }}</dd>
+
+                <dt>Nome</dt>
+                <dd>{{ client.nome }}</dd>
+
+                <dt>E-mail</dt>
+                <dd>{{ client.email }}</dd>
+
+                <dt>eSIM</dt>
+                <dd>
+                    {{ client.esim or 'Não associado' }}
+                </dd>
+
+                <dt>Pacote</dt>
+                <dd>
+                    {{ client.pacote or 'Não associado' }}
+                </dd>
+
+                <dt>Status</dt>
+                <dd>{{ client.status }}</dd>
+            </dl>
+
+            <p>
+                <a href="{{ url_for(
+                    'clients.detail',
+                    client_id=client.id
+                ) }}">
+                    Visualizar cliente
+                </a>
+            </p>
+        </section>
+    {% endif %}
+
+    {% if country %}
+        <section>
+            <h2>Cobertura do país</h2>
+
+            <p>Consulta pela Tabela Hash.</p>
+
+            <dl>
+                <dt>País</dt>
+                <dd>
+                    {{ country.pais }}
+                    ({{ country.codigo }})
+                </dd>
+
+                <dt>Região</dt>
+                <dd>{{ country.regiao }}</dd>
+
+                <dt>Operadora</dt>
+                <dd>{{ country.operadora }}</dd>
+
+                <dt>Tecnologia</dt>
+                <dd>{{ country.tecnologia }}</dd>
+            </dl>
+
+            <p>Cobertura cadastrada disponível.</p>
+        </section>
+    {% endif %}
+
+    {% if client %}
+        <section>
+            <h2>Pacote contratado</h2>
+
+            {% if package %}
+
+                <dl>
+                    <dt>Código</dt>
+                    <dd>{{ package.codigo }}</dd>
+
+                    <dt>Nome</dt>
+                    <dd>{{ package.nome }}</dd>
+
+                    <dt>Dados</dt>
+                    <dd>{{ package.dados_gb }} GB</dd>
+
+                    <dt>Validade</dt>
+                    <dd>{{ package.validade_dias }} dias</dd>
+                </dl>
+
+                {% if package_covered is sameas true %}
+
+                    <p class="message success" role="status">
+                        O país está incluído no pacote contratado.
+                    </p>
+
+                {% elif package_covered is sameas false %}
+
+                    <p class="message error" role="status">
+                        O país não está incluído no pacote contratado.
+                    </p>
+
+                {% endif %}
+
+            {% elif client.pacote is none %}
+
+                <p>O cliente não possui pacote associado.</p>
+
+            {% else %}
+
+                <p>
+                    O pacote associado não foi encontrado no catálogo.
+                </p>
+
+            {% endif %}
+        </section>
+    {% endif %}
+
+{% endif %}
+
+<p>
+    <a href="{{ url_for('clients.client_list') }}">
+        Voltar para a lista de clientes
+    </a>
+</p>
+
+{% endblock %}

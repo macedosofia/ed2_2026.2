@@ -562,5 +562,417 @@ class ClientRoutesTests(unittest.TestCase):
             record,
         )
 
+    def create_coverage_country(self, code="IT"):
+        countries = {
+            "IT": {
+                "codigo": "IT",
+                "pais": "Italia",
+                "regiao": "Europa",
+                "operadora": "TIM",
+                "tecnologia": "5G",
+            },
+            "BR": {
+                "codigo": "BR",
+                "pais": "Brasil",
+                "regiao": "America",
+                "operadora": "Claro",
+                "tecnologia": "5G",
+            },
+        }
+
+        record = countries[code]
+
+        self.app.extensions["countries"].create(record)
+
+        return record
+
+    def test_coverage_form(self):
+        response = self.client.get("/clients/coverage")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'name="client_id"', response.data)
+        self.assertIn(b'name="codigo"', response.data)
+
+    def test_coverage_navigation_links(self):
+        self.create_sample_client()
+
+        home = self.client.get("/")
+        listing = self.client.get("/clients")
+        detail = self.client.get("/clients/58372")
+
+        self.assertEqual(home.status_code, 200)
+        self.assertEqual(listing.status_code, 200)
+        self.assertEqual(detail.status_code, 200)
+
+        self.assertIn(b"/clients/coverage", home.data)
+
+        self.assertIn(
+            b"Consultar cobertura de clientes",
+            listing.data,
+        )
+
+        self.assertIn(
+            b"/clients/coverage?client_id=58372",
+            detail.data,
+        )
+
+    def test_coverage_prefills_client_id(self):
+        response = self.client.get(
+            "/clients/coverage?client_id=58372"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertIn(
+            b'value="58372"',
+            response.data,
+        )
+
+        self.assertNotIn(
+            b'class="message error"',
+            response.data,
+        )
+
+    def test_coverage_compatible_package(self):
+        self.create_sample_client()
+        self.create_coverage_country()
+
+        response = self.client.get(
+            "/clients/coverage?client_id=58372&codigo=IT"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        html = response.get_data(as_text=True)
+
+        self.assertIn("Maria Silva", html)
+        self.assertIn("ESIM-83921", html)
+        self.assertIn("Italia", html)
+        self.assertIn("TIM", html)
+        self.assertIn("5G", html)
+        self.assertIn("Europa Plus", html)
+
+        self.assertIn(
+            "O país está incluído no pacote contratado.",
+            html,
+        )
+
+    def test_coverage_incompatible_package(self):
+        self.create_sample_client()
+        self.create_coverage_country("BR")
+
+        response = self.client.get(
+            "/clients/coverage?client_id=58372&codigo=BR"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        html = response.get_data(as_text=True)
+
+        self.assertIn("Brasil", html)
+        self.assertIn("Europa Plus", html)
+
+        self.assertIn(
+            "O país não está incluído no pacote contratado.",
+            html,
+        )
+
+    def test_coverage_without_optional_associations(self):
+        self.create_sample_client()
+        self.create_coverage_country()
+
+        self.app.extensions["clients"].update(
+            58372,
+            {
+                "esim": None,
+                "pacote": None,
+            },
+        )
+
+        response = self.client.get(
+            "/clients/coverage?client_id=58372&codigo=IT"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        html = response.get_data(as_text=True)
+
+        self.assertIn("Maria Silva", html)
+        self.assertIn("Italia", html)
+        self.assertIn("Não associado", html)
+
+        self.assertIn(
+            "O cliente não possui pacote associado.",
+            html,
+        )
+
+    def test_coverage_without_esim(self):
+        self.create_sample_client()
+        self.create_coverage_country()
+
+        self.app.extensions["clients"].update(
+            58372,
+            {"esim": None},
+        )
+
+        response = self.client.get(
+            "/clients/coverage?client_id=58372&codigo=IT"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        html = response.get_data(as_text=True)
+
+        self.assertIn("Não associado", html)
+        self.assertIn("Europa Plus", html)
+
+        self.assertIn(
+            "O país está incluído no pacote contratado.",
+            html,
+        )
+
+    def test_coverage_missing_package_in_catalog(self):
+        self.create_sample_client()
+        self.create_coverage_country()
+
+        self.app.extensions["clients"].update(
+            58372,
+            {"pacote": 9999},
+        )
+
+        response = self.client.get(
+            "/clients/coverage?client_id=58372&codigo=IT"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        html = response.get_data(as_text=True)
+
+        self.assertIn("Maria Silva", html)
+        self.assertIn("Italia", html)
+
+        self.assertIn(
+            "O pacote associado não foi encontrado no catálogo.",
+            html,
+        )
+
+    def test_coverage_normalizes_country_code(self):
+        self.create_sample_client()
+        self.create_coverage_country()
+
+        response = self.client.get(
+            "/clients/coverage?client_id=58372&codigo=it"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertIn(b"Italia", response.data)
+        self.assertIn(b'value="IT"', response.data)
+
+    def test_coverage_missing_client(self):
+        self.create_coverage_country()
+
+        response = self.client.get(
+            "/clients/coverage?client_id=99999&codigo=IT"
+        )
+
+        self.assertEqual(response.status_code, 404)
+
+        html = response.get_data(as_text=True)
+
+        self.assertIn("Cliente não encontrado.", html)
+        self.assertIn("Italia", html)
+
+    def test_coverage_missing_country(self):
+        self.create_sample_client()
+
+        response = self.client.get(
+            "/clients/coverage?client_id=58372&codigo=ZZ"
+        )
+
+        self.assertEqual(response.status_code, 404)
+
+        html = response.get_data(as_text=True)
+
+        self.assertIn("País não cadastrado.", html)
+        self.assertIn("Maria Silva", html)
+
+    def test_coverage_rejects_invalid_client_ids(self):
+        for client_id in ("", "0", "-1", "abc", "1.5"):
+            with self.subTest(client_id=client_id):
+                response = self.client.get(
+                    "/clients/coverage",
+                    query_string={
+                        "client_id": client_id,
+                        "codigo": "IT",
+                    },
+                )
+
+                self.assertEqual(response.status_code, 400)
+
+                self.assertIn(
+                    "O ID deve ser um inteiro positivo.",
+                    response.get_data(as_text=True),
+                )
+
+    def test_coverage_rejects_invalid_country_codes(self):
+        self.create_sample_client()
+
+        for code in ("", "I", "ITA", "12", "I1"):
+            with self.subTest(code=code):
+                response = self.client.get(
+                    "/clients/coverage",
+                    query_string={
+                        "client_id": "58372",
+                        "codigo": code,
+                    },
+                )
+
+                self.assertEqual(response.status_code, 400)
+
+    def test_coverage_requires_client_id_on_search(self):
+        response = self.client.get(
+            "/clients/coverage?codigo=IT"
+        )
+
+        self.assertEqual(response.status_code, 400)
+
+    def test_coverage_rejects_post(self):
+        response = self.client.post(
+            "/clients/coverage"
+        )
+
+        self.assertEqual(response.status_code, 405)
+
+    def test_coverage_uses_data_structures_directly(self):
+        self.create_sample_client()
+        self.create_coverage_country()
+
+        cs = self.app.extensions["clients"]
+        hs = self.app.extensions["countries"]
+
+        with patch.object(
+            cs.tree,
+            "find",
+            wraps=cs.tree.find,
+        ) as btree_find, patch.object(
+            hs.table,
+            "find",
+            wraps=hs.table.find,
+        ) as hash_find:
+
+            response = self.client.get(
+                "/clients/coverage?client_id=58372&codigo=IT"
+            )
+
+            self.assertEqual(response.status_code, 200)
+
+            btree_find.assert_called_once_with(58372)
+            hash_find.assert_called_once_with("IT")
+
+    def test_coverage_does_not_reload_json(self):
+        self.create_sample_client()
+        self.create_coverage_country()
+
+        targets = (
+            "globalsim.services.clients.clients_json.load",
+            "globalsim.services.countries.countries_json.load",
+            "globalsim.services.packages.packages_json.load",
+        )
+
+        for target in targets:
+            with self.subTest(target=target):
+                with patch(
+                    target,
+                    side_effect=AssertionError(
+                        "JSON recarregado durante consulta"
+                    ),
+                ) as loader:
+
+                    response = self.client.get(
+                        "/clients/coverage?client_id=58372&codigo=IT"
+                    )
+
+                    self.assertEqual(response.status_code, 200)
+
+                    loader.assert_not_called()
+
+    def test_coverage_does_not_list_all_records(self):
+        self.create_sample_client()
+        self.create_coverage_country()
+
+        cs = self.app.extensions["clients"]
+        hs = self.app.extensions["countries"]
+
+        with patch.object(
+            cs.tree,
+            "list_all",
+            side_effect=AssertionError(
+                "Listagem indevida da Arvore B"
+            ),
+        ) as btree_list, patch.object(
+            hs.table,
+            "list_all",
+            side_effect=AssertionError(
+                "Listagem indevida da Tabela Hash"
+            ),
+        ) as hash_list:
+
+            response = self.client.get(
+                "/clients/coverage?client_id=58372&codigo=IT"
+            )
+
+            self.assertEqual(response.status_code, 200)
+
+            btree_list.assert_not_called()
+            hash_list.assert_not_called()
+
+    def test_coverage_preserves_records_and_json(self):
+        self.create_sample_client()
+        self.create_coverage_country()
+
+        cs = self.app.extensions["clients"]
+        hs = self.app.extensions["countries"]
+
+        clients_before = self.clients_path.read_bytes()
+        countries_before = self.countries_path.read_bytes()
+        packages_before = self.packages_path.read_bytes()
+
+        client_records = cs.list_all()
+        country_records = hs.list_all()
+
+        response = self.client.get(
+            "/clients/coverage?client_id=58372&codigo=IT"
+        )
+
+        self.assertEqual(response.status_code, 200)
+
+        self.assertEqual(
+            self.clients_path.read_bytes(),
+            clients_before,
+        )
+
+        self.assertEqual(
+            self.countries_path.read_bytes(),
+            countries_before,
+        )
+
+        self.assertEqual(
+            self.packages_path.read_bytes(),
+            packages_before,
+        )
+
+        self.assertEqual(
+            cs.list_all(),
+            client_records,
+        )
+
+        self.assertEqual(
+            hs.list_all(),
+            country_records,
+        )
+
+
+
 if __name__ == "__main__":
     unittest.main()

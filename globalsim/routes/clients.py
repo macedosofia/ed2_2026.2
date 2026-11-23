@@ -8,7 +8,7 @@ from flask import (
     request,
     url_for,
 )
-
+from globalsim.models.country import normalize_code
 
 blueprint = Blueprint("clients", __name__)
 
@@ -233,4 +233,85 @@ def edit(client_id):
         client=client,
         packages=package_service().list_all(),
         editing=True,
+    ), status
+
+def country_service():
+    return current_app.extensions["countries"]
+
+
+@blueprint.get("/clients/coverage")
+def coverage():
+    raw_id = request.args.get("client_id", "").strip()
+    code = request.args.get("codigo", "").strip()
+
+    searched = searched = "codigo" in request.args
+
+    client = None
+    country = None
+    package = None
+    package_covered = None
+    status = 200
+
+    if searched:
+        try:
+            client_id = int(raw_id)
+
+            if client_id <= 0:
+                raise ValueError
+
+        except ValueError:
+            flash(
+                "O ID deve ser um inteiro positivo.",
+                "error",
+            )
+            status = 400
+
+        if status == 200:
+            try:
+                code = normalize_code(code)
+
+            except ValueError as error:
+                flash(str(error), "error")
+                status = 400
+
+        if status == 200:
+            client = service().find(client_id)
+            country = country_service().find(code)
+
+            if client is None:
+                flash(
+                    "Cliente não encontrado.",
+                    "error",
+                )
+                status = 404
+
+            if country is None:
+                flash(
+                    "País não cadastrado.",
+                    "error",
+                )
+                status = 404
+
+            if client is not None:
+                package_code = client.get("pacote")
+
+                if package_code is not None:
+                    package = package_service().find(
+                        package_code
+                    )
+
+            if package is not None and country is not None:
+                package_covered = (
+                    country["codigo"] in package["paises"]
+                )
+
+    return render_template(
+        "client_coverage.html",
+        client=client,
+        country=country,
+        package=package,
+        package_covered=package_covered,
+        search_id=raw_id,
+        code=code,
+        searched=searched,
     ), status
