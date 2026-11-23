@@ -4,6 +4,12 @@
 {% block content %}
 <h1>Gerenciamento de clientes</h1>
 
+<p>
+    <a href="{{ url_for('clients.create') }}">
+        Cadastrar cliente
+    </a>
+</p>
+
 <h2>Buscar cliente por ID</h2>
 
 <form method="get" action="{{ url_for('clients.search') }}">
@@ -47,6 +53,9 @@
             <td>
                 <a href="{{ url_for('clients.detail', client_id=client.id) }}">
                     Visualizar
+                </a>
+                <a href="{{ url_for('clients.edit', client_id=client.id) }}">
+                    Editar
                 </a>
             </td>
         </tr>
