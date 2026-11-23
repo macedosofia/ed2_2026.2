@@ -508,3 +508,50 @@ class BTreeUpdateTests(unittest.TestCase):
                 "id": 999,
                 "nome": "Cliente inexistente"
             })
+
+
+class BTreeStatisticsTests(unittest.TestCase):
+
+    def test_empty_tree_statistics(self):
+        tree = BTree()
+
+        self.assertEqual(
+            tree.statistics(),
+            {
+                "size": 0,
+                "height": 0,
+                "node_count": 0,
+                "splits": 0,
+                "lookups": 0,
+            }
+        )
+
+    def test_statistics_after_operations(self):
+        tree = BTree(min_degree=3)
+
+        for client_id in [10, 20, 30, 40, 50, 60]:
+            tree.insert({"id": client_id})
+
+        stats = tree.statistics()
+
+        self.assertEqual(stats["size"], 6)
+        self.assertEqual(stats["height"], 2)
+        self.assertEqual(stats["node_count"], 3)
+        self.assertEqual(stats["splits"], 1)
+        self.assertEqual(stats["lookups"], 0)
+
+        tree.find(10)
+        tree.find(999)
+
+        self.assertEqual(
+            tree.statistics()["lookups"],
+            2
+        )
+
+        with self.assertRaises(ValueError):
+            tree.insert({"id": 10})
+
+        self.assertEqual(
+            tree.statistics()["size"],
+            6
+        )

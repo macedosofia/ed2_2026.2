@@ -14,9 +14,16 @@ class BTree:
         self.min_degree = min_degree
         self.root = BTreeNode()
 
+        self._size = 0
+        self._splits = 0
+        self._lookups = 0
+
+
     def find(self, client_id):
         if type(client_id) is not int:
             raise ValueError("O ID do cliente deve ser um número inteiro.")
+
+        self._lookups += 1
 
         return self._find_node(self.root, client_id)
 
@@ -33,6 +40,7 @@ class BTree:
             return None
 
         return self._find_node(node.children[index], client_id)
+
 
     def _split_child(self, parent, index):
         t = self.min_degree
@@ -64,6 +72,9 @@ class BTree:
         parent.records.insert(index, median_record)
         parent.children.insert(index + 1, new_child)
 
+        self._splits += 1
+
+
     def insert(self, record):
         if not isinstance(record, dict):
             raise ValueError("O cliente deve ser um dicionário.")
@@ -73,7 +84,7 @@ class BTree:
         if type(client_id) is not int:
             raise ValueError("O ID do cliente deve ser um número inteiro.")
 
-        if self.find(client_id) is not None:
+        if self._find_node(self.root, client_id) is not None:
             raise ValueError("Já existe um cliente com esse ID.")
 
         if len(self.root.keys) == 2 * self.min_degree - 1:
@@ -87,6 +98,8 @@ class BTree:
             self.root = new_root
 
         self._insert_non_full(self.root, record.copy())
+
+        self._size += 1
 
     def _insert_non_full(self, node, record):
         client_id = record["id"]
@@ -108,6 +121,7 @@ class BTree:
                 index += 1
 
         self._insert_non_full(node.children[index], record)
+
 
     def list_all(self):
         records = []
@@ -132,6 +146,7 @@ class BTree:
                 node.children[len(node.keys)],
                 records
             )
+
 
     def update(self, client_id, record):
         if type(client_id) is not int:
@@ -162,3 +177,37 @@ class BTree:
             return False
 
         return self._update_node(node.children[index], client_id, record)
+
+
+    def _height(self):
+        if self._size == 0:
+            return 0
+
+        height = 1
+        node = self.root
+
+        while not node.leaf:
+            height += 1
+            node = node.children[0]
+
+        return height
+
+    def _count_nodes(self, node):
+        count = 1
+
+        for child in node.children:
+            count += self._count_nodes(child)
+
+        return count
+
+    def statistics(self):
+        return {
+            "size": self._size,
+            "height": self._height(),
+            "node_count": (
+                0 if self._size == 0
+                else self._count_nodes(self.root)
+            ),
+            "splits": self._splits,
+            "lookups": self._lookups,
+        }
