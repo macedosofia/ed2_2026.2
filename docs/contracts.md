@@ -58,3 +58,95 @@ O módulo de persistência só lê e grava. A Hash não conhece Flask, templates
 | GET | `/instrumentation` | Observar a Hash | instrumentation.html |
 
 Usar os nomes de campos do registro nos formulários. Após mutação bem-sucedida, aplicar Post/Redirect/Get. Em erro de validação, preservar campos e exibir a causa; códigos inexistentes e falhas de arquivo não devem parecer operações bem-sucedidas. GET nunca altera registros.
+
+
+## Serviço de clientes (ClientService)
+
+O serviço de clientes está localizado em
+`globalsim/services/clients.py` e utiliza a Árvore B
+como estrutura principal de armazenamento em memória.
+
+### Estrutura do cliente
+
+| Campo | Tipo | Regra |
+|---|---|---|
+| id | int | Inteiro positivo, único e imutável |
+| nome | str | Texto não vazio |
+| email | str | Endereço de e-mail válido |
+| esim | str ou None | Identificador do eSIM |
+| pacote | int ou None | Identificador positivo do pacote |
+| status | str | Texto não vazio |
+
+Os campos `esim` e `pacote` podem receber `None`
+quando ainda não existe uma associação.
+
+### Interface pública
+
+| Método | Retorno | Responsabilidade |
+|---|---|---|
+| ClientService(path) | Instância | Carrega os clientes do JSON |
+| create(record) | None | Cadastra um cliente |
+| find(client_id) | dict ou None | Busca um cliente pelo ID |
+| list_all() | list | Lista os clientes em ordem crescente de ID |
+| update(client_id, changes) | None | Atualiza parcialmente um cliente |
+| statistics() | dict | Retorna as métricas da Árvore B |
+
+### Regras de atualização
+
+- O ID do cliente não pode ser alterado.
+- Os campos não informados permanecem inalterados.
+- Campos desconhecidos são rejeitados.
+- Os dados atualizados passam pela validação do modelo.
+- A associação de eSIM e pacote utiliza o método update().
+
+### Exceções
+
+- ValueError: ID inválido, ID duplicado, dados inválidos,
+  campo desconhecido ou tentativa de alterar o ID.
+- LookupError: tentativa de atualizar cliente inexistente.
+- OSError: falha de acesso ou gravação do arquivo.
+
+### Persistência e integridade
+
+A persistência está localizada em
+`globalsim/persistence/clients_json.py`.
+
+- O JSON é carregado durante a inicialização do serviço.
+- A Árvore B é utilizada nas operações em memória.
+- O JSON é atualizado após cada cadastro ou atualização.
+- A gravação utiliza arquivo temporário e substituição atômica.
+- Em caso de falha, o serviço restaura os registros e
+  as estatísticas anteriores da Árvore B.
+- As operações são protegidas por RLock.
+- Os registros retornados são cópias dos dados armazenados.
+- Arquivos inválidos não são sobrescritos automaticamente.
+
+### Estatísticas da Árvore B
+
+| Métrica | Descrição |
+|---|---|
+| size | Quantidade de clientes |
+| height | Altura da árvore |
+| node_count | Quantidade de nós |
+| splits | Quantidade de divisões de nós |
+| lookups | Quantidade de buscas realizadas |
+
+### Limitações e integração
+
+- A disponibilidade do eSIM será validada na integração.
+- A existência do pacote no catálogo será validada na integração.
+- A integração com Flask e os demais módulos será realizada
+  nas respectivas etapas do projeto.
+- A exclusão de clientes não está implementada.
+- O rollback utiliza uma cópia da árvore, com custo adicional
+  de tempo e memória proporcional ao tamanho da estrutura.
+
+### Testes automatizados
+
+- tests/test_client.py: 11 testes.
+- tests/test_clients_json.py: 9 testes.
+- tests/test_client_service.py: 24 testes.
+
+Total de 44 testes relacionados ao gerenciamento de clientes,
+incluindo carregamento de 1.000 registros, persistência,
+validação, atualização e rollback.
