@@ -453,3 +453,58 @@ class BTreeTraversalTests(unittest.TestCase):
             result_ids,
             list(range(1, 1001))
         )
+
+
+class BTreeUpdateTests(unittest.TestCase):
+
+    def setUp(self):
+        self.tree = BTree(min_degree=3)
+
+        for client_id in [10, 20, 30, 40, 50, 60]:
+            self.tree.insert({
+                "id": client_id,
+                "nome": f"Cliente {client_id}"
+            })
+
+    def test_update_existing_client(self):
+        for client_id in [30, 40]:
+            with self.subTest(client_id=client_id):
+                updated = {
+                    "id": client_id,
+                    "nome": "Nome atualizado"
+                }
+
+                self.tree.update(client_id, updated)
+
+                updated["nome"] = "Alterado externamente"
+
+                self.assertEqual(
+                    self.tree.find(client_id)["nome"],
+                    "Nome atualizado"
+                )
+
+        self.assertEqual(
+            [record["id"] for record in self.tree.list_all()],
+            [10, 20, 30, 40, 50, 60]
+        )
+
+    def test_rejects_id_change(self):
+        with self.assertRaises(ValueError):
+            self.tree.update(40, {
+                "id": 99,
+                "nome": "Cliente alterado"
+            })
+
+        self.assertEqual(
+            self.tree.find(40)["nome"],
+            "Cliente 40"
+        )
+
+        self.assertIsNone(self.tree.find(99))
+
+    def test_update_nonexistent_client(self):
+        with self.assertRaises(LookupError):
+            self.tree.update(999, {
+                "id": 999,
+                "nome": "Cliente inexistente"
+            })

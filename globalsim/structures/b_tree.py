@@ -132,3 +132,33 @@ class BTree:
                 node.children[len(node.keys)],
                 records
             )
+
+    def update(self, client_id, record):
+        if type(client_id) is not int:
+            raise ValueError("O ID do cliente deve ser um número inteiro.")
+
+        if not isinstance(record, dict):
+            raise ValueError("O cliente deve ser um dicionário.")
+
+        if type(record.get("id")) is not int or record["id"] != client_id:
+            raise ValueError("O ID do cliente não pode ser alterado.")
+
+        updated = self._update_node(self.root, client_id, record)
+
+        if not updated:
+            raise LookupError("Cliente não encontrado.")
+
+    def _update_node(self, node, client_id, record):
+        index = 0
+
+        while index < len(node.keys) and client_id > node.keys[index]:
+            index += 1
+
+        if index < len(node.keys) and client_id == node.keys[index]:
+            node.records[index] = record.copy()
+            return True
+
+        if node.leaf:
+            return False
+
+        return self._update_node(node.children[index], client_id, record)
