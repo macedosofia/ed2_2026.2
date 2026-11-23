@@ -46,7 +46,7 @@ class ClientService:
         with self.lock:
             client = validate_client(record)
             self._mutate(self.tree.insert, client)
-    
+
     def _update_record(self, client_id, changes):
         current = self.tree.find(client_id)
 
