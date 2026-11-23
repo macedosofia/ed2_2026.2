@@ -46,3 +46,35 @@ class ClientService:
         with self.lock:
             client = validate_client(record)
             self._mutate(self.tree.insert, client)
+    
+    def _update_record(self, client_id, changes):
+        current = self.tree.find(client_id)
+
+        if current is None:
+            raise LookupError("Cliente não encontrado.")
+
+        updated = dict(current)
+        updated.update(changes)
+
+        client = validate_client(updated)
+
+        if client["id"] != client_id:
+            raise ValueError("Não é permitido alterar o ID do cliente.")
+
+        self.tree.update(client_id, client)
+
+    def update(self, client_id, changes):
+        with self.lock:
+            client_id = normalize_id(client_id)
+
+            if not isinstance(changes, dict):
+                raise ValueError("As alterações devem ser um dicionário.")
+
+            allowed_fields = {
+                "id", "nome", "email", "esim", "pacote", "status"
+            }
+
+            if set(changes) - allowed_fields:
+                raise ValueError("Campo de atualização inválido.")
+
+            self._mutate(self._update_record, client_id, changes)

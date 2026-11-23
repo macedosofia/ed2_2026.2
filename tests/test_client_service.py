@@ -205,6 +205,133 @@ class TestClientService(unittest.TestCase):
             self.make_client(500),
         )
 
+    def test_partial_update(self):
+        client = self.make_client(1)
+        self.service.create(client)
+
+        self.service.update(1, {"nome": "Novo Nome"})
+
+        expected = dict(client, nome="Novo Nome")
+        self.assertEqual(self.service.find(1), expected)
+
+    def test_update_persistence(self):
+        self.service.create(self.make_client(1))
+        self.service.update(1, {"status": "inativo"})
+
+        new_service = ClientService(self.path)
+
+        self.assertEqual(
+            new_service.find(1)["status"],
+            "inativo",
+        )
+
+    def test_associate_esim_and_package(self):
+        client = self.make_client(1)
+        self.service.create(client)
+
+        self.service.update(
+            1, {"esim": "ESIM001", "pacote": 10}
+        )
+
+        expected = dict(client, esim="ESIM001", pacote=10)
+
+        self.assertEqual(self.service.find(1), expected)
+        self.assertEqual(clients_json.load(self.path), [expected])
+
+    def test_update_cannot_change_id(self):
+        client = self.make_client(1)
+        self.service.create(client)
+
+        original = self.path.read_bytes()
+        statistics = self.service.statistics()
+
+        with self.assertRaises(ValueError):
+            self.service.update(1, {"id": 2})
+
+        self.assertEqual(self.service.list_all(), [client])
+        self.assertEqual(self.service.statistics(), statistics)
+        self.assertEqual(self.path.read_bytes(), original)
+
+    def test_update_missing_client(self):
+        statistics = self.service.statistics()
+
+        with self.assertRaises(LookupError):
+            self.service.update(999, {"nome": "Novo Nome"})
+
+        self.assertEqual(self.service.list_all(), [])
+        self.assertEqual(self.service.statistics(), statistics)
+        self.assertFalse(self.path.exists())
+
+    def test_update_invalid_data(self):
+        client = self.make_client(1)
+        self.service.create(client)
+
+        original = self.path.read_bytes()
+        statistics = self.service.statistics()
+
+        invalid_changes = [
+            {"email": "invalido"},
+            {"nome": ""},
+            {"pacote": -1},
+            {"esim": ""},
+            {"status": ""},
+            {"id": True},
+        ]
+
+        for changes in invalid_changes:
+            with self.subTest(changes=changes):
+                with self.assertRaises(ValueError):
+                    self.service.update(1, changes)
+
+                self.assertEqual(
+                    self.service.list_all(), [client]
+                )
+                self.assertEqual(
+                    self.service.statistics(), statistics
+                )
+                self.assertEqual(
+                    self.path.read_bytes(), original
+                )
+
+    def test_update_unknown_field(self):
+        client = self.make_client(1)
+        self.service.create(client)
+
+        with self.assertRaises(ValueError):
+            self.service.update(1, {"campo_invalido": "valor"})
+
+        self.assertEqual(self.service.list_all(), [client])
+
+    def test_update_invalid_changes_type(self):
+        client = self.make_client(1)
+        self.service.create(client)
+
+        for changes in [None, [], "invalido", 10]:
+            with self.subTest(changes=changes):
+                with self.assertRaises(ValueError):
+                    self.service.update(1, changes)
+
+        self.assertEqual(self.service.list_all(), [client])
+
+    def test_update_rollback_on_save_failure(self):
+        client = self.make_client(1)
+        self.service.create(client)
+
+        original = self.path.read_bytes()
+        statistics = self.service.statistics()
+
+        with patch(
+            "globalsim.services.clients.clients_json.save",
+            side_effect=OSError("Falha simulada"),
+        ):
+            with self.assertRaises(OSError):
+                self.service.update(
+                    1, {"nome": "Novo Nome"}
+                )
+
+        self.assertEqual(self.service.list_all(), [client])
+        self.assertEqual(self.service.statistics(), statistics)
+        self.assertEqual(self.path.read_bytes(), original)
 
 if __name__ == "__main__":
     unittest.main()
