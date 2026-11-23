@@ -104,3 +104,88 @@ class BTreeSearchTests(unittest.TestCase):
     def test_rejects_invalid_minimum_degree(self):
         with self.assertRaises(ValueError):
             BTree(min_degree=1)
+
+
+class BTreeSplitTests(unittest.TestCase):
+
+    def setUp(self):
+        self.tree = BTree(min_degree=3)
+
+    def test_split_full_leaf(self):
+        parent = BTreeNode(leaf=False)
+        child = BTreeNode()
+
+        child.keys = [10, 20, 30, 40, 50]
+        child.records = [
+            {"id": key} for key in child.keys
+        ]
+
+        parent.children = [child]
+
+        self.tree._split_child(parent, 0)
+
+        self.assertEqual(parent.keys, [30])
+        self.assertEqual(parent.records, [{"id": 30}])
+
+        self.assertEqual(parent.children[0].keys, [10, 20])
+        self.assertEqual(parent.children[1].keys, [40, 50])
+
+        self.assertEqual(len(parent.children), 2)
+
+        self.assertTrue(parent.children[0].leaf)
+        self.assertTrue(parent.children[1].leaf)
+
+        self.tree.root = parent
+
+        for key in [10, 20, 30, 40, 50]:
+            self.assertEqual(self.tree.find(key), {"id": key})
+
+    def test_split_full_internal_node(self):
+        parent = BTreeNode(leaf=False)
+        child = BTreeNode(leaf=False)
+
+        child.keys = [10, 20, 30, 40, 50]
+        child.records = [
+            {"id": key} for key in child.keys
+        ]
+
+        child.children = []
+
+        for key in [5, 15, 25, 35, 45, 55]:
+            leaf = BTreeNode()
+            leaf.keys = [key]
+            leaf.records = [{"id": key}]
+            child.children.append(leaf)
+
+        parent.children = [child]
+
+        self.tree._split_child(parent, 0)
+
+        left = parent.children[0]
+        right = parent.children[1]
+
+        self.assertEqual(parent.keys, [30])
+
+        self.assertEqual(left.keys, [10, 20])
+        self.assertEqual(right.keys, [40, 50])
+
+        self.assertFalse(left.leaf)
+        self.assertFalse(right.leaf)
+
+        self.assertEqual(len(left.children), 3)
+        self.assertEqual(len(right.children), 3)
+
+        self.assertEqual(
+            [node.keys[0] for node in left.children],
+            [5, 15, 25]
+        )
+
+        self.assertEqual(
+            [node.keys[0] for node in right.children],
+            [35, 45, 55]
+        )
+
+        self.tree.root = parent
+
+        for key in [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]:
+            self.assertEqual(self.tree.find(key), {"id": key})

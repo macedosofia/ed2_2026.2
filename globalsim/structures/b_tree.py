@@ -33,3 +33,33 @@ class BTree:
             return None
 
         return self._find_node(node.children[index], client_id)
+
+    def _split_child(self, parent, index):
+        t = self.min_degree
+
+        child = parent.children[index]
+
+        if len(child.keys) != 2 * t - 1:
+            raise ValueError("O nó filho deve estar cheio para ser dividido.")
+
+        if len(parent.keys) >= 2 * t - 1:
+            raise ValueError("O nó pai não possui espaço para a mediana.")
+
+        new_child = BTreeNode(leaf=child.leaf)
+
+        median_key = child.keys[t - 1]
+        median_record = child.records[t - 1]
+
+        new_child.keys = child.keys[t:]
+        new_child.records = child.records[t:]
+
+        child.keys = child.keys[:t - 1]
+        child.records = child.records[:t - 1]
+
+        if not child.leaf:
+            new_child.children = child.children[t:]
+            child.children = child.children[:t]
+
+        parent.keys.insert(index, median_key)
+        parent.records.insert(index, median_record)
+        parent.children.insert(index + 1, new_child)
