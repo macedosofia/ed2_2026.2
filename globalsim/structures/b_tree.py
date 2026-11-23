@@ -108,3 +108,27 @@ class BTree:
                 index += 1
 
         self._insert_non_full(node.children[index], record)
+
+    def list_all(self):
+        records = []
+
+        self._collect_in_order(self.root, records)
+
+        return records
+
+    def _collect_in_order(self, node, records):
+        for index, record in enumerate(node.records):
+
+            if not node.leaf:
+                self._collect_in_order(
+                    node.children[index],
+                    records
+                )
+
+            records.append(record.copy())
+
+        if not node.leaf:
+            self._collect_in_order(
+                node.children[len(node.keys)],
+                records
+            )

@@ -388,4 +388,68 @@ class BTreeInvariantTests(unittest.TestCase):
 
             total = self.assert_valid_tree(tree)
 
-            self.assertEqual(total, expected_total)    
+            self.assertEqual(total, expected_total)
+
+
+class BTreeTraversalTests(unittest.TestCase):
+
+    def setUp(self):
+        self.tree = BTree(min_degree=3)
+
+    def test_empty_tree_returns_empty_list(self):
+        self.assertEqual(self.tree.list_all(), [])
+
+    def test_list_all_returns_sorted_clients(self):
+        ids = [50, 10, 80, 30, 20, 70, 40, 60]
+
+        for client_id in ids:
+            self.tree.insert({"id": client_id})
+
+        records = self.tree.list_all()
+
+        result_ids = [
+            record["id"] for record in records
+        ]
+
+        self.assertEqual(
+            result_ids,
+            sorted(ids)
+        )
+
+    def test_list_all_returns_copies(self):
+        self.tree.insert({
+            "id": 10,
+            "nome": "Ana"
+        })
+
+        records = self.tree.list_all()
+
+        records[0]["nome"] = "Alterado"
+
+        self.assertEqual(
+            self.tree.find(10)["nome"],
+            "Ana"
+        )
+
+    def test_list_all_with_1000_clients(self):
+        import random
+
+        ids = list(range(1, 1001))
+
+        random.Random(2026).shuffle(ids)
+
+        for client_id in ids:
+            self.tree.insert({"id": client_id})
+
+        records = self.tree.list_all()
+
+        result_ids = [
+            record["id"] for record in records
+        ]
+
+        self.assertEqual(len(records), 1000)
+
+        self.assertEqual(
+            result_ids,
+            list(range(1, 1001))
+        )
