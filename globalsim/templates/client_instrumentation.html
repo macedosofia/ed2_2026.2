@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Instrumentação da Árvore B</h1>
+
+<p>
+    A aplicação utiliza uma Árvore B para armazenar
+    e consultar clientes por ID.
+</p>
+
+<h2>Estatísticas</h2>
+
+<ul>
+    <li>Clientes cadastrados: {{ stats.size }}</li>
+
+    <li>Altura da árvore: {{ stats.height }}</li>
+
+    <li>Quantidade de nós: {{ stats.node_count }}</li>
+
+    <li>Divisões de nós: {{ stats.splits }}</li>
+
+    <li>Total de buscas: {{ stats.lookups }}</li>
+</ul>
+
+{% if stats.size == 0 %}
+    <p>Nenhum cliente cadastrado na Árvore B.</p>
+{% endif %}
+
+<h2>Entendendo as métricas</h2>
+
+<dl>
+    <dt>Clientes cadastrados</dt>
+    <dd>
+        Quantidade de registros armazenados na árvore.
+    </dd>
+
+    <dt>Altura da árvore</dt>
+    <dd>
+        Quantidade de níveis da árvore.
+        Uma árvore vazia possui altura zero.
+    </dd>
+
+    <dt>Quantidade de nós</dt>
+    <dd>
+        Total de nós contabilizados na estrutura.
+        Uma árvore vazia apresenta zero nós nas estatísticas.
+    </dd>
+
+    <dt>Divisões de nós</dt>
+    <dd>
+        Quantidade de divisões realizadas durante
+        as inserções de clientes, incluindo o
+        carregamento inicial dos registros.
+    </dd>
+
+    <dt>Total de buscas</dt>
+    <dd>
+        Quantidade de chamadas ao método de busca,
+        incluindo consultas com e sem resultado
+        e buscas internas durante atualizações.
+    </dd>
+</dl>
+
+<p>
+    As métricas são obtidas diretamente da Árvore B
+    em memória. Os contadores não são persistidos
+    no arquivo JSON.
+</p>
+
+<p>
+    <a href="{{ url_for('clients.instrumentation') }}">
+        Atualizar estatísticas
+    </a>
+</p>
+
+<p>
+    <a href="{{ url_for('clients.client_list') }}">
+        Voltar para a lista de clientes
+    </a>
+</p>
+
+{% endblock %}

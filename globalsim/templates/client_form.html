@@ -1,0 +1,94 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>
+    {% if editing %}
+        Editar cliente
+    {% else %}
+        Cadastrar cliente
+    {% endif %}
+</h1>
+
+<form method="post">
+
+    <label for="id">ID do cliente</label>
+    <input
+        type="number"
+        id="id"
+        name="id"
+        min="1"
+        value="{{ client.get('id', '') }}"
+        {% if editing %}readonly{% endif %}
+        required
+    >
+
+    <label for="nome">Nome</label>
+    <input
+        type="text"
+        id="nome"
+        name="nome"
+        value="{{ client.get('nome', '') }}"
+        required
+    >
+
+    <label for="email">E-mail</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        value="{{ client.get('email', '') }}"
+        required
+    >
+
+    <label for="esim">eSIM</label>
+    <input
+        type="text"
+        id="esim"
+        name="esim"
+        value="{{ client.get('esim') or '' }}"
+    >
+
+    <label for="pacote">Pacote de dados</label>
+    <select id="pacote" name="pacote">
+        <option value="">Nenhum pacote associado</option>
+
+        {% for package in packages %}
+            <option
+                value="{{ package.codigo }}"
+                {% if client.get('pacote') | string == package.codigo | string %}
+                    selected
+                {% endif %}
+            >
+                {{ package.codigo }} - {{ package.nome }}
+                ({{ package.dados_gb }} GB /
+                {{ package.validade_dias }} dias)
+            </option>
+        {% endfor %}
+    </select>
+
+    <label for="status">Status</label>
+    <input
+        type="text"
+        id="status"
+        name="status"
+        value="{{ client.get('status', 'ativo') }}"
+        required
+    >
+
+    <button type="submit">
+        {% if editing %}
+            Salvar alterações
+        {% else %}
+            Cadastrar cliente
+        {% endif %}
+    </button>
+
+    <a href="{{ url_for('clients.client_list') }}">
+        Cancelar
+    </a>
+
+</form>
+
+{% endblock %}

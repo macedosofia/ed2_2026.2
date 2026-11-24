@@ -8,11 +8,23 @@ from globalsim.app import create_app
 
 
 class CountryRoutesTests(unittest.TestCase):
+
     def setUp(self):
         self.directory = tempfile.TemporaryDirectory()
         self.addCleanup(self.directory.cleanup)
         self.path = Path(self.directory.name) / 'countries.json'
-        self.config = {'TESTING': True, 'SECRET_KEY': 'test', 'COUNTRIES_PATH': self.path}
+
+        self.packages_path = Path(self.directory.name) / 'packages.json'
+        self.packages_path.write_text('[]', encoding='utf-8')
+
+        self.config = {
+            'TESTING': True,
+            'SECRET_KEY': 'test',
+            'COUNTRIES_PATH': self.path,
+            'CLIENTS_PATH': Path(self.directory.name) / 'clients.json',
+            'PACKAGES_PATH': self.packages_path,
+        }
+
         self.app = create_app(self.config)
         self.client = self.app.test_client()
         self.record = dict(codigo='BR', pais='Brasil', regiao='América', operadora='Teste', tecnologia='5G')
