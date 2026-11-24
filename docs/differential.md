@@ -2,7 +2,7 @@
 
 **Status:** Escolhido pela equipe e aprovado pela professora.
 
-**Etapa atual:** Etapa 2, com recomendador funcional e Blueprint testado. O registro na aplicação principal está pendente de integração.
+**Etapa atual.** O recomendador e o Blueprint estão integrados à aplicação Flask na Etapa 2.
 
 ## 1. Visão geral
 
@@ -190,21 +190,9 @@ A verificação de cobertura e a existência de caminhos no Grafo serão tratada
 
 O Blueprint atende a `GET /trip-planner` e `POST /trip-planner`. O GET exibe o formulário e o POST apresenta o resultado na mesma página. Entradas inválidas recebem HTTP 400. Consultas válidas, incluindo as sem recomendação, recebem HTTP 200.
 
-O registro definitivo em `create_app()` e o link no menu ficam para a integração com a interface de clientes. Após a revisão, a fábrica poderá montar `TripPlannerService(app.extensions["countries"], package_service, client_service)` com as instâncias existentes e registrar `create_trip_planner_blueprint(planner)` antes de retornar a aplicação. O endpoint do link é `trip_planner.plan_trip`.
+A [fábrica Flask](../globalsim/app.py) cria o `TripPlannerService` com os mesmos serviços de países, clientes e pacotes usados pelo restante da aplicação e registra o Blueprint. O menu usa o endpoint `trip_planner.plan_trip`.
 
-Para uma demonstração local do formulário, execute o exemplo abaixo em Python a partir da raiz do repositório e abra `http://127.0.0.1:5000/trip-planner`. Esse exemplo usa o modo de recomendação sem consulta de cliente. Os testes do Blueprint exercitam o mesmo formulário com um serviço de clientes e dados temporários.
-
-```python
-from globalsim.app import create_app
-from globalsim.routes.trip_planner import create_trip_planner_blueprint
-from globalsim.services.packages import PackageService
-from globalsim.services.trip_planner import TripPlannerService
-
-app = create_app()
-planner = TripPlannerService(app.extensions["countries"], PackageService())
-app.register_blueprint(create_trip_planner_blueprint(planner))
-app.run()
-```
+Para demonstrar o formulário, inicie a aplicação conforme o [guia da Etapa 2](stage2_delivery.md#execução-e-testes) e abra [http://127.0.0.1:5000/trip-planner](http://127.0.0.1:5000/trip-planner).
 
 ## 8. Diferencial em relação aos requisitos obrigatórios
 
@@ -243,7 +231,7 @@ Os testes da Etapa 2 exercitam a validação de entradas, a cobertura, a escolha
 | Rota existente no Grafo (Etapa 3) | Apresentar caminho e latência |
 | Rota inexistente no Grafo (Etapa 3) | Informar ausência de conectividade |
 
-Os testes de `tests/test_trip_planner.py` usam os serviços sobre arquivos temporários. Eles verificam a seleção com diferentes ordens do catálogo, os contadores de buscas na Hash e na Árvore B e a integridade dos registros e arquivos. `tests/test_trip_planner_routes.py` registra o Blueprint em uma instância de teste do Flask e usa `app.test_client()` para verificar GET e POST.
+Os testes de `tests/test_trip_planner.py` usam os serviços sobre arquivos temporários. Eles verificam a seleção com diferentes ordens do catálogo, os contadores de buscas na Hash e na Árvore B e a integridade dos registros e arquivos. [`tests/test_trip_planner_routes.py`](../tests/test_trip_planner_routes.py) usa a fábrica da aplicação e `app.test_client()` para verificar GET e POST. [`tests/test_stage2_integration.py`](../tests/test_stage2_integration.py) verifica o menu, a recomendação e o uso dos serviços compartilhados.
 
 Com as dependências de `requirements.txt` instaladas, execute a suíte completa.
 
@@ -284,7 +272,7 @@ Proposta enviada em outubro de 2026.
 Proposta aprovada pela professora.
 
 **Situação da implementação:**
-Recomendador, consulta opcional de cliente e Blueprint implementados para a Etapa 2. O registro na aplicação principal será feito na integração. A conectividade do roteiro está prevista para a Etapa 3.
+Recomendador, consulta opcional de cliente e Blueprint estão disponíveis na aplicação principal. A conectividade do roteiro está prevista para a Etapa 3.
 
 ## 13. Checklist de acompanhamento
 
@@ -320,7 +308,7 @@ Recomendador, consulta opcional de cliente e Blueprint implementados para a Etap
 - [x] Integrar a consulta de cobertura pela Hash.
 - [x] Integrar a consulta opcional de cliente pela Árvore B.
 - [x] Atualizar a documentação da Etapa 2.
-- [ ] Registrar o Blueprint e o link de navegação na aplicação principal.
+- [x] Registrar o Blueprint e o link de navegação na aplicação principal.
 
 ### Etapa 3
 
