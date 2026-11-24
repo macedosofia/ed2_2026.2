@@ -1,6 +1,6 @@
 # GlobalSIM — Estruturas de Dados II
 
-Projeto acadêmico desenvolvido para a disciplina de Estruturas de Dados II.
+Projeto acadêmico de Estruturas de Dados II do curso de Sistemas de Informação da Universidade do Estado da Bahia (UNEB).
 
 **Repositório:** ed2_2026.2
 
@@ -20,7 +20,7 @@ O desenvolvimento está dividido em três etapas:
 |---|---|---|
 | 1 | Tabela Hash | Países atendidos e cobertura |
 | 2 | Árvore B | Clientes e eSIMs |
-| 3 | Grafo | Rede internacional e conectividade |
+| 3 | Grafo | Rede internacional e conectividade (previsto) |
 
 ## Etapa 1 — Tabela Hash
 
@@ -47,6 +47,12 @@ A instrumentação permite acompanhar a quantidade de países, buscas realizadas
 
 A base inicial já contém os oito países de demonstração. A versão final da entrega original é identificada pela tag `etapa-1-final`; a tag `etapa-1` preserva o marco anterior da equipe.
 
+## Etapa 2 — Árvore B
+
+**Entrega em 24/11/2026.** A Árvore B armazena e busca clientes pelo ID único. A aplicação permite cadastrar, listar e editar clientes, associar eSIMs e pacotes e gravar as alterações em JSON. A consulta cliente × destino combina a Árvore B, a Tabela Hash e o catálogo de pacotes. A instrumentação mostra o tamanho, a altura, o número de nós, as divisões e as buscas da árvore.
+
+A carga de clientes por JSON já funciona. A base demonstrativa de 1.000 clientes aguarda a integração do [PR #19](https://github.com/macedosofia/ed2_2026.2/pull/19). Após o merge, siga a [preparação do roteiro](docs/stage2_delivery.md#preparação) para abrir uma cópia da base no Flask.
+
 ## Como executar
 
 Requer Python 3.10 ou superior.
@@ -60,9 +66,16 @@ python -m pip install -r requirements.txt
 python -m flask --app globalsim.app:create_app run --debug
 ```
 
-Abra:
+Abra [http://127.0.0.1:5000](http://127.0.0.1:5000). Use o menu ou acesse os caminhos abaixo pelo navegador.
 
-http://127.0.0.1:5000
+| Recurso | Caminho |
+|---|---|
+| Países e consulta de cobertura | `/countries` e `/coverage` |
+| Instrumentação da Tabela Hash | `/instrumentation` |
+| Clientes, busca e edição | `/clients` |
+| Consulta cliente × país | `/clients/coverage` |
+| Instrumentação da Árvore B | `/clients/instrumentation` |
+| Planejador Multidestinos | `/trip-planner` |
 
 ## Como executar os testes
 
@@ -70,28 +83,23 @@ Com o ambiente virtual ativado, na raiz do repositório:
 
 ```bash
 python -m unittest discover -s tests -v
+python -m unittest discover -s tests -q
 ```
 
-Validação em 20/10/2026: **25 testes aprovados**, incluindo validação dos registros, falhas de persistência e os oito países de demonstração.
-
-Após a refatoração da Tabela Hash para `dict`, em 23/10/2026, foram executados **30 testes com sucesso**, incluindo operações da estrutura, instrumentação, persistência JSON e rotas Flask.
+O [guia da Etapa 2](docs/stage2_delivery.md#execução-e-testes) registra o resultado da suíte e a revisão verificada.
 
 ## Diferencial da equipe
 
-**Planejador Multidestinos com Recomendação Automática de Pacotes eSIM.**
+O **Planejador Multidestinos com Recomendação Automática de Pacotes eSIM** está disponível na aplicação principal. Ele consulta a cobertura dos destinos e recomenda um pacote que atenda ao roteiro, à duração e ao consumo estimado. A seleção prioriza menor franquia suficiente, menor validade excedente e menor código. Com um ID de cliente, a tela mostra o pacote atual para comparação. A proposta foi aprovada pela professora.
 
-A funcionalidade permitirá analisar múltiplos destinos internacionais, verificar cobertura e recomendar um pacote adequado à duração e ao consumo estimado da viagem.
+## Etapa 3 — Grafo
 
-A recomendação utilizará critérios determinísticos para selecionar um único pacote que atenda aos destinos, à quantidade de dados e à validade necessária.
-
-Nas etapas seguintes, o planejamento será integrado à Árvore B e ao Grafo.
-
-**Status:** Proposta aprovada pela professora.
+A próxima etapa acrescentará a rede internacional ponderada por latência, a visualização do Grafo, BFS, DFS, Dijkstra e a integração de rotas de menor latência à consulta de conectividade.
 
 ## Documentação
 
-- [Documentação da Etapa 1](globalsim/README.md)
+- [Etapa 2 — checklist do enunciado, arquitetura e roteiro de demonstração](docs/stage2_delivery.md)
+- [Gerenciamento Web de clientes](docs/client_web.md)
 - [Descrição do diferencial](docs/differential.md)
+- [Documentação histórica da Etapa 1](globalsim/README.md)
 - [Checklist e roteiro da primeira entrega](docs/delivery_1.md)
-
-O projeto será desenvolvido incrementalmente, preservando as funcionalidades das etapas anteriores.
