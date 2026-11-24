@@ -1,0 +1,8002 @@
+[
+  {
+    "id": 553,
+    "nome": "Stevie Wonder",
+    "email": "cliente0553@example.test",
+    "esim": "ESIM-00553",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 102,
+    "nome": "Luccas Neto",
+    "email": "cliente0102@example.test",
+    "esim": "ESIM-00102",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 252,
+    "nome": "Clarice Lispector",
+    "email": "cliente0252@example.test",
+    "esim": "ESIM-00252",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 143,
+    "nome": "Felps",
+    "email": "cliente0143@example.test",
+    "esim": "ESIM-00143",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 382,
+    "nome": "Monica Geller",
+    "email": "cliente0382@example.test",
+    "esim": "ESIM-00382",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 994,
+    "nome": "Helena Pacheco",
+    "email": "cliente0994@example.test",
+    "esim": "ESIM-00994",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 421,
+    "nome": "Harvey Specter",
+    "email": "cliente0421@example.test",
+    "esim": "ESIM-00421",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 434,
+    "nome": "Annie January",
+    "email": "cliente0434@example.test",
+    "esim": "ESIM-00434",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 105,
+    "nome": "Júlio Cocielo",
+    "email": "cliente0105@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 148,
+    "nome": "Casimiro Miguel",
+    "email": "cliente0148@example.test",
+    "esim": "ESIM-00148",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 392,
+    "nome": "Leonard Hofstadter",
+    "email": "cliente0392@example.test",
+    "esim": "ESIM-00392",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 924,
+    "nome": "Elisa Viana",
+    "email": "cliente0924@example.test",
+    "esim": "ESIM-00924",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 794,
+    "nome": "Beatriz Pacheco",
+    "email": "cliente0794@example.test",
+    "esim": "ESIM-00794",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 609,
+    "nome": "César Lattes",
+    "email": "cliente0609@example.test",
+    "esim": "ESIM-00609",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 63,
+    "nome": "Antonio Banderas",
+    "email": "cliente0063@example.test",
+    "esim": "ESIM-00063",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 970,
+    "nome": "Gabriela Ribeiro",
+    "email": "cliente0970@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 462,
+    "nome": "Vegeta",
+    "email": "cliente0462@example.test",
+    "esim": "ESIM-00462",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 930,
+    "nome": "Estela Carvalho",
+    "email": "cliente0930@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 465,
+    "nome": "Gohan",
+    "email": "cliente0465@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 998,
+    "nome": "Helena Teixeira",
+    "email": "cliente0998@example.test",
+    "esim": "ESIM-00998",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 493,
+    "nome": "Misa Amane",
+    "email": "cliente0493@example.test",
+    "esim": "ESIM-00493",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 919,
+    "nome": "Elisa Pacheco",
+    "email": "cliente0919@example.test",
+    "esim": "ESIM-00919",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 518,
+    "nome": "Cássia Eller",
+    "email": "cliente0518@example.test",
+    "esim": "ESIM-00518",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 68,
+    "nome": "Ricardo Darín",
+    "email": "cliente0068@example.test",
+    "esim": "ESIM-00068",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 623,
+    "nome": "Linus Pauling",
+    "email": "cliente0623@example.test",
+    "esim": "ESIM-00623",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 497,
+    "nome": "Khun Aguero Agnis",
+    "email": "cliente0497@example.test",
+    "esim": "ESIM-00497",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 232,
+    "nome": "Serginho Escadinha",
+    "email": "cliente0232@example.test",
+    "esim": "ESIM-00232",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 891,
+    "nome": "Daniela Monteiro",
+    "email": "cliente0891@example.test",
+    "esim": "ESIM-00891",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 705,
+    "nome": "Adriana Carvalho",
+    "email": "cliente0705@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 874,
+    "nome": "Cecília Viana",
+    "email": "cliente0874@example.test",
+    "esim": "ESIM-00874",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 744,
+    "nome": "Alice Pacheco",
+    "email": "cliente0744@example.test",
+    "esim": "ESIM-00744",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 709,
+    "nome": "Adriana Farias",
+    "email": "cliente0709@example.test",
+    "esim": "ESIM-00709",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 441,
+    "nome": "Jonas Kahnwald",
+    "email": "cliente0441@example.test",
+    "esim": "ESIM-00441",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 117,
+    "nome": "Deive Pazos",
+    "email": "cliente0117@example.test",
+    "esim": "ESIM-00117",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 100,
+    "nome": "Benedict Cumberbatch",
+    "email": "cliente0100@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 689,
+    "nome": "Elizabeth Loftus",
+    "email": "cliente0689@example.test",
+    "esim": "ESIM-00689",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 594,
+    "nome": "George Harrison",
+    "email": "cliente0594@example.test",
+    "esim": "ESIM-00594",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 391,
+    "nome": "Sheldon Cooper",
+    "email": "cliente0391@example.test",
+    "esim": "ESIM-00391",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 936,
+    "nome": "Estela Garcia",
+    "email": "cliente0936@example.test",
+    "esim": "ESIM-00936",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 32,
+    "nome": "Kate Winslet",
+    "email": "cliente0032@example.test",
+    "esim": "ESIM-00032",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 979,
+    "nome": "Helena Cardoso",
+    "email": "cliente0979@example.test",
+    "esim": "ESIM-00979",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 472,
+    "nome": "Alphonse Elric",
+    "email": "cliente0472@example.test",
+    "esim": "ESIM-00472",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 866,
+    "nome": "Cecília Monteiro",
+    "email": "cliente0866@example.test",
+    "esim": "ESIM-00866",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 550,
+    "nome": "Luciano Camargo",
+    "email": "cliente0550@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 614,
+    "nome": "Henrietta Swan Leavitt",
+    "email": "cliente0614@example.test",
+    "esim": "ESIM-00614",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 335,
+    "nome": "Han Kang",
+    "email": "cliente0335@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 564,
+    "nome": "Christina Aguilera",
+    "email": "cliente0564@example.test",
+    "esim": "ESIM-00564",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 193,
+    "nome": "Allyson Felix",
+    "email": "cliente0193@example.test",
+    "esim": "ESIM-00193",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 157,
+    "nome": "Ronaldo Nazário",
+    "email": "cliente0157@example.test",
+    "esim": "ESIM-00157",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 826,
+    "nome": "Camila Azevedo",
+    "email": "cliente0826@example.test",
+    "esim": "ESIM-00826",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 18,
+    "nome": "Glória Pires",
+    "email": "cliente0018@example.test",
+    "esim": "ESIM-00018",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 956,
+    "nome": "Gabriela Coelho",
+    "email": "cliente0956@example.test",
+    "esim": "ESIM-00956",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 873,
+    "nome": "Cecília Teixeira",
+    "email": "cliente0873@example.test",
+    "esim": "ESIM-00873",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 824,
+    "nome": "Bianca Viana",
+    "email": "cliente0824@example.test",
+    "esim": "ESIM-00824",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 593,
+    "nome": "Mariah Carey",
+    "email": "cliente0593@example.test",
+    "esim": "ESIM-00593",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 385,
+    "nome": "Joey Tribbiani",
+    "email": "cliente0385@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 585,
+    "nome": "Juan Gabriel",
+    "email": "cliente0585@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 354,
+    "nome": "Hank Schrader",
+    "email": "cliente0354@example.test",
+    "esim": "ESIM-00354",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 899,
+    "nome": "Daniela Viana",
+    "email": "cliente0899@example.test",
+    "esim": "ESIM-00899",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 107,
+    "nome": "Lucas Lira",
+    "email": "cliente0107@example.test",
+    "esim": "ESIM-00107",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 729,
+    "nome": "Alice Cardoso",
+    "email": "cliente0729@example.test",
+    "esim": "ESIM-00729",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 115,
+    "nome": "Pedro Loos",
+    "email": "cliente0115@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 698,
+    "nome": "Émile Durkheim",
+    "email": "cliente0698@example.test",
+    "esim": "ESIM-00698",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 912,
+    "nome": "Elisa Lemos",
+    "email": "cliente0912@example.test",
+    "esim": "ESIM-00912",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 946,
+    "nome": "Estela Rocha",
+    "email": "cliente0946@example.test",
+    "esim": "ESIM-00946",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 969,
+    "nome": "Gabriela Pacheco",
+    "email": "cliente0969@example.test",
+    "esim": "ESIM-00969",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 579,
+    "nome": "Elvis Presley",
+    "email": "cliente0579@example.test",
+    "esim": "ESIM-00579",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 11,
+    "nome": "Marieta Severo",
+    "email": "cliente0011@example.test",
+    "esim": "ESIM-00011",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 406,
+    "nome": "Jack Shephard",
+    "email": "cliente0406@example.test",
+    "esim": "ESIM-00406",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 633,
+    "nome": "Gregor Mendel",
+    "email": "cliente0633@example.test",
+    "esim": "ESIM-00633",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 569,
+    "nome": "Dua Lipa",
+    "email": "cliente0569@example.test",
+    "esim": "ESIM-00569",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 219,
+    "nome": "Jade Barbosa",
+    "email": "cliente0219@example.test",
+    "esim": "ESIM-00219",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 245,
+    "nome": "Tony Hawk",
+    "email": "cliente0245@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 843,
+    "nome": "Camila Nogueira",
+    "email": "cliente0843@example.test",
+    "esim": "ESIM-00843",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 57,
+    "nome": "Tom Holland",
+    "email": "cliente0057@example.test",
+    "esim": "ESIM-00057",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 505,
+    "nome": "Djavan",
+    "email": "cliente0505@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 740,
+    "nome": "Alice Medeiros",
+    "email": "cliente0740@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 459,
+    "nome": "Sanji",
+    "email": "cliente0459@example.test",
+    "esim": "ESIM-00459",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 607,
+    "nome": "Lise Meitner",
+    "email": "cliente0607@example.test",
+    "esim": "ESIM-00607",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 453,
+    "nome": "Sakura Haruno",
+    "email": "cliente0453@example.test",
+    "esim": "ESIM-00453",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 883,
+    "nome": "Daniela Duarte",
+    "email": "cliente0883@example.test",
+    "esim": "ESIM-00883",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 140,
+    "nome": "Foquinha",
+    "email": "cliente0140@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 895,
+    "nome": "Daniela Ribeiro",
+    "email": "cliente0895@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 163,
+    "nome": "Vinícius Júnior",
+    "email": "cliente0163@example.test",
+    "esim": "ESIM-00163",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 516,
+    "nome": "Marisa Monte",
+    "email": "cliente0516@example.test",
+    "esim": "ESIM-00516",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 315,
+    "nome": "Mikhail Bulgákov",
+    "email": "cliente0315@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 512,
+    "nome": "Elis Regina",
+    "email": "cliente0512@example.test",
+    "esim": "ESIM-00512",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 548,
+    "nome": "Xororó",
+    "email": "cliente0548@example.test",
+    "esim": "ESIM-00548",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 312,
+    "nome": "Liev Tolstói",
+    "email": "cliente0312@example.test",
+    "esim": "ESIM-00312",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 442,
+    "nome": "Martha Nielsen",
+    "email": "cliente0442@example.test",
+    "esim": "ESIM-00442",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 896,
+    "nome": "Daniela Rocha",
+    "email": "cliente0896@example.test",
+    "esim": "ESIM-00896",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 209,
+    "nome": "Fernando Scherer",
+    "email": "cliente0209@example.test",
+    "esim": "ESIM-00209",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 85,
+    "nome": "Deepika Padukone",
+    "email": "cliente0085@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 429,
+    "nome": "Ada Shelby",
+    "email": "cliente0429@example.test",
+    "esim": "ESIM-00429",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 374,
+    "nome": "Lucas Sinclair",
+    "email": "cliente0374@example.test",
+    "esim": "ESIM-00374",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 580,
+    "nome": "Bob Dylan",
+    "email": "cliente0580@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 640,
+    "nome": "Theodosius Dobzhansky",
+    "email": "cliente0640@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 831,
+    "nome": "Camila Coelho",
+    "email": "cliente0831@example.test",
+    "esim": "ESIM-00831",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 4,
+    "nome": "Wagner Moura",
+    "email": "cliente0004@example.test",
+    "esim": "ESIM-00004",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 269,
+    "nome": "Itamar Vieira Junior",
+    "email": "cliente0269@example.test",
+    "esim": "ESIM-00269",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 788,
+    "nome": "Beatriz Lima",
+    "email": "cliente0788@example.test",
+    "esim": "ESIM-00788",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 480,
+    "nome": "Hisoka Morow",
+    "email": "cliente0480@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 90,
+    "nome": "Shohreh Aghdashloo",
+    "email": "cliente0090@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 344,
+    "nome": "Naguib Mahfouz",
+    "email": "cliente0344@example.test",
+    "esim": "ESIM-00344",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 815,
+    "nome": "Bianca Medeiros",
+    "email": "cliente0815@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 658,
+    "nome": "David Hilbert",
+    "email": "cliente0658@example.test",
+    "esim": "ESIM-00658",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 13,
+    "nome": "Andréa Beltrão",
+    "email": "cliente0013@example.test",
+    "esim": "ESIM-00013",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 389,
+    "nome": "Rosa Diaz",
+    "email": "cliente0389@example.test",
+    "esim": "ESIM-00389",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 800,
+    "nome": "Beatriz Vieira",
+    "email": "cliente0800@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 676,
+    "nome": "Harry Hess",
+    "email": "cliente0676@example.test",
+    "esim": "ESIM-00676",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 736,
+    "nome": "Alice Garcia",
+    "email": "cliente0736@example.test",
+    "esim": "ESIM-00736",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 878,
+    "nome": "Daniela Campos",
+    "email": "cliente0878@example.test",
+    "esim": "ESIM-00878",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 923,
+    "nome": "Elisa Teixeira",
+    "email": "cliente0923@example.test",
+    "esim": "ESIM-00923",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 19,
+    "nome": "Rodrigo Santoro",
+    "email": "cliente0019@example.test",
+    "esim": "ESIM-00019",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 42,
+    "nome": "Amy Adams",
+    "email": "cliente0042@example.test",
+    "esim": "ESIM-00042",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 812,
+    "nome": "Bianca Lemos",
+    "email": "cliente0812@example.test",
+    "esim": "ESIM-00812",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 745,
+    "nome": "Alice Ribeiro",
+    "email": "cliente0745@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 659,
+    "nome": "Maryam Mirzakhani",
+    "email": "cliente0659@example.test",
+    "esim": "ESIM-00659",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 765,
+    "nome": "Amanda Medeiros",
+    "email": "cliente0765@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 611,
+    "nome": "Galileu Galilei",
+    "email": "cliente0611@example.test",
+    "esim": "ESIM-00611",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 251,
+    "nome": "Machado de Assis",
+    "email": "cliente0251@example.test",
+    "esim": "ESIM-00251",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 907,
+    "nome": "Elisa Cunha",
+    "email": "cliente0907@example.test",
+    "esim": "ESIM-00907",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 968,
+    "nome": "Gabriela Nogueira",
+    "email": "cliente0968@example.test",
+    "esim": "ESIM-00968",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 420,
+    "nome": "Alex Karev",
+    "email": "cliente0420@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 439,
+    "nome": "Nairóbi",
+    "email": "cliente0439@example.test",
+    "esim": "ESIM-00439",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 29,
+    "nome": "Morgan Freeman",
+    "email": "cliente0029@example.test",
+    "esim": "ESIM-00029",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 390,
+    "nome": "Terry Jeffords",
+    "email": "cliente0390@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 446,
+    "nome": "Eric",
+    "email": "cliente0446@example.test",
+    "esim": "ESIM-00446",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 778,
+    "nome": "Beatriz Campos",
+    "email": "cliente0778@example.test",
+    "esim": "ESIM-00778",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 655,
+    "nome": "Emmy Noether",
+    "email": "cliente0655@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 830,
+    "nome": "Camila Carvalho",
+    "email": "cliente0830@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 364,
+    "nome": "Daenerys Targaryen",
+    "email": "cliente0364@example.test",
+    "esim": "ESIM-00364",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 346,
+    "nome": "Margaret Atwood",
+    "email": "cliente0346@example.test",
+    "esim": "ESIM-00346",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 250,
+    "nome": "Ítalo Ferreira",
+    "email": "cliente0250@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 259,
+    "nome": "Rachel de Queiroz",
+    "email": "cliente0259@example.test",
+    "esim": "ESIM-00259",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 118,
+    "nome": "Leon Martins",
+    "email": "cliente0118@example.test",
+    "esim": "ESIM-00118",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 694,
+    "nome": "Claude Lévi-Strauss",
+    "email": "cliente0694@example.test",
+    "esim": "ESIM-00694",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 411,
+    "nome": "Gregory House",
+    "email": "cliente0411@example.test",
+    "esim": "ESIM-00411",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 714,
+    "nome": "Adriana Matos",
+    "email": "cliente0714@example.test",
+    "esim": "ESIM-00714",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 257,
+    "nome": "Aluísio Azevedo",
+    "email": "cliente0257@example.test",
+    "esim": "ESIM-00257",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 742,
+    "nome": "Alice Moura",
+    "email": "cliente0742@example.test",
+    "esim": "ESIM-00742",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 790,
+    "nome": "Beatriz Medeiros",
+    "email": "cliente0790@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 737,
+    "nome": "Alice Lemos",
+    "email": "cliente0737@example.test",
+    "esim": "ESIM-00737",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 715,
+    "nome": "Adriana Medeiros",
+    "email": "cliente0715@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 9,
+    "nome": "Tony Ramos",
+    "email": "cliente0009@example.test",
+    "esim": "ESIM-00009",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 857,
+    "nome": "Cecília Cunha",
+    "email": "cliente0857@example.test",
+    "esim": "ESIM-00857",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 850,
+    "nome": "Camila Vieira",
+    "email": "cliente0850@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 37,
+    "nome": "George Clooney",
+    "email": "cliente0037@example.test",
+    "esim": "ESIM-00037",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 40,
+    "nome": "Charlize Theron",
+    "email": "cliente0040@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 529,
+    "nome": "Thiaguinho",
+    "email": "cliente0529@example.test",
+    "esim": "ESIM-00529",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 935,
+    "nome": "Estela Freitas",
+    "email": "cliente0935@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 840,
+    "nome": "Camila Medeiros",
+    "email": "cliente0840@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 759,
+    "nome": "Amanda Farias",
+    "email": "cliente0759@example.test",
+    "esim": "ESIM-00759",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 198,
+    "nome": "Armand Duplantis",
+    "email": "cliente0198@example.test",
+    "esim": "ESIM-00198",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 343,
+    "nome": "Ngũgĩ wa Thiong’o",
+    "email": "cliente0343@example.test",
+    "esim": "ESIM-00343",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 401,
+    "nome": "Rick Grimes",
+    "email": "cliente0401@example.test",
+    "esim": "ESIM-00401",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 656,
+    "nome": "Srinivasa Ramanujan",
+    "email": "cliente0656@example.test",
+    "esim": "ESIM-00656",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 987,
+    "nome": "Helena Lemos",
+    "email": "cliente0987@example.test",
+    "esim": "ESIM-00987",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 549,
+    "nome": "Zezé Di Camargo",
+    "email": "cliente0549@example.test",
+    "esim": "ESIM-00549",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 723,
+    "nome": "Adriana Teixeira",
+    "email": "cliente0723@example.test",
+    "esim": "ESIM-00723",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 884,
+    "nome": "Daniela Farias",
+    "email": "cliente0884@example.test",
+    "esim": "ESIM-00884",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 290,
+    "nome": "Agatha Christie",
+    "email": "cliente0290@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 286,
+    "nome": "Virginia Woolf",
+    "email": "cliente0286@example.test",
+    "esim": "ESIM-00286",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 397,
+    "nome": "Robin Scherbatsky",
+    "email": "cliente0397@example.test",
+    "esim": "ESIM-00397",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 554,
+    "nome": "Whitney Houston",
+    "email": "cliente0554@example.test",
+    "esim": "ESIM-00554",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 490,
+    "nome": "Kyojuro Rengoku",
+    "email": "cliente0490@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 110,
+    "nome": "Rafinha Bastos",
+    "email": "cliente0110@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 451,
+    "nome": "Naruto Uzumaki",
+    "email": "cliente0451@example.test",
+    "esim": "ESIM-00451",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 279,
+    "nome": "Ondjaki",
+    "email": "cliente0279@example.test",
+    "esim": "ESIM-00279",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 119,
+    "nome": "Nilce Moretto",
+    "email": "cliente0119@example.test",
+    "esim": "ESIM-00119",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 255,
+    "nome": "Guimarães Rosa",
+    "email": "cliente0255@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 513,
+    "nome": "Maria Bethânia",
+    "email": "cliente0513@example.test",
+    "esim": "ESIM-00513",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 810,
+    "nome": "Bianca Freitas",
+    "email": "cliente0810@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 653,
+    "nome": "Leonhard Euler",
+    "email": "cliente0653@example.test",
+    "esim": "ESIM-00653",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 410,
+    "nome": "Hugo “Hurley” Reyes",
+    "email": "cliente0410@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 725,
+    "nome": "Adriana Vieira",
+    "email": "cliente0725@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 673,
+    "nome": "Alfred Wegener",
+    "email": "cliente0673@example.test",
+    "esim": "ESIM-00673",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 358,
+    "nome": "Chuck McGill",
+    "email": "cliente0358@example.test",
+    "esim": "ESIM-00358",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 371,
+    "nome": "Eleven",
+    "email": "cliente0371@example.test",
+    "esim": "ESIM-00371",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 402,
+    "nome": "Daryl Dixon",
+    "email": "cliente0402@example.test",
+    "esim": "ESIM-00402",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 144,
+    "nome": "Calango",
+    "email": "cliente0144@example.test",
+    "esim": "ESIM-00144",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 916,
+    "nome": "Elisa Monteiro",
+    "email": "cliente0916@example.test",
+    "esim": "ESIM-00916",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 708,
+    "nome": "Adriana Duarte",
+    "email": "cliente0708@example.test",
+    "esim": "ESIM-00708",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 922,
+    "nome": "Elisa Sampaio",
+    "email": "cliente0922@example.test",
+    "esim": "ESIM-00922",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 355,
+    "nome": "Gus Fring",
+    "email": "cliente0355@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 711,
+    "nome": "Adriana Garcia",
+    "email": "cliente0711@example.test",
+    "esim": "ESIM-00711",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 934,
+    "nome": "Estela Farias",
+    "email": "cliente0934@example.test",
+    "esim": "ESIM-00934",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 226,
+    "nome": "Claressa Shields",
+    "email": "cliente0226@example.test",
+    "esim": "ESIM-00226",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 231,
+    "nome": "Giba",
+    "email": "cliente0231@example.test",
+    "esim": "ESIM-00231",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 753,
+    "nome": "Amanda Campos",
+    "email": "cliente0753@example.test",
+    "esim": "ESIM-00753",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 856,
+    "nome": "Cecília Coelho",
+    "email": "cliente0856@example.test",
+    "esim": "ESIM-00856",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 630,
+    "nome": "Johanna Döbereiner",
+    "email": "cliente0630@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 541,
+    "nome": "Marília Mendonça",
+    "email": "cliente0541@example.test",
+    "esim": "ESIM-00541",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 471,
+    "nome": "Edward Elric",
+    "email": "cliente0471@example.test",
+    "esim": "ESIM-00471",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 223,
+    "nome": "Manny Pacquiao",
+    "email": "cliente0223@example.test",
+    "esim": "ESIM-00223",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 77,
+    "nome": "Donnie Yen",
+    "email": "cliente0077@example.test",
+    "esim": "ESIM-00077",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 197,
+    "nome": "Faith Kipyegon",
+    "email": "cliente0197@example.test",
+    "esim": "ESIM-00197",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 377,
+    "nome": "Dwight Schrute",
+    "email": "cliente0377@example.test",
+    "esim": "ESIM-00377",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 727,
+    "nome": "Alice Barreto",
+    "email": "cliente0727@example.test",
+    "esim": "ESIM-00727",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 131,
+    "nome": "Manu Digilio",
+    "email": "cliente0131@example.test",
+    "esim": "ESIM-00131",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 347,
+    "nome": "Ursula K. Le Guin",
+    "email": "cliente0347@example.test",
+    "esim": "ESIM-00347",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 820,
+    "nome": "Bianca Ribeiro",
+    "email": "cliente0820@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 185,
+    "nome": "Novak Djokovic",
+    "email": "cliente0185@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 186,
+    "nome": "Steffi Graf",
+    "email": "cliente0186@example.test",
+    "esim": "ESIM-00186",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 666,
+    "nome": "John McCarthy",
+    "email": "cliente0666@example.test",
+    "esim": "ESIM-00666",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 544,
+    "nome": "Maraisa",
+    "email": "cliente0544@example.test",
+    "esim": "ESIM-00544",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 14,
+    "nome": "Matheus Nachtergaele",
+    "email": "cliente0014@example.test",
+    "esim": "ESIM-00014",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 149,
+    "nome": "Fred Bruno",
+    "email": "cliente0149@example.test",
+    "esim": "ESIM-00149",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 868,
+    "nome": "Cecília Nogueira",
+    "email": "cliente0868@example.test",
+    "esim": "ESIM-00868",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 78,
+    "nome": "Song Kang-ho",
+    "email": "cliente0078@example.test",
+    "esim": "ESIM-00078",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 103,
+    "nome": "Whindersson Nunes",
+    "email": "cliente0103@example.test",
+    "esim": "ESIM-00103",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 539,
+    "nome": "Gloria Groove",
+    "email": "cliente0539@example.test",
+    "esim": "ESIM-00539",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 247,
+    "nome": "Nyjah Huston",
+    "email": "cliente0247@example.test",
+    "esim": "ESIM-00247",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 475,
+    "nome": "Winry Rockbell",
+    "email": "cliente0475@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 801,
+    "nome": "Bianca Azevedo",
+    "email": "cliente0801@example.test",
+    "esim": "ESIM-00801",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 890,
+    "nome": "Daniela Medeiros",
+    "email": "cliente0890@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 319,
+    "nome": "Stefan Zweig",
+    "email": "cliente0319@example.test",
+    "esim": "ESIM-00319",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 960,
+    "nome": "Gabriela Freitas",
+    "email": "cliente0960@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 894,
+    "nome": "Daniela Pacheco",
+    "email": "cliente0894@example.test",
+    "esim": "ESIM-00894",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 771,
+    "nome": "Amanda Rocha",
+    "email": "cliente0771@example.test",
+    "esim": "ESIM-00771",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 94,
+    "nome": "Judi Dench",
+    "email": "cliente0094@example.test",
+    "esim": "ESIM-00094",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 855,
+    "nome": "Cecília Carvalho",
+    "email": "cliente0855@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 997,
+    "nome": "Helena Sampaio",
+    "email": "cliente0997@example.test",
+    "esim": "ESIM-00997",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 774,
+    "nome": "Amanda Viana",
+    "email": "cliente0774@example.test",
+    "esim": "ESIM-00774",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 712,
+    "nome": "Adriana Lemos",
+    "email": "cliente0712@example.test",
+    "esim": "ESIM-00712",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 233,
+    "nome": "Wallace de Souza",
+    "email": "cliente0233@example.test",
+    "esim": "ESIM-00233",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 692,
+    "nome": "Margaret Mead",
+    "email": "cliente0692@example.test",
+    "esim": "ESIM-00692",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 419,
+    "nome": "Miranda Bailey",
+    "email": "cliente0419@example.test",
+    "esim": "ESIM-00419",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 388,
+    "nome": "Raymond Holt",
+    "email": "cliente0388@example.test",
+    "esim": "ESIM-00388",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 215,
+    "nome": "Larisa Latynina",
+    "email": "cliente0215@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 545,
+    "nome": "Luan Santana",
+    "email": "cliente0545@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 333,
+    "nome": "Yukio Mishima",
+    "email": "cliente0333@example.test",
+    "esim": "ESIM-00333",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 565,
+    "nome": "Adele",
+    "email": "cliente0565@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 331,
+    "nome": "Haruki Murakami",
+    "email": "cliente0331@example.test",
+    "esim": "ESIM-00331",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 777,
+    "nome": "Beatriz Barreto",
+    "email": "cliente0777@example.test",
+    "esim": "ESIM-00777",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 156,
+    "nome": "Zinedine Zidane",
+    "email": "cliente0156@example.test",
+    "esim": "ESIM-00156",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 499,
+    "nome": "Rachel",
+    "email": "cliente0499@example.test",
+    "esim": "ESIM-00499",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 293,
+    "nome": "Edgar Allan Poe",
+    "email": "cliente0293@example.test",
+    "esim": "ESIM-00293",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 240,
+    "nome": "Zhu Ting",
+    "email": "cliente0240@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 973,
+    "nome": "Gabriela Teixeira",
+    "email": "cliente0973@example.test",
+    "esim": "ESIM-00973",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 296,
+    "nome": "Jack London",
+    "email": "cliente0296@example.test",
+    "esim": "ESIM-00296",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 555,
+    "nome": "Aretha Franklin",
+    "email": "cliente0555@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 121,
+    "nome": "Alanzoka",
+    "email": "cliente0121@example.test",
+    "esim": "ESIM-00121",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 599,
+    "nome": "Jung Kook",
+    "email": "cliente0599@example.test",
+    "esim": "ESIM-00599",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 242,
+    "nome": "Lewis Hamilton",
+    "email": "cliente0242@example.test",
+    "esim": "ESIM-00242",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 405,
+    "nome": "Glenn Rhee",
+    "email": "cliente0405@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 132,
+    "nome": "Gato Galáctico",
+    "email": "cliente0132@example.test",
+    "esim": "ESIM-00132",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 547,
+    "nome": "Chitãozinho",
+    "email": "cliente0547@example.test",
+    "esim": "ESIM-00547",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 141,
+    "nome": "LubaTV",
+    "email": "cliente0141@example.test",
+    "esim": "ESIM-00141",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 48,
+    "nome": "Rachel McAdams",
+    "email": "cliente0048@example.test",
+    "esim": "ESIM-00048",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 308,
+    "nome": "Roberto Bolaño",
+    "email": "cliente0308@example.test",
+    "esim": "ESIM-00308",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 644,
+    "nome": "Oswaldo Cruz",
+    "email": "cliente0644@example.test",
+    "esim": "ESIM-00644",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 605,
+    "nome": "Max Planck",
+    "email": "cliente0605@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 70,
+    "nome": "Sofía Vergara",
+    "email": "cliente0070@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 8,
+    "nome": "Taís Araújo",
+    "email": "cliente0008@example.test",
+    "esim": "ESIM-00008",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 56,
+    "nome": "Zendaya",
+    "email": "cliente0056@example.test",
+    "esim": "ESIM-00056",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 430,
+    "nome": "Alfie Solomons",
+    "email": "cliente0430@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 214,
+    "nome": "Nadia Comăneci",
+    "email": "cliente0214@example.test",
+    "esim": "ESIM-00214",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 450,
+    "nome": "Luna",
+    "email": "cliente0450@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 443,
+    "nome": "Ulrich Nielsen",
+    "email": "cliente0443@example.test",
+    "esim": "ESIM-00443",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 415,
+    "nome": "Allison Cameron",
+    "email": "cliente0415@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 886,
+    "nome": "Daniela Garcia",
+    "email": "cliente0886@example.test",
+    "esim": "ESIM-00886",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 403,
+    "nome": "Michonne",
+    "email": "cliente0403@example.test",
+    "esim": "ESIM-00403",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 301,
+    "nome": "Gabriel García Márquez",
+    "email": "cliente0301@example.test",
+    "esim": "ESIM-00301",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 306,
+    "nome": "Juan Rulfo",
+    "email": "cliente0306@example.test",
+    "esim": "ESIM-00306",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 671,
+    "nome": "James Hutton",
+    "email": "cliente0671@example.test",
+    "esim": "ESIM-00671",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 348,
+    "nome": "Octavia E. Butler",
+    "email": "cliente0348@example.test",
+    "esim": "ESIM-00348",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 292,
+    "nome": "Mark Twain",
+    "email": "cliente0292@example.test",
+    "esim": "ESIM-00292",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 489,
+    "nome": "Inosuke Hashibira",
+    "email": "cliente0489@example.test",
+    "esim": "ESIM-00489",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 41,
+    "nome": "Christian Bale",
+    "email": "cliente0041@example.test",
+    "esim": "ESIM-00041",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 795,
+    "nome": "Beatriz Ribeiro",
+    "email": "cliente0795@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 534,
+    "nome": "Margareth Menezes",
+    "email": "cliente0534@example.test",
+    "esim": "ESIM-00534",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 438,
+    "nome": "Berlim",
+    "email": "cliente0438@example.test",
+    "esim": "ESIM-00438",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 424,
+    "nome": "Louis Litt",
+    "email": "cliente0424@example.test",
+    "esim": "ESIM-00424",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 818,
+    "nome": "Bianca Nogueira",
+    "email": "cliente0818@example.test",
+    "esim": "ESIM-00818",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 719,
+    "nome": "Adriana Pacheco",
+    "email": "cliente0719@example.test",
+    "esim": "ESIM-00719",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 750,
+    "nome": "Alice Vieira",
+    "email": "cliente0750@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 757,
+    "nome": "Amanda Cunha",
+    "email": "cliente0757@example.test",
+    "esim": "ESIM-00757",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 372,
+    "nome": "Mike Wheeler",
+    "email": "cliente0372@example.test",
+    "esim": "ESIM-00372",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 341,
+    "nome": "Chimamanda Ngozi Adichie",
+    "email": "cliente0341@example.test",
+    "esim": "ESIM-00341",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 484,
+    "nome": "Satoru Gojo",
+    "email": "cliente0484@example.test",
+    "esim": "ESIM-00484",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 7,
+    "nome": "Lázaro Ramos",
+    "email": "cliente0007@example.test",
+    "esim": "ESIM-00007",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 174,
+    "nome": "Stephen Curry",
+    "email": "cliente0174@example.test",
+    "esim": "ESIM-00174",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 248,
+    "nome": "Kelly Slater",
+    "email": "cliente0248@example.test",
+    "esim": "ESIM-00248",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 244,
+    "nome": "Max Verstappen",
+    "email": "cliente0244@example.test",
+    "esim": "ESIM-00244",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 213,
+    "nome": "Daiane dos Santos",
+    "email": "cliente0213@example.test",
+    "esim": "ESIM-00213",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 172,
+    "nome": "LeBron James",
+    "email": "cliente0172@example.test",
+    "esim": "ESIM-00172",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 67,
+    "nome": "Pedro Pascal",
+    "email": "cliente0067@example.test",
+    "esim": "ESIM-00067",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 941,
+    "nome": "Estela Monteiro",
+    "email": "cliente0941@example.test",
+    "esim": "ESIM-00941",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 287,
+    "nome": "George Orwell",
+    "email": "cliente0287@example.test",
+    "esim": "ESIM-00287",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 827,
+    "nome": "Camila Barreto",
+    "email": "cliente0827@example.test",
+    "esim": "ESIM-00827",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 660,
+    "nome": "Artur Avila",
+    "email": "cliente0660@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 739,
+    "nome": "Alice Matos",
+    "email": "cliente0739@example.test",
+    "esim": "ESIM-00739",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 309,
+    "nome": "Elena Ferrante",
+    "email": "cliente0309@example.test",
+    "esim": "ESIM-00309",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 31,
+    "nome": "Leonardo DiCaprio",
+    "email": "cliente0031@example.test",
+    "esim": "ESIM-00031",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 620,
+    "nome": "Beatriz Barbuy",
+    "email": "cliente0620@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 181,
+    "nome": "Serena Williams",
+    "email": "cliente0181@example.test",
+    "esim": "ESIM-00181",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 218,
+    "nome": "Flávia Saraiva",
+    "email": "cliente0218@example.test",
+    "esim": "ESIM-00218",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 108,
+    "nome": "Felipe Castanhari",
+    "email": "cliente0108@example.test",
+    "esim": "ESIM-00108",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 413,
+    "nome": "Lisa Cuddy",
+    "email": "cliente0413@example.test",
+    "esim": "ESIM-00413",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 780,
+    "nome": "Beatriz Carvalho",
+    "email": "cliente0780@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 492,
+    "nome": "L Lawliet",
+    "email": "cliente0492@example.test",
+    "esim": "ESIM-00492",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 49,
+    "nome": "Jake Gyllenhaal",
+    "email": "cliente0049@example.test",
+    "esim": "ESIM-00049",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 173,
+    "nome": "Kobe Bryant",
+    "email": "cliente0173@example.test",
+    "esim": "ESIM-00173",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 338,
+    "nome": "Kazuo Ishiguro",
+    "email": "cliente0338@example.test",
+    "esim": "ESIM-00338",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 483,
+    "nome": "Nobara Kugisaki",
+    "email": "cliente0483@example.test",
+    "esim": "ESIM-00483",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 282,
+    "nome": "Charles Dickens",
+    "email": "cliente0282@example.test",
+    "esim": "ESIM-00282",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 996,
+    "nome": "Helena Rocha",
+    "email": "cliente0996@example.test",
+    "esim": "ESIM-00996",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 841,
+    "nome": "Camila Monteiro",
+    "email": "cliente0841@example.test",
+    "esim": "ESIM-00841",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 648,
+    "nome": "Jonas Salk",
+    "email": "cliente0648@example.test",
+    "esim": "ESIM-00648",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 509,
+    "nome": "Ney Matogrosso",
+    "email": "cliente0509@example.test",
+    "esim": "ESIM-00509",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 674,
+    "nome": "Inge Lehmann",
+    "email": "cliente0674@example.test",
+    "esim": "ESIM-00674",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 151,
+    "nome": "Pelé",
+    "email": "cliente0151@example.test",
+    "esim": "ESIM-00151",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 320,
+    "nome": "Milan Kundera",
+    "email": "cliente0320@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 64,
+    "nome": "Salma Hayek",
+    "email": "cliente0064@example.test",
+    "esim": "ESIM-00064",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 635,
+    "nome": "Thomas Hunt Morgan",
+    "email": "cliente0635@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 74,
+    "nome": "Maggie Cheung",
+    "email": "cliente0074@example.test",
+    "esim": "ESIM-00074",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 367,
+    "nome": "Daemon Targaryen",
+    "email": "cliente0367@example.test",
+    "esim": "ESIM-00367",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 915,
+    "nome": "Elisa Medeiros",
+    "email": "cliente0915@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 329,
+    "nome": "Simone de Beauvoir",
+    "email": "cliente0329@example.test",
+    "esim": "ESIM-00329",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 730,
+    "nome": "Alice Carvalho",
+    "email": "cliente0730@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 789,
+    "nome": "Beatriz Matos",
+    "email": "cliente0789@example.test",
+    "esim": "ESIM-00789",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 809,
+    "nome": "Bianca Farias",
+    "email": "cliente0809@example.test",
+    "esim": "ESIM-00809",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 521,
+    "nome": "Alcione",
+    "email": "cliente0521@example.test",
+    "esim": "ESIM-00521",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 137,
+    "nome": "Gkay",
+    "email": "cliente0137@example.test",
+    "esim": "ESIM-00137",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 760,
+    "nome": "Amanda Freitas",
+    "email": "cliente0760@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 581,
+    "nome": "Shakira",
+    "email": "cliente0581@example.test",
+    "esim": "ESIM-00581",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 169,
+    "nome": "Megan Rapinoe",
+    "email": "cliente0169@example.test",
+    "esim": "ESIM-00169",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 138,
+    "nome": "Evelyn Regly",
+    "email": "cliente0138@example.test",
+    "esim": "ESIM-00138",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 931,
+    "nome": "Estela Coelho",
+    "email": "cliente0931@example.test",
+    "esim": "ESIM-00931",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 619,
+    "nome": "Subrahmanyan Chandrasekhar",
+    "email": "cliente0619@example.test",
+    "esim": "ESIM-00619",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 291,
+    "nome": "William Shakespeare",
+    "email": "cliente0291@example.test",
+    "esim": "ESIM-00291",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 227,
+    "nome": "Anderson Silva",
+    "email": "cliente0227@example.test",
+    "esim": "ESIM-00227",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 80,
+    "nome": "Youn Yuh-jung",
+    "email": "cliente0080@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 624,
+    "nome": "Dorothy Hodgkin",
+    "email": "cliente0624@example.test",
+    "esim": "ESIM-00624",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 381,
+    "nome": "Rachel Green",
+    "email": "cliente0381@example.test",
+    "esim": "ESIM-00381",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 303,
+    "nome": "Jorge Luis Borges",
+    "email": "cliente0303@example.test",
+    "esim": "ESIM-00303",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 486,
+    "nome": "Tanjiro Kamado",
+    "email": "cliente0486@example.test",
+    "esim": "ESIM-00486",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 180,
+    "nome": "Oscar Schmidt",
+    "email": "cliente0180@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 477,
+    "nome": "Killua Zoldyck",
+    "email": "cliente0477@example.test",
+    "esim": "ESIM-00477",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 645,
+    "nome": "Carlos Chagas",
+    "email": "cliente0645@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 238,
+    "nome": "Jaqueline Carvalho",
+    "email": "cliente0238@example.test",
+    "esim": "ESIM-00238",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 858,
+    "nome": "Cecília Duarte",
+    "email": "cliente0858@example.test",
+    "esim": "ESIM-00858",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 91,
+    "nome": "Tilda Swinton",
+    "email": "cliente0091@example.test",
+    "esim": "ESIM-00091",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 784,
+    "nome": "Beatriz Farias",
+    "email": "cliente0784@example.test",
+    "esim": "ESIM-00784",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 207,
+    "nome": "Sarah Sjöström",
+    "email": "cliente0207@example.test",
+    "esim": "ESIM-00207",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 253,
+    "nome": "Jorge Amado",
+    "email": "cliente0253@example.test",
+    "esim": "ESIM-00253",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 337,
+    "nome": "Mo Yan",
+    "email": "cliente0337@example.test",
+    "esim": "ESIM-00337",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 988,
+    "nome": "Helena Lima",
+    "email": "cliente0988@example.test",
+    "esim": "ESIM-00988",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 170,
+    "nome": "Aitana Bonmatí",
+    "email": "cliente0170@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 643,
+    "nome": "Alexander Fleming",
+    "email": "cliente0643@example.test",
+    "esim": "ESIM-00643",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 260,
+    "nome": "Carolina Maria de Jesus",
+    "email": "cliente0260@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 646,
+    "nome": "Adolfo Lutz",
+    "email": "cliente0646@example.test",
+    "esim": "ESIM-00646",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 566,
+    "nome": "Taylor Swift",
+    "email": "cliente0566@example.test",
+    "esim": "ESIM-00566",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 763,
+    "nome": "Amanda Lima",
+    "email": "cliente0763@example.test",
+    "esim": "ESIM-00763",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 567,
+    "nome": "Billie Eilish",
+    "email": "cliente0567@example.test",
+    "esim": "ESIM-00567",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 454,
+    "nome": "Kakashi Hatake",
+    "email": "cliente0454@example.test",
+    "esim": "ESIM-00454",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 677,
+    "nome": "Milutin Milanković",
+    "email": "cliente0677@example.test",
+    "esim": "ESIM-00677",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 501,
+    "nome": "Caetano Veloso",
+    "email": "cliente0501@example.test",
+    "esim": "ESIM-00501",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 793,
+    "nome": "Beatriz Nogueira",
+    "email": "cliente0793@example.test",
+    "esim": "ESIM-00793",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 45,
+    "nome": "Daniel Day-Lewis",
+    "email": "cliente0045@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 36,
+    "nome": "Julia Roberts",
+    "email": "cliente0036@example.test",
+    "esim": "ESIM-00036",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 43,
+    "nome": "Joaquin Phoenix",
+    "email": "cliente0043@example.test",
+    "esim": "ESIM-00043",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 177,
+    "nome": "Larry Bird",
+    "email": "cliente0177@example.test",
+    "esim": "ESIM-00177",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 939,
+    "nome": "Estela Matos",
+    "email": "cliente0939@example.test",
+    "esim": "ESIM-00939",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 542,
+    "nome": "Simone Mendes",
+    "email": "cliente0542@example.test",
+    "esim": "ESIM-00542",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 350,
+    "nome": "Neil Gaiman",
+    "email": "cliente0350@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 670,
+    "nome": "Juliana Freire",
+    "email": "cliente0670@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 127,
+    "nome": "Jazzghost",
+    "email": "cliente0127@example.test",
+    "esim": "ESIM-00127",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 981,
+    "nome": "Helena Coelho",
+    "email": "cliente0981@example.test",
+    "esim": "ESIM-00981",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 285,
+    "nome": "Charlotte Brontë",
+    "email": "cliente0285@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 627,
+    "nome": "Mario Molina",
+    "email": "cliente0627@example.test",
+    "esim": "ESIM-00627",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 256,
+    "nome": "Lima Barreto",
+    "email": "cliente0256@example.test",
+    "esim": "ESIM-00256",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 506,
+    "nome": "Jorge Ben Jor",
+    "email": "cliente0506@example.test",
+    "esim": "ESIM-00506",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 679,
+    "nome": "Susan Solomon",
+    "email": "cliente0679@example.test",
+    "esim": "ESIM-00679",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 61,
+    "nome": "Javier Bardem",
+    "email": "cliente0061@example.test",
+    "esim": "ESIM-00061",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 423,
+    "nome": "Jessica Pearson",
+    "email": "cliente0423@example.test",
+    "esim": "ESIM-00423",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 395,
+    "nome": "Raj Koothrappali",
+    "email": "cliente0395@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 903,
+    "nome": "Elisa Campos",
+    "email": "cliente0903@example.test",
+    "esim": "ESIM-00903",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 768,
+    "nome": "Amanda Nogueira",
+    "email": "cliente0768@example.test",
+    "esim": "ESIM-00768",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 196,
+    "nome": "Eliud Kipchoge",
+    "email": "cliente0196@example.test",
+    "esim": "ESIM-00196",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 38,
+    "nome": "Sandra Bullock",
+    "email": "cliente0038@example.test",
+    "esim": "ESIM-00038",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 925,
+    "nome": "Elisa Vieira",
+    "email": "cliente0925@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 647,
+    "nome": "Edward Jenner",
+    "email": "cliente0647@example.test",
+    "esim": "ESIM-00647",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 495,
+    "nome": "Near",
+    "email": "cliente0495@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 168,
+    "nome": "Alex Morgan",
+    "email": "cliente0168@example.test",
+    "esim": "ESIM-00168",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 55,
+    "nome": "Samuel L. Jackson",
+    "email": "cliente0055@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 875,
+    "nome": "Cecília Vieira",
+    "email": "cliente0875@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 128,
+    "nome": "TazerCraft Pac",
+    "email": "cliente0128@example.test",
+    "esim": "ESIM-00128",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 682,
+    "nome": "Camillo Golgi",
+    "email": "cliente0682@example.test",
+    "esim": "ESIM-00682",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 307,
+    "nome": "Laura Esquivel",
+    "email": "cliente0307@example.test",
+    "esim": "ESIM-00307",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 701,
+    "nome": "Adriana Azevedo",
+    "email": "cliente0701@example.test",
+    "esim": "ESIM-00701",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 811,
+    "nome": "Bianca Garcia",
+    "email": "cliente0811@example.test",
+    "esim": "ESIM-00811",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 111,
+    "nome": "Iberê Thenório",
+    "email": "cliente0111@example.test",
+    "esim": "ESIM-00111",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 756,
+    "nome": "Amanda Coelho",
+    "email": "cliente0756@example.test",
+    "esim": "ESIM-00756",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 189,
+    "nome": "Carlos Alcaraz",
+    "email": "cliente0189@example.test",
+    "esim": "ESIM-00189",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 33,
+    "nome": "Brad Pitt",
+    "email": "cliente0033@example.test",
+    "esim": "ESIM-00033",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 779,
+    "nome": "Beatriz Cardoso",
+    "email": "cliente0779@example.test",
+    "esim": "ESIM-00779",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 2,
+    "nome": "Fernanda Torres",
+    "email": "cliente0002@example.test",
+    "esim": "ESIM-00002",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 683,
+    "nome": "Brenda Milner",
+    "email": "cliente0683@example.test",
+    "esim": "ESIM-00683",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 455,
+    "nome": "Itachi Uchiha",
+    "email": "cliente0455@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 650,
+    "nome": "Albert Sabin",
+    "email": "cliente0650@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 342,
+    "nome": "Chinua Achebe",
+    "email": "cliente0342@example.test",
+    "esim": "ESIM-00342",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 610,
+    "nome": "Satyendra Nath Bose",
+    "email": "cliente0610@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 522,
+    "nome": "Beth Carvalho",
+    "email": "cliente0522@example.test",
+    "esim": "ESIM-00522",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 847,
+    "nome": "Camila Sampaio",
+    "email": "cliente0847@example.test",
+    "esim": "ESIM-00847",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 596,
+    "nome": "Cesária Évora",
+    "email": "cliente0596@example.test",
+    "esim": "ESIM-00596",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 75,
+    "nome": "Gong Li",
+    "email": "cliente0075@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 277,
+    "nome": "Paulina Chiziane",
+    "email": "cliente0277@example.test",
+    "esim": "ESIM-00277",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 162,
+    "nome": "Erling Haaland",
+    "email": "cliente0162@example.test",
+    "esim": "ESIM-00162",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 724,
+    "nome": "Adriana Viana",
+    "email": "cliente0724@example.test",
+    "esim": "ESIM-00724",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 608,
+    "nome": "Chien-Shiung Wu",
+    "email": "cliente0608@example.test",
+    "esim": "ESIM-00608",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 457,
+    "nome": "Roronoa Zoro",
+    "email": "cliente0457@example.test",
+    "esim": "ESIM-00457",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 370,
+    "nome": "Corlys Velaryon",
+    "email": "cliente0370@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 88,
+    "nome": "Riz Ahmed",
+    "email": "cliente0088@example.test",
+    "esim": "ESIM-00088",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 669,
+    "nome": "Judea Pearl",
+    "email": "cliente0669@example.test",
+    "esim": "ESIM-00669",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 398,
+    "nome": "Barney Stinson",
+    "email": "cliente0398@example.test",
+    "esim": "ESIM-00398",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 396,
+    "nome": "Ted Mosby",
+    "email": "cliente0396@example.test",
+    "esim": "ESIM-00396",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 668,
+    "nome": "Frances Allen",
+    "email": "cliente0668@example.test",
+    "esim": "ESIM-00668",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 902,
+    "nome": "Elisa Barreto",
+    "email": "cliente0902@example.test",
+    "esim": "ESIM-00902",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 217,
+    "nome": "Arthur Zanetti",
+    "email": "cliente0217@example.test",
+    "esim": "ESIM-00217",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 940,
+    "nome": "Estela Medeiros",
+    "email": "cliente0940@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 332,
+    "nome": "Yasunari Kawabata",
+    "email": "cliente0332@example.test",
+    "esim": "ESIM-00332",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 885,
+    "nome": "Daniela Freitas",
+    "email": "cliente0885@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 5,
+    "nome": "Alice Braga",
+    "email": "cliente0005@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 535,
+    "nome": "Anitta",
+    "email": "cliente0535@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 383,
+    "nome": "Phoebe Buffay",
+    "email": "cliente0383@example.test",
+    "esim": "ESIM-00383",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 500,
+    "nome": "Yuri Zahard",
+    "email": "cliente0500@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 199,
+    "nome": "Alison dos Santos",
+    "email": "cliente0199@example.test",
+    "esim": "ESIM-00199",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 69,
+    "nome": "Édgar Ramírez",
+    "email": "cliente0069@example.test",
+    "esim": "ESIM-00069",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 183,
+    "nome": "Roger Federer",
+    "email": "cliente0183@example.test",
+    "esim": "ESIM-00183",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 147,
+    "nome": "Diogo Defante",
+    "email": "cliente0147@example.test",
+    "esim": "ESIM-00147",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 278,
+    "nome": "Pepetela",
+    "email": "cliente0278@example.test",
+    "esim": "ESIM-00278",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 958,
+    "nome": "Gabriela Duarte",
+    "email": "cliente0958@example.test",
+    "esim": "ESIM-00958",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 821,
+    "nome": "Bianca Rocha",
+    "email": "cliente0821@example.test",
+    "esim": "ESIM-00821",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 84,
+    "nome": "Amitabh Bachchan",
+    "email": "cliente0084@example.test",
+    "esim": "ESIM-00084",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 98,
+    "nome": "Saoirse Ronan",
+    "email": "cliente0098@example.test",
+    "esim": "ESIM-00098",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 893,
+    "nome": "Daniela Nogueira",
+    "email": "cliente0893@example.test",
+    "esim": "ESIM-00893",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 340,
+    "nome": "Salman Rushdie",
+    "email": "cliente0340@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 304,
+    "nome": "Julio Cortázar",
+    "email": "cliente0304@example.test",
+    "esim": "ESIM-00304",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 926,
+    "nome": "Estela Azevedo",
+    "email": "cliente0926@example.test",
+    "esim": "ESIM-00926",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 22,
+    "nome": "Denzel Washington",
+    "email": "cliente0022@example.test",
+    "esim": "ESIM-00022",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 782,
+    "nome": "Beatriz Cunha",
+    "email": "cliente0782@example.test",
+    "esim": "ESIM-00782",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 134,
+    "nome": "Felipe Calixto",
+    "email": "cliente0134@example.test",
+    "esim": "ESIM-00134",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 508,
+    "nome": "Roberto Carlos",
+    "email": "cliente0508@example.test",
+    "esim": "ESIM-00508",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 171,
+    "nome": "Michael Jordan",
+    "email": "cliente0171@example.test",
+    "esim": "ESIM-00171",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 807,
+    "nome": "Bianca Cunha",
+    "email": "cliente0807@example.test",
+    "esim": "ESIM-00807",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 376,
+    "nome": "Michael Scott",
+    "email": "cliente0376@example.test",
+    "esim": "ESIM-00376",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 73,
+    "nome": "Tony Leung Chiu-wai",
+    "email": "cliente0073@example.test",
+    "esim": "ESIM-00073",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 872,
+    "nome": "Cecília Sampaio",
+    "email": "cliente0872@example.test",
+    "esim": "ESIM-00872",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 54,
+    "nome": "Lupita Nyong’o",
+    "email": "cliente0054@example.test",
+    "esim": "ESIM-00054",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 261,
+    "nome": "Conceição Evaristo",
+    "email": "cliente0261@example.test",
+    "esim": "ESIM-00261",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 684,
+    "nome": "Roger Sperry",
+    "email": "cliente0684@example.test",
+    "esim": "ESIM-00684",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 901,
+    "nome": "Elisa Azevedo",
+    "email": "cliente0901@example.test",
+    "esim": "ESIM-00901",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 330,
+    "nome": "Marguerite Duras",
+    "email": "cliente0330@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 507,
+    "nome": "Tim Maia",
+    "email": "cliente0507@example.test",
+    "esim": "ESIM-00507",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 904,
+    "nome": "Elisa Cardoso",
+    "email": "cliente0904@example.test",
+    "esim": "ESIM-00904",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 853,
+    "nome": "Cecília Campos",
+    "email": "cliente0853@example.test",
+    "esim": "ESIM-00853",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 195,
+    "nome": "Florence Griffith Joyner",
+    "email": "cliente0195@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 751,
+    "nome": "Amanda Azevedo",
+    "email": "cliente0751@example.test",
+    "esim": "ESIM-00751",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 23,
+    "nome": "Meryl Streep",
+    "email": "cliente0023@example.test",
+    "esim": "ESIM-00023",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 294,
+    "nome": "Herman Melville",
+    "email": "cliente0294@example.test",
+    "esim": "ESIM-00294",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 726,
+    "nome": "Alice Azevedo",
+    "email": "cliente0726@example.test",
+    "esim": "ESIM-00726",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 933,
+    "nome": "Estela Duarte",
+    "email": "cliente0933@example.test",
+    "esim": "ESIM-00933",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 953,
+    "nome": "Gabriela Campos",
+    "email": "cliente0953@example.test",
+    "esim": "ESIM-00953",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 557,
+    "nome": "Diana Ross",
+    "email": "cliente0557@example.test",
+    "esim": "ESIM-00557",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 887,
+    "nome": "Daniela Lemos",
+    "email": "cliente0887@example.test",
+    "esim": "ESIM-00887",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 112,
+    "nome": "Mari Fulfaro",
+    "email": "cliente0112@example.test",
+    "esim": "ESIM-00112",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 274,
+    "nome": "Sophia de Mello Breyner Andresen",
+    "email": "cliente0274@example.test",
+    "esim": "ESIM-00274",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 851,
+    "nome": "Cecília Azevedo",
+    "email": "cliente0851@example.test",
+    "esim": "ESIM-00851",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 704,
+    "nome": "Adriana Cardoso",
+    "email": "cliente0704@example.test",
+    "esim": "ESIM-00704",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 52,
+    "nome": "Scarlett Johansson",
+    "email": "cliente0052@example.test",
+    "esim": "ESIM-00052",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 379,
+    "nome": "Pam Beesly",
+    "email": "cliente0379@example.test",
+    "esim": "ESIM-00379",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 783,
+    "nome": "Beatriz Duarte",
+    "email": "cliente0783@example.test",
+    "esim": "ESIM-00783",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 71,
+    "nome": "Michelle Yeoh",
+    "email": "cliente0071@example.test",
+    "esim": "ESIM-00071",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 927,
+    "nome": "Estela Barreto",
+    "email": "cliente0927@example.test",
+    "esim": "ESIM-00927",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 375,
+    "nome": "Max Mayfield",
+    "email": "cliente0375@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 688,
+    "nome": "Jean Piaget",
+    "email": "cliente0688@example.test",
+    "esim": "ESIM-00688",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 690,
+    "nome": "Suzana Herculano-Houzel",
+    "email": "cliente0690@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 849,
+    "nome": "Camila Viana",
+    "email": "cliente0849@example.test",
+    "esim": "ESIM-00849",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 44,
+    "nome": "Natalie Portman",
+    "email": "cliente0044@example.test",
+    "esim": "ESIM-00044",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 89,
+    "nome": "Golshifteh Farahani",
+    "email": "cliente0089@example.test",
+    "esim": "ESIM-00089",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 999,
+    "nome": "Helena Viana",
+    "email": "cliente0999@example.test",
+    "esim": "ESIM-00999",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 20,
+    "nome": "Leandra Leal",
+    "email": "cliente0020@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 991,
+    "nome": "Helena Monteiro",
+    "email": "cliente0991@example.test",
+    "esim": "ESIM-00991",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 210,
+    "nome": "Ana Marcela Cunha",
+    "email": "cliente0210@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 360,
+    "nome": "Nacho Varga",
+    "email": "cliente0360@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 909,
+    "nome": "Elisa Farias",
+    "email": "cliente0909@example.test",
+    "esim": "ESIM-00909",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 537,
+    "nome": "IZA",
+    "email": "cliente0537@example.test",
+    "esim": "ESIM-00537",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 417,
+    "nome": "Cristina Yang",
+    "email": "cliente0417@example.test",
+    "esim": "ESIM-00417",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 848,
+    "nome": "Camila Teixeira",
+    "email": "cliente0848@example.test",
+    "esim": "ESIM-00848",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 487,
+    "nome": "Nezuko Kamado",
+    "email": "cliente0487@example.test",
+    "esim": "ESIM-00487",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 971,
+    "nome": "Gabriela Rocha",
+    "email": "cliente0971@example.test",
+    "esim": "ESIM-00971",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 458,
+    "nome": "Nami",
+    "email": "cliente0458@example.test",
+    "esim": "ESIM-00458",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 836,
+    "nome": "Camila Garcia",
+    "email": "cliente0836@example.test",
+    "esim": "ESIM-00836",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 945,
+    "nome": "Estela Ribeiro",
+    "email": "cliente0945@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 211,
+    "nome": "Simone Biles",
+    "email": "cliente0211@example.test",
+    "esim": "ESIM-00211",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 622,
+    "nome": "Dmitri Mendeleev",
+    "email": "cliente0622@example.test",
+    "esim": "ESIM-00622",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 82,
+    "nome": "Shah Rukh Khan",
+    "email": "cliente0082@example.test",
+    "esim": "ESIM-00082",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 758,
+    "nome": "Amanda Duarte",
+    "email": "cliente0758@example.test",
+    "esim": "ESIM-00758",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 160,
+    "nome": "Formiga",
+    "email": "cliente0160@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 948,
+    "nome": "Estela Teixeira",
+    "email": "cliente0948@example.test",
+    "esim": "ESIM-00948",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 720,
+    "nome": "Adriana Ribeiro",
+    "email": "cliente0720@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 404,
+    "nome": "Carol Peletier",
+    "email": "cliente0404@example.test",
+    "esim": "ESIM-00404",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 460,
+    "nome": "Nico Robin",
+    "email": "cliente0460@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 243,
+    "nome": "Michael Schumacher",
+    "email": "cliente0243@example.test",
+    "esim": "ESIM-00243",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 416,
+    "nome": "Meredith Grey",
+    "email": "cliente0416@example.test",
+    "esim": "ESIM-00416",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 775,
+    "nome": "Amanda Vieira",
+    "email": "cliente0775@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 879,
+    "nome": "Daniela Cardoso",
+    "email": "cliente0879@example.test",
+    "esim": "ESIM-00879",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 573,
+    "nome": "Elton John",
+    "email": "cliente0573@example.test",
+    "esim": "ESIM-00573",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 236,
+    "nome": "Sheilla Castro",
+    "email": "cliente0236@example.test",
+    "esim": "ESIM-00236",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 368,
+    "nome": "Alicent Hightower",
+    "email": "cliente0368@example.test",
+    "esim": "ESIM-00368",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 588,
+    "nome": "Juanes",
+    "email": "cliente0588@example.test",
+    "esim": "ESIM-00588",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 206,
+    "nome": "Caeleb Dressel",
+    "email": "cliente0206@example.test",
+    "esim": "ESIM-00206",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 352,
+    "nome": "Jesse Pinkman",
+    "email": "cliente0352@example.test",
+    "esim": "ESIM-00352",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 283,
+    "nome": "Mary Shelley",
+    "email": "cliente0283@example.test",
+    "esim": "ESIM-00283",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 717,
+    "nome": "Adriana Moura",
+    "email": "cliente0717@example.test",
+    "esim": "ESIM-00717",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 842,
+    "nome": "Camila Moura",
+    "email": "cliente0842@example.test",
+    "esim": "ESIM-00842",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 713,
+    "nome": "Adriana Lima",
+    "email": "cliente0713@example.test",
+    "esim": "ESIM-00713",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 155,
+    "nome": "Diego Maradona",
+    "email": "cliente0155@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 228,
+    "nome": "Amanda Nunes",
+    "email": "cliente0228@example.test",
+    "esim": "ESIM-00228",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 641,
+    "nome": "Louis Pasteur",
+    "email": "cliente0641@example.test",
+    "esim": "ESIM-00641",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 882,
+    "nome": "Daniela Cunha",
+    "email": "cliente0882@example.test",
+    "esim": "ESIM-00882",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 249,
+    "nome": "Gabriel Medina",
+    "email": "cliente0249@example.test",
+    "esim": "ESIM-00249",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 963,
+    "nome": "Gabriela Lima",
+    "email": "cliente0963@example.test",
+    "esim": "ESIM-00963",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 918,
+    "nome": "Elisa Nogueira",
+    "email": "cliente0918@example.test",
+    "esim": "ESIM-00918",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 326,
+    "nome": "Émile Zola",
+    "email": "cliente0326@example.test",
+    "esim": "ESIM-00326",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 943,
+    "nome": "Estela Nogueira",
+    "email": "cliente0943@example.test",
+    "esim": "ESIM-00943",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 272,
+    "nome": "Eça de Queirós",
+    "email": "cliente0272@example.test",
+    "esim": "ESIM-00272",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 527,
+    "nome": "Belo",
+    "email": "cliente0527@example.test",
+    "esim": "ESIM-00527",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 563,
+    "nome": "Britney Spears",
+    "email": "cliente0563@example.test",
+    "esim": "ESIM-00563",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 184,
+    "nome": "Rafael Nadal",
+    "email": "cliente0184@example.test",
+    "esim": "ESIM-00184",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 942,
+    "nome": "Estela Moura",
+    "email": "cliente0942@example.test",
+    "esim": "ESIM-00942",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 693,
+    "nome": "Ruth Benedict",
+    "email": "cliente0693@example.test",
+    "esim": "ESIM-00693",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 597,
+    "nome": "Miriam Makeba",
+    "email": "cliente0597@example.test",
+    "esim": "ESIM-00597",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 632,
+    "nome": "Alfred Russel Wallace",
+    "email": "cliente0632@example.test",
+    "esim": "ESIM-00632",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 762,
+    "nome": "Amanda Lemos",
+    "email": "cliente0762@example.test",
+    "esim": "ESIM-00762",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 814,
+    "nome": "Bianca Matos",
+    "email": "cliente0814@example.test",
+    "esim": "ESIM-00814",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 621,
+    "nome": "Antoine Lavoisier",
+    "email": "cliente0621@example.test",
+    "esim": "ESIM-00621",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 17,
+    "nome": "Murilo Benício",
+    "email": "cliente0017@example.test",
+    "esim": "ESIM-00017",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 604,
+    "nome": "Niels Bohr",
+    "email": "cliente0604@example.test",
+    "esim": "ESIM-00604",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 234,
+    "nome": "Bruninho Rezende",
+    "email": "cliente0234@example.test",
+    "esim": "ESIM-00234",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 152,
+    "nome": "Marta",
+    "email": "cliente0152@example.test",
+    "esim": "ESIM-00152",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 262,
+    "nome": "Lygia Fagundes Telles",
+    "email": "cliente0262@example.test",
+    "esim": "ESIM-00262",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 955,
+    "nome": "Gabriela Carvalho",
+    "email": "cliente0955@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 845,
+    "nome": "Camila Ribeiro",
+    "email": "cliente0845@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 817,
+    "nome": "Bianca Moura",
+    "email": "cliente0817@example.test",
+    "esim": "ESIM-00817",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 864,
+    "nome": "Cecília Matos",
+    "email": "cliente0864@example.test",
+    "esim": "ESIM-00864",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 225,
+    "nome": "Katie Taylor",
+    "email": "cliente0225@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 432,
+    "nome": "Billy Butcher",
+    "email": "cliente0432@example.test",
+    "esim": "ESIM-00432",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 972,
+    "nome": "Gabriela Sampaio",
+    "email": "cliente0972@example.test",
+    "esim": "ESIM-00972",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 387,
+    "nome": "Amy Santiago",
+    "email": "cliente0387@example.test",
+    "esim": "ESIM-00387",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 394,
+    "nome": "Howard Wolowitz",
+    "email": "cliente0394@example.test",
+    "esim": "ESIM-00394",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 675,
+    "nome": "Marie Tharp",
+    "email": "cliente0675@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 583,
+    "nome": "Ricky Martin",
+    "email": "cliente0583@example.test",
+    "esim": "ESIM-00583",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 130,
+    "nome": "Gabriel Dearo",
+    "email": "cliente0130@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 435,
+    "nome": "Frenchie",
+    "email": "cliente0435@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 30,
+    "nome": "Nicole Kidman",
+    "email": "cliente0030@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 310,
+    "nome": "Italo Calvino",
+    "email": "cliente0310@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 363,
+    "nome": "Sansa Stark",
+    "email": "cliente0363@example.test",
+    "esim": "ESIM-00363",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 844,
+    "nome": "Camila Pacheco",
+    "email": "cliente0844@example.test",
+    "esim": "ESIM-00844",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 129,
+    "nome": "TazerCraft Mike",
+    "email": "cliente0129@example.test",
+    "esim": "ESIM-00129",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 798,
+    "nome": "Beatriz Teixeira",
+    "email": "cliente0798@example.test",
+    "esim": "ESIM-00798",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 1000,
+    "nome": "Helena Vieira",
+    "email": "cliente1000@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 649,
+    "nome": "Rita Colwell",
+    "email": "cliente0649@example.test",
+    "esim": "ESIM-00649",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 167,
+    "nome": "Mohamed Salah",
+    "email": "cliente0167@example.test",
+    "esim": "ESIM-00167",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 116,
+    "nome": "Alexandre Ottoni",
+    "email": "cliente0116@example.test",
+    "esim": "ESIM-00116",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 58,
+    "nome": "Florence Pugh",
+    "email": "cliente0058@example.test",
+    "esim": "ESIM-00058",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 203,
+    "nome": "Simone Manuel",
+    "email": "cliente0203@example.test",
+    "esim": "ESIM-00203",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 351,
+    "nome": "Walter White",
+    "email": "cliente0351@example.test",
+    "esim": "ESIM-00351",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 556,
+    "nome": "Tina Turner",
+    "email": "cliente0556@example.test",
+    "esim": "ESIM-00556",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 699,
+    "nome": "Max Weber",
+    "email": "cliente0699@example.test",
+    "esim": "ESIM-00699",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 327,
+    "nome": "Marcel Proust",
+    "email": "cliente0327@example.test",
+    "esim": "ESIM-00327",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 427,
+    "nome": "Arthur Shelby",
+    "email": "cliente0427@example.test",
+    "esim": "ESIM-00427",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 305,
+    "nome": "Mario Vargas Llosa",
+    "email": "cliente0305@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 602,
+    "nome": "Albert Einstein",
+    "email": "cliente0602@example.test",
+    "esim": "ESIM-00602",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 297,
+    "nome": "F. Scott Fitzgerald",
+    "email": "cliente0297@example.test",
+    "esim": "ESIM-00297",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 703,
+    "nome": "Adriana Campos",
+    "email": "cliente0703@example.test",
+    "esim": "ESIM-00703",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 289,
+    "nome": "C. S. Lewis",
+    "email": "cliente0289@example.test",
+    "esim": "ESIM-00289",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 25,
+    "nome": "Robert De Niro",
+    "email": "cliente0025@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 448,
+    "nome": "Camila",
+    "email": "cliente0448@example.test",
+    "esim": "ESIM-00448",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 60,
+    "nome": "Anya Taylor-Joy",
+    "email": "cliente0060@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 626,
+    "nome": "Ahmed Zewail",
+    "email": "cliente0626@example.test",
+    "esim": "ESIM-00626",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 618,
+    "nome": "Carl Sagan",
+    "email": "cliente0618@example.test",
+    "esim": "ESIM-00618",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 747,
+    "nome": "Alice Sampaio",
+    "email": "cliente0747@example.test",
+    "esim": "ESIM-00747",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 928,
+    "nome": "Estela Campos",
+    "email": "cliente0928@example.test",
+    "esim": "ESIM-00928",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 861,
+    "nome": "Cecília Garcia",
+    "email": "cliente0861@example.test",
+    "esim": "ESIM-00861",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 384,
+    "nome": "Chandler Bing",
+    "email": "cliente0384@example.test",
+    "esim": "ESIM-00384",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 667,
+    "nome": "Leslie Lamport",
+    "email": "cliente0667@example.test",
+    "esim": "ESIM-00667",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 437,
+    "nome": "Tóquio",
+    "email": "cliente0437@example.test",
+    "esim": "ESIM-00437",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 474,
+    "nome": "Riza Hawkeye",
+    "email": "cliente0474@example.test",
+    "esim": "ESIM-00474",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 221,
+    "nome": "Muhammad Ali",
+    "email": "cliente0221@example.test",
+    "esim": "ESIM-00221",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 324,
+    "nome": "Gustave Flaubert",
+    "email": "cliente0324@example.test",
+    "esim": "ESIM-00324",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 414,
+    "nome": "Eric Foreman",
+    "email": "cliente0414@example.test",
+    "esim": "ESIM-00414",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 39,
+    "nome": "Matt Damon",
+    "email": "cliente0039@example.test",
+    "esim": "ESIM-00039",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 467,
+    "nome": "Mikasa Ackerman",
+    "email": "cliente0467@example.test",
+    "esim": "ESIM-00467",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 617,
+    "nome": "Jocelyn Bell Burnell",
+    "email": "cliente0617@example.test",
+    "esim": "ESIM-00617",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 359,
+    "nome": "Howard Hamlin",
+    "email": "cliente0359@example.test",
+    "esim": "ESIM-00359",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 591,
+    "nome": "Amy Winehouse",
+    "email": "cliente0591@example.test",
+    "esim": "ESIM-00591",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 575,
+    "nome": "Paul McCartney",
+    "email": "cliente0575@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 806,
+    "nome": "Bianca Coelho",
+    "email": "cliente0806@example.test",
+    "esim": "ESIM-00806",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 126,
+    "nome": "AuthenticGames",
+    "email": "cliente0126@example.test",
+    "esim": "ESIM-00126",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 318,
+    "nome": "Thomas Mann",
+    "email": "cliente0318@example.test",
+    "esim": "ESIM-00318",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 24,
+    "nome": "Al Pacino",
+    "email": "cliente0024@example.test",
+    "esim": "ESIM-00024",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 241,
+    "nome": "Ayrton Senna",
+    "email": "cliente0241@example.test",
+    "esim": "ESIM-00241",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 631,
+    "nome": "Charles Darwin",
+    "email": "cliente0631@example.test",
+    "esim": "ESIM-00631",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 59,
+    "nome": "Timothée Chalamet",
+    "email": "cliente0059@example.test",
+    "esim": "ESIM-00059",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 16,
+    "nome": "Adriana Esteves",
+    "email": "cliente0016@example.test",
+    "esim": "ESIM-00016",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 761,
+    "nome": "Amanda Garcia",
+    "email": "cliente0761@example.test",
+    "esim": "ESIM-00761",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 264,
+    "nome": "Ariano Suassuna",
+    "email": "cliente0264@example.test",
+    "esim": "ESIM-00264",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 755,
+    "nome": "Amanda Carvalho",
+    "email": "cliente0755@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 980,
+    "nome": "Helena Carvalho",
+    "email": "cliente0980@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 65,
+    "nome": "Gael García Bernal",
+    "email": "cliente0065@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 263,
+    "nome": "Hilda Hilst",
+    "email": "cliente0263@example.test",
+    "esim": "ESIM-00263",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 268,
+    "nome": "Milton Hatoum",
+    "email": "cliente0268@example.test",
+    "esim": "ESIM-00268",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 166,
+    "nome": "Luka Modrić",
+    "email": "cliente0166@example.test",
+    "esim": "ESIM-00166",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 323,
+    "nome": "Jules Verne",
+    "email": "cliente0323@example.test",
+    "esim": "ESIM-00323",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 299,
+    "nome": "John Steinbeck",
+    "email": "cliente0299@example.test",
+    "esim": "ESIM-00299",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 813,
+    "nome": "Bianca Lima",
+    "email": "cliente0813@example.test",
+    "esim": "ESIM-00813",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 911,
+    "nome": "Elisa Garcia",
+    "email": "cliente0911@example.test",
+    "esim": "ESIM-00911",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 284,
+    "nome": "Emily Brontë",
+    "email": "cliente0284@example.test",
+    "esim": "ESIM-00284",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 957,
+    "nome": "Gabriela Cunha",
+    "email": "cliente0957@example.test",
+    "esim": "ESIM-00957",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 920,
+    "nome": "Elisa Ribeiro",
+    "email": "cliente0920@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 628,
+    "nome": "Frances Arnold",
+    "email": "cliente0628@example.test",
+    "esim": "ESIM-00628",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 190,
+    "nome": "Iga Świątek",
+    "email": "cliente0190@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 365,
+    "nome": "Tyrion Lannister",
+    "email": "cliente0365@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 62,
+    "nome": "Penélope Cruz",
+    "email": "cliente0062@example.test",
+    "esim": "ESIM-00062",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 748,
+    "nome": "Alice Teixeira",
+    "email": "cliente0748@example.test",
+    "esim": "ESIM-00748",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 176,
+    "nome": "Magic Johnson",
+    "email": "cliente0176@example.test",
+    "esim": "ESIM-00176",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 447,
+    "nome": "Inês",
+    "email": "cliente0447@example.test",
+    "esim": "ESIM-00447",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 808,
+    "nome": "Bianca Duarte",
+    "email": "cliente0808@example.test",
+    "esim": "ESIM-00808",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 271,
+    "nome": "José Saramago",
+    "email": "cliente0271@example.test",
+    "esim": "ESIM-00271",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 104,
+    "nome": "Kéfera Buchmann",
+    "email": "cliente0104@example.test",
+    "esim": "ESIM-00104",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 136,
+    "nome": "Viih Tube",
+    "email": "cliente0136@example.test",
+    "esim": "ESIM-00136",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 876,
+    "nome": "Daniela Azevedo",
+    "email": "cliente0876@example.test",
+    "esim": "ESIM-00876",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 978,
+    "nome": "Helena Campos",
+    "email": "cliente0978@example.test",
+    "esim": "ESIM-00978",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 577,
+    "nome": "Mick Jagger",
+    "email": "cliente0577@example.test",
+    "esim": "ESIM-00577",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 854,
+    "nome": "Cecília Cardoso",
+    "email": "cliente0854@example.test",
+    "esim": "ESIM-00854",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 584,
+    "nome": "Luis Miguel",
+    "email": "cliente0584@example.test",
+    "esim": "ESIM-00584",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 697,
+    "nome": "Niède Guidon",
+    "email": "cliente0697@example.test",
+    "esim": "ESIM-00697",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 582,
+    "nome": "Selena Quintanilla",
+    "email": "cliente0582@example.test",
+    "esim": "ESIM-00582",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 986,
+    "nome": "Helena Garcia",
+    "email": "cliente0986@example.test",
+    "esim": "ESIM-00986",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 288,
+    "nome": "J. R. R. Tolkien",
+    "email": "cliente0288@example.test",
+    "esim": "ESIM-00288",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 791,
+    "nome": "Beatriz Monteiro",
+    "email": "cliente0791@example.test",
+    "esim": "ESIM-00791",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 113,
+    "nome": "Pirula",
+    "email": "cliente0113@example.test",
+    "esim": "ESIM-00113",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 222,
+    "nome": "Mike Tyson",
+    "email": "cliente0222@example.test",
+    "esim": "ESIM-00222",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 552,
+    "nome": "Prince",
+    "email": "cliente0552@example.test",
+    "esim": "ESIM-00552",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 983,
+    "nome": "Helena Duarte",
+    "email": "cliente0983@example.test",
+    "esim": "ESIM-00983",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 576,
+    "nome": "John Lennon",
+    "email": "cliente0576@example.test",
+    "esim": "ESIM-00576",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 652,
+    "nome": "Arquimedes",
+    "email": "cliente0652@example.test",
+    "esim": "ESIM-00652",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 161,
+    "nome": "Kylian Mbappé",
+    "email": "cliente0161@example.test",
+    "esim": "ESIM-00161",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 361,
+    "nome": "Jon Snow",
+    "email": "cliente0361@example.test",
+    "esim": "ESIM-00361",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 28,
+    "nome": "Jodie Foster",
+    "email": "cliente0028@example.test",
+    "esim": "ESIM-00028",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 187,
+    "nome": "Martina Navratilova",
+    "email": "cliente0187@example.test",
+    "esim": "ESIM-00187",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 772,
+    "nome": "Amanda Sampaio",
+    "email": "cliente0772@example.test",
+    "esim": "ESIM-00772",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 418,
+    "nome": "Derek Shepherd",
+    "email": "cliente0418@example.test",
+    "esim": "ESIM-00418",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 339,
+    "nome": "Arundhati Roy",
+    "email": "cliente0339@example.test",
+    "esim": "ESIM-00339",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 466,
+    "nome": "Eren Yeager",
+    "email": "cliente0466@example.test",
+    "esim": "ESIM-00466",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 96,
+    "nome": "Olivia Colman",
+    "email": "cliente0096@example.test",
+    "esim": "ESIM-00096",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 781,
+    "nome": "Beatriz Coelho",
+    "email": "cliente0781@example.test",
+    "esim": "ESIM-00781",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 237,
+    "nome": "Fofão",
+    "email": "cliente0237@example.test",
+    "esim": "ESIM-00237",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 220,
+    "nome": "Sunisa Lee",
+    "email": "cliente0220@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 97,
+    "nome": "Cillian Murphy",
+    "email": "cliente0097@example.test",
+    "esim": "ESIM-00097",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 281,
+    "nome": "Jane Austen",
+    "email": "cliente0281@example.test",
+    "esim": "ESIM-00281",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 905,
+    "nome": "Elisa Carvalho",
+    "email": "cliente0905@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 540,
+    "nome": "Pabllo Vittar",
+    "email": "cliente0540@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 123,
+    "nome": "Zangado",
+    "email": "cliente0123@example.test",
+    "esim": "ESIM-00123",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 456,
+    "nome": "Monkey D. Luffy",
+    "email": "cliente0456@example.test",
+    "esim": "ESIM-00456",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 880,
+    "nome": "Daniela Carvalho",
+    "email": "cliente0880@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 532,
+    "nome": "Daniela Mercury",
+    "email": "cliente0532@example.test",
+    "esim": "ESIM-00532",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 733,
+    "nome": "Alice Duarte",
+    "email": "cliente0733@example.test",
+    "esim": "ESIM-00733",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 182,
+    "nome": "Venus Williams",
+    "email": "cliente0182@example.test",
+    "esim": "ESIM-00182",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 479,
+    "nome": "Leorio Paradinight",
+    "email": "cliente0479@example.test",
+    "esim": "ESIM-00479",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 938,
+    "nome": "Estela Lima",
+    "email": "cliente0938@example.test",
+    "esim": "ESIM-00938",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 426,
+    "nome": "Thomas Shelby",
+    "email": "cliente0426@example.test",
+    "esim": "ESIM-00426",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 731,
+    "nome": "Alice Coelho",
+    "email": "cliente0731@example.test",
+    "esim": "ESIM-00731",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 476,
+    "nome": "Gon Freecss",
+    "email": "cliente0476@example.test",
+    "esim": "ESIM-00476",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 270,
+    "nome": "Ana Maria Machado",
+    "email": "cliente0270@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 179,
+    "nome": "Hortência Marcari",
+    "email": "cliente0179@example.test",
+    "esim": "ESIM-00179",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 353,
+    "nome": "Skyler White",
+    "email": "cliente0353@example.test",
+    "esim": "ESIM-00353",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 192,
+    "nome": "Carl Lewis",
+    "email": "cliente0192@example.test",
+    "esim": "ESIM-00192",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 313,
+    "nome": "Anton Tchékhov",
+    "email": "cliente0313@example.test",
+    "esim": "ESIM-00313",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 393,
+    "nome": "Penny",
+    "email": "cliente0393@example.test",
+    "esim": "ESIM-00393",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 81,
+    "nome": "Irrfan Khan",
+    "email": "cliente0081@example.test",
+    "esim": "ESIM-00081",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 425,
+    "nome": "Donna Paulsen",
+    "email": "cliente0425@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 546,
+    "nome": "Gusttavo Lima",
+    "email": "cliente0546@example.test",
+    "esim": "ESIM-00546",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 816,
+    "nome": "Bianca Monteiro",
+    "email": "cliente0816@example.test",
+    "esim": "ESIM-00816",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 280,
+    "nome": "José Eduardo Agualusa",
+    "email": "cliente0280@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 754,
+    "nome": "Amanda Cardoso",
+    "email": "cliente0754@example.test",
+    "esim": "ESIM-00754",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 191,
+    "nome": "Usain Bolt",
+    "email": "cliente0191@example.test",
+    "esim": "ESIM-00191",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 678,
+    "nome": "Syukuro Manabe",
+    "email": "cliente0678@example.test",
+    "esim": "ESIM-00678",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 165,
+    "nome": "Xavi Hernández",
+    "email": "cliente0165@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 142,
+    "nome": "Cellbit",
+    "email": "cliente0142@example.test",
+    "esim": "ESIM-00142",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 530,
+    "nome": "Arlindo Cruz",
+    "email": "cliente0530@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 224,
+    "nome": "Floyd Mayweather Jr.",
+    "email": "cliente0224@example.test",
+    "esim": "ESIM-00224",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 543,
+    "nome": "Maiara",
+    "email": "cliente0543@example.test",
+    "esim": "ESIM-00543",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 743,
+    "nome": "Alice Nogueira",
+    "email": "cliente0743@example.test",
+    "esim": "ESIM-00743",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 892,
+    "nome": "Daniela Moura",
+    "email": "cliente0892@example.test",
+    "esim": "ESIM-00892",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 21,
+    "nome": "Viola Davis",
+    "email": "cliente0021@example.test",
+    "esim": "ESIM-00021",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 860,
+    "nome": "Cecília Freitas",
+    "email": "cliente0860@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 496,
+    "nome": "Vigésimo Quinto Baam",
+    "email": "cliente0496@example.test",
+    "esim": "ESIM-00496",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 194,
+    "nome": "Shelly-Ann Fraser-Pryce",
+    "email": "cliente0194@example.test",
+    "esim": "ESIM-00194",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 657,
+    "nome": "Bernhard Riemann",
+    "email": "cliente0657@example.test",
+    "esim": "ESIM-00657",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 799,
+    "nome": "Beatriz Viana",
+    "email": "cliente0799@example.test",
+    "esim": "ESIM-00799",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 50,
+    "nome": "Anne Hathaway",
+    "email": "cliente0050@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 558,
+    "nome": "Beyoncé",
+    "email": "cliente0558@example.test",
+    "esim": "ESIM-00558",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 664,
+    "nome": "Donald Knuth",
+    "email": "cliente0664@example.test",
+    "esim": "ESIM-00664",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 47,
+    "nome": "Ryan Gosling",
+    "email": "cliente0047@example.test",
+    "esim": "ESIM-00047",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 178,
+    "nome": "Hakeem Olajuwon",
+    "email": "cliente0178@example.test",
+    "esim": "ESIM-00178",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 862,
+    "nome": "Cecília Lemos",
+    "email": "cliente0862@example.test",
+    "esim": "ESIM-00862",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 201,
+    "nome": "Michael Phelps",
+    "email": "cliente0201@example.test",
+    "esim": "ESIM-00201",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 829,
+    "nome": "Camila Cardoso",
+    "email": "cliente0829@example.test",
+    "esim": "ESIM-00829",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 921,
+    "nome": "Elisa Rocha",
+    "email": "cliente0921@example.test",
+    "esim": "ESIM-00921",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 982,
+    "nome": "Helena Cunha",
+    "email": "cliente0982@example.test",
+    "esim": "ESIM-00982",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 72,
+    "nome": "Jackie Chan",
+    "email": "cliente0072@example.test",
+    "esim": "ESIM-00072",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 695,
+    "nome": "Mary Leakey",
+    "email": "cliente0695@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 239,
+    "nome": "Karch Kiraly",
+    "email": "cliente0239@example.test",
+    "esim": "ESIM-00239",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 767,
+    "nome": "Amanda Moura",
+    "email": "cliente0767@example.test",
+    "esim": "ESIM-00767",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 846,
+    "nome": "Camila Rocha",
+    "email": "cliente0846@example.test",
+    "esim": "ESIM-00846",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 345,
+    "nome": "Orhan Pamuk",
+    "email": "cliente0345@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 639,
+    "nome": "Mayana Zatz",
+    "email": "cliente0639@example.test",
+    "esim": "ESIM-00639",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 832,
+    "nome": "Camila Cunha",
+    "email": "cliente0832@example.test",
+    "esim": "ESIM-00832",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 212,
+    "nome": "Rebeca Andrade",
+    "email": "cliente0212@example.test",
+    "esim": "ESIM-00212",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 752,
+    "nome": "Amanda Barreto",
+    "email": "cliente0752@example.test",
+    "esim": "ESIM-00752",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 606,
+    "nome": "Richard Feynman",
+    "email": "cliente0606@example.test",
+    "esim": "ESIM-00606",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 158,
+    "nome": "Neymar",
+    "email": "cliente0158@example.test",
+    "esim": "ESIM-00158",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 175,
+    "nome": "Shaquille O’Neal",
+    "email": "cliente0175@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 634,
+    "nome": "Barbara McClintock",
+    "email": "cliente0634@example.test",
+    "esim": "ESIM-00634",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 586,
+    "nome": "Marc Anthony",
+    "email": "cliente0586@example.test",
+    "esim": "ESIM-00586",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 966,
+    "nome": "Gabriela Monteiro",
+    "email": "cliente0966@example.test",
+    "esim": "ESIM-00966",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 834,
+    "nome": "Camila Farias",
+    "email": "cliente0834@example.test",
+    "esim": "ESIM-00834",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 877,
+    "nome": "Daniela Barreto",
+    "email": "cliente0877@example.test",
+    "esim": "ESIM-00877",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 334,
+    "nome": "Banana Yoshimoto",
+    "email": "cliente0334@example.test",
+    "esim": "ESIM-00334",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 984,
+    "nome": "Helena Farias",
+    "email": "cliente0984@example.test",
+    "esim": "ESIM-00984",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 311,
+    "nome": "Fiódor Dostoiévski",
+    "email": "cliente0311@example.test",
+    "esim": "ESIM-00311",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 700,
+    "nome": "Florestan Fernandes",
+    "email": "cliente0700@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 336,
+    "nome": "Liu Cixin",
+    "email": "cliente0336@example.test",
+    "esim": "ESIM-00336",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 488,
+    "nome": "Zenitsu Agatsuma",
+    "email": "cliente0488@example.test",
+    "esim": "ESIM-00488",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 523,
+    "nome": "Martinho da Vila",
+    "email": "cliente0523@example.test",
+    "esim": "ESIM-00523",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 944,
+    "nome": "Estela Pacheco",
+    "email": "cliente0944@example.test",
+    "esim": "ESIM-00944",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 27,
+    "nome": "Anthony Hopkins",
+    "email": "cliente0027@example.test",
+    "esim": "ESIM-00027",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 362,
+    "nome": "Arya Stark",
+    "email": "cliente0362@example.test",
+    "esim": "ESIM-00362",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 662,
+    "nome": "Grace Hopper",
+    "email": "cliente0662@example.test",
+    "esim": "ESIM-00662",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 356,
+    "nome": "Jimmy McGill",
+    "email": "cliente0356@example.test",
+    "esim": "ESIM-00356",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 53,
+    "nome": "Chris Evans",
+    "email": "cliente0053@example.test",
+    "esim": "ESIM-00053",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 76,
+    "nome": "Zhang Ziyi",
+    "email": "cliente0076@example.test",
+    "esim": "ESIM-00076",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 399,
+    "nome": "Marshall Eriksen",
+    "email": "cliente0399@example.test",
+    "esim": "ESIM-00399",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 109,
+    "nome": "Cauê Moura",
+    "email": "cliente0109@example.test",
+    "esim": "ESIM-00109",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 802,
+    "nome": "Bianca Barreto",
+    "email": "cliente0802@example.test",
+    "esim": "ESIM-00802",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 949,
+    "nome": "Estela Viana",
+    "email": "cliente0949@example.test",
+    "esim": "ESIM-00949",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 202,
+    "nome": "Katie Ledecky",
+    "email": "cliente0202@example.test",
+    "esim": "ESIM-00202",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 533,
+    "nome": "Claudia Leitte",
+    "email": "cliente0533@example.test",
+    "esim": "ESIM-00533",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 153,
+    "nome": "Lionel Messi",
+    "email": "cliente0153@example.test",
+    "esim": "ESIM-00153",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 400,
+    "nome": "Lily Aldrin",
+    "email": "cliente0400@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 805,
+    "nome": "Bianca Carvalho",
+    "email": "cliente0805@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 520,
+    "nome": "Clara Nunes",
+    "email": "cliente0520@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 314,
+    "nome": "Nikolai Gógol",
+    "email": "cliente0314@example.test",
+    "esim": "ESIM-00314",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 974,
+    "nome": "Gabriela Viana",
+    "email": "cliente0974@example.test",
+    "esim": "ESIM-00974",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 773,
+    "nome": "Amanda Teixeira",
+    "email": "cliente0773@example.test",
+    "esim": "ESIM-00773",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 164,
+    "nome": "Andrés Iniesta",
+    "email": "cliente0164@example.test",
+    "esim": "ESIM-00164",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 962,
+    "nome": "Gabriela Lemos",
+    "email": "cliente0962@example.test",
+    "esim": "ESIM-00962",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 428,
+    "nome": "Polly Gray",
+    "email": "cliente0428@example.test",
+    "esim": "ESIM-00428",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 87,
+    "nome": "Dev Patel",
+    "email": "cliente0087@example.test",
+    "esim": "ESIM-00087",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 833,
+    "nome": "Camila Duarte",
+    "email": "cliente0833@example.test",
+    "esim": "ESIM-00833",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 517,
+    "nome": "Adriana Calcanhotto",
+    "email": "cliente0517@example.test",
+    "esim": "ESIM-00517",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 839,
+    "nome": "Camila Matos",
+    "email": "cliente0839@example.test",
+    "esim": "ESIM-00839",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 613,
+    "nome": "Edwin Hubble",
+    "email": "cliente0613@example.test",
+    "esim": "ESIM-00613",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 135,
+    "nome": "Camila Loures",
+    "email": "cliente0135@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 603,
+    "nome": "Marie Curie",
+    "email": "cliente0603@example.test",
+    "esim": "ESIM-00603",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 485,
+    "nome": "Suguru Geto",
+    "email": "cliente0485@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 990,
+    "nome": "Helena Medeiros",
+    "email": "cliente0990@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 870,
+    "nome": "Cecília Ribeiro",
+    "email": "cliente0870@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 139,
+    "nome": "Jout Jout",
+    "email": "cliente0139@example.test",
+    "esim": "ESIM-00139",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 738,
+    "nome": "Alice Lima",
+    "email": "cliente0738@example.test",
+    "esim": "ESIM-00738",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 707,
+    "nome": "Adriana Cunha",
+    "email": "cliente0707@example.test",
+    "esim": "ESIM-00707",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 504,
+    "nome": "Milton Nascimento",
+    "email": "cliente0504@example.test",
+    "esim": "ESIM-00504",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 589,
+    "nome": "Rosalía",
+    "email": "cliente0589@example.test",
+    "esim": "ESIM-00589",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 598,
+    "nome": "Angélique Kidjo",
+    "email": "cliente0598@example.test",
+    "esim": "ESIM-00598",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 681,
+    "nome": "Santiago Ramón y Cajal",
+    "email": "cliente0681@example.test",
+    "esim": "ESIM-00681",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 321,
+    "nome": "Victor Hugo",
+    "email": "cliente0321@example.test",
+    "esim": "ESIM-00321",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 6,
+    "nome": "Sônia Braga",
+    "email": "cliente0006@example.test",
+    "esim": "ESIM-00006",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 159,
+    "nome": "Ronaldinho Gaúcho",
+    "email": "cliente0159@example.test",
+    "esim": "ESIM-00159",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 951,
+    "nome": "Gabriela Azevedo",
+    "email": "cliente0951@example.test",
+    "esim": "ESIM-00951",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 651,
+    "nome": "Euclides",
+    "email": "cliente0651@example.test",
+    "esim": "ESIM-00651",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 776,
+    "nome": "Beatriz Azevedo",
+    "email": "cliente0776@example.test",
+    "esim": "ESIM-00776",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 685,
+    "nome": "Eric Kandel",
+    "email": "cliente0685@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 275,
+    "nome": "António Lobo Antunes",
+    "email": "cliente0275@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 797,
+    "nome": "Beatriz Sampaio",
+    "email": "cliente0797@example.test",
+    "esim": "ESIM-00797",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 993,
+    "nome": "Helena Nogueira",
+    "email": "cliente0993@example.test",
+    "esim": "ESIM-00993",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 46,
+    "nome": "Emma Stone",
+    "email": "cliente0046@example.test",
+    "esim": "ESIM-00046",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 636,
+    "nome": "Lynn Margulis",
+    "email": "cliente0636@example.test",
+    "esim": "ESIM-00636",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 124,
+    "nome": "VenomExtreme",
+    "email": "cliente0124@example.test",
+    "esim": "ESIM-00124",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 254,
+    "nome": "Graciliano Ramos",
+    "email": "cliente0254@example.test",
+    "esim": "ESIM-00254",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 204,
+    "nome": "Ian Thorpe",
+    "email": "cliente0204@example.test",
+    "esim": "ESIM-00204",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 625,
+    "nome": "Rosalind Franklin",
+    "email": "cliente0625@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 86,
+    "nome": "Priyanka Chopra Jonas",
+    "email": "cliente0086@example.test",
+    "esim": "ESIM-00086",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 560,
+    "nome": "Alicia Keys",
+    "email": "cliente0560@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 595,
+    "nome": "Édith Piaf",
+    "email": "cliente0595@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 463,
+    "nome": "Bulma",
+    "email": "cliente0463@example.test",
+    "esim": "ESIM-00463",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 1,
+    "nome": "Fernanda Montenegro",
+    "email": "cliente0001@example.test",
+    "esim": "ESIM-00001",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 95,
+    "nome": "Colin Firth",
+    "email": "cliente0095@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 15,
+    "nome": "Débora Falabella",
+    "email": "cliente0015@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 964,
+    "nome": "Gabriela Matos",
+    "email": "cliente0964@example.test",
+    "esim": "ESIM-00964",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 150,
+    "nome": "Felipe Andreoli",
+    "email": "cliente0150@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 422,
+    "nome": "Mike Ross",
+    "email": "cliente0422@example.test",
+    "esim": "ESIM-00422",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 766,
+    "nome": "Amanda Monteiro",
+    "email": "cliente0766@example.test",
+    "esim": "ESIM-00766",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 200,
+    "nome": "Joaquim Cruz",
+    "email": "cliente0200@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 99,
+    "nome": "Emily Blunt",
+    "email": "cliente0099@example.test",
+    "esim": "ESIM-00099",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 380,
+    "nome": "Stanley Hudson",
+    "email": "cliente0380@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 989,
+    "nome": "Helena Matos",
+    "email": "cliente0989@example.test",
+    "esim": "ESIM-00989",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 273,
+    "nome": "Fernando Pessoa",
+    "email": "cliente0273@example.test",
+    "esim": "ESIM-00273",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 665,
+    "nome": "Barbara Liskov",
+    "email": "cliente0665@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 66,
+    "nome": "Diego Luna",
+    "email": "cliente0066@example.test",
+    "esim": "ESIM-00066",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 859,
+    "nome": "Cecília Farias",
+    "email": "cliente0859@example.test",
+    "esim": "ESIM-00859",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 746,
+    "nome": "Alice Rocha",
+    "email": "cliente0746@example.test",
+    "esim": "ESIM-00746",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 914,
+    "nome": "Elisa Matos",
+    "email": "cliente0914@example.test",
+    "esim": "ESIM-00914",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 188,
+    "nome": "Gustavo Kuerten",
+    "email": "cliente0188@example.test",
+    "esim": "ESIM-00188",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 464,
+    "nome": "Piccolo",
+    "email": "cliente0464@example.test",
+    "esim": "ESIM-00464",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 266,
+    "nome": "Érico Veríssimo",
+    "email": "cliente0266@example.test",
+    "esim": "ESIM-00266",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 528,
+    "nome": "Alexandre Pires",
+    "email": "cliente0528@example.test",
+    "esim": "ESIM-00528",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 804,
+    "nome": "Bianca Cardoso",
+    "email": "cliente0804@example.test",
+    "esim": "ESIM-00804",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 932,
+    "nome": "Estela Cunha",
+    "email": "cliente0932@example.test",
+    "esim": "ESIM-00932",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 706,
+    "nome": "Adriana Coelho",
+    "email": "cliente0706@example.test",
+    "esim": "ESIM-00706",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 449,
+    "nome": "Isac",
+    "email": "cliente0449@example.test",
+    "esim": "ESIM-00449",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 965,
+    "nome": "Gabriela Medeiros",
+    "email": "cliente0965@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 937,
+    "nome": "Estela Lemos",
+    "email": "cliente0937@example.test",
+    "esim": "ESIM-00937",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 325,
+    "nome": "Honoré de Balzac",
+    "email": "cliente0325@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 298,
+    "nome": "Ernest Hemingway",
+    "email": "cliente0298@example.test",
+    "esim": "ESIM-00298",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 35,
+    "nome": "Tom Hanks",
+    "email": "cliente0035@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 680,
+    "nome": "Carlos Nobre",
+    "email": "cliente0680@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 572,
+    "nome": "David Bowie",
+    "email": "cliente0572@example.test",
+    "esim": "ESIM-00572",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 445,
+    "nome": "Noah",
+    "email": "cliente0445@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 828,
+    "nome": "Camila Campos",
+    "email": "cliente0828@example.test",
+    "esim": "ESIM-00828",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 510,
+    "nome": "Alceu Valença",
+    "email": "cliente0510@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 786,
+    "nome": "Beatriz Garcia",
+    "email": "cliente0786@example.test",
+    "esim": "ESIM-00786",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 524,
+    "nome": "Zeca Pagodinho",
+    "email": "cliente0524@example.test",
+    "esim": "ESIM-00524",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 478,
+    "nome": "Kurapika",
+    "email": "cliente0478@example.test",
+    "esim": "ESIM-00478",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 498,
+    "nome": "Rak Wraithraiser",
+    "email": "cliente0498@example.test",
+    "esim": "ESIM-00498",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 710,
+    "nome": "Adriana Freitas",
+    "email": "cliente0710@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 267,
+    "nome": "Rubem Fonseca",
+    "email": "cliente0267@example.test",
+    "esim": "ESIM-00267",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 205,
+    "nome": "Mark Spitz",
+    "email": "cliente0205@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 369,
+    "nome": "Viserys I Targaryen",
+    "email": "cliente0369@example.test",
+    "esim": "ESIM-00369",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 502,
+    "nome": "Gilberto Gil",
+    "email": "cliente0502@example.test",
+    "esim": "ESIM-00502",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 910,
+    "nome": "Elisa Freitas",
+    "email": "cliente0910@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 823,
+    "nome": "Bianca Teixeira",
+    "email": "cliente0823@example.test",
+    "esim": "ESIM-00823",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 470,
+    "nome": "Hange Zoë",
+    "email": "cliente0470@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 612,
+    "nome": "Johannes Kepler",
+    "email": "cliente0612@example.test",
+    "esim": "ESIM-00612",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 672,
+    "nome": "Charles Lyell",
+    "email": "cliente0672@example.test",
+    "esim": "ESIM-00672",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 154,
+    "nome": "Cristiano Ronaldo",
+    "email": "cliente0154@example.test",
+    "esim": "ESIM-00154",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 34,
+    "nome": "Angelina Jolie",
+    "email": "cliente0034@example.test",
+    "esim": "ESIM-00034",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 10,
+    "nome": "Regina Casé",
+    "email": "cliente0010@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 276,
+    "nome": "Mia Couto",
+    "email": "cliente0276@example.test",
+    "esim": "ESIM-00276",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 852,
+    "nome": "Cecília Barreto",
+    "email": "cliente0852@example.test",
+    "esim": "ESIM-00852",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 302,
+    "nome": "Isabel Allende",
+    "email": "cliente0302@example.test",
+    "esim": "ESIM-00302",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 208,
+    "nome": "César Cielo",
+    "email": "cliente0208@example.test",
+    "esim": "ESIM-00208",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 444,
+    "nome": "Claudia Tiedemann",
+    "email": "cliente0444@example.test",
+    "esim": "ESIM-00444",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 867,
+    "nome": "Cecília Moura",
+    "email": "cliente0867@example.test",
+    "esim": "ESIM-00867",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 908,
+    "nome": "Elisa Duarte",
+    "email": "cliente0908@example.test",
+    "esim": "ESIM-00908",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 900,
+    "nome": "Daniela Vieira",
+    "email": "cliente0900@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 716,
+    "nome": "Adriana Monteiro",
+    "email": "cliente0716@example.test",
+    "esim": "ESIM-00716",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 514,
+    "nome": "Rita Lee",
+    "email": "cliente0514@example.test",
+    "esim": "ESIM-00514",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 995,
+    "nome": "Helena Ribeiro",
+    "email": "cliente0995@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 819,
+    "nome": "Bianca Pacheco",
+    "email": "cliente0819@example.test",
+    "esim": "ESIM-00819",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 562,
+    "nome": "Lady Gaga",
+    "email": "cliente0562@example.test",
+    "esim": "ESIM-00562",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 316,
+    "nome": "Franz Kafka",
+    "email": "cliente0316@example.test",
+    "esim": "ESIM-00316",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 686,
+    "nome": "Rita Levi-Montalcini",
+    "email": "cliente0686@example.test",
+    "esim": "ESIM-00686",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 412,
+    "nome": "James Wilson",
+    "email": "cliente0412@example.test",
+    "esim": "ESIM-00412",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 574,
+    "nome": "George Michael",
+    "email": "cliente0574@example.test",
+    "esim": "ESIM-00574",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 954,
+    "nome": "Gabriela Cardoso",
+    "email": "cliente0954@example.test",
+    "esim": "ESIM-00954",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 559,
+    "nome": "Rihanna",
+    "email": "cliente0559@example.test",
+    "esim": "ESIM-00559",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 732,
+    "nome": "Alice Cunha",
+    "email": "cliente0732@example.test",
+    "esim": "ESIM-00732",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 481,
+    "nome": "Yuji Itadori",
+    "email": "cliente0481@example.test",
+    "esim": "ESIM-00481",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 691,
+    "nome": "Franz Boas",
+    "email": "cliente0691@example.test",
+    "esim": "ESIM-00691",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 468,
+    "nome": "Armin Arlert",
+    "email": "cliente0468@example.test",
+    "esim": "ESIM-00468",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 718,
+    "nome": "Adriana Nogueira",
+    "email": "cliente0718@example.test",
+    "esim": "ESIM-00718",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 642,
+    "nome": "Robert Koch",
+    "email": "cliente0642@example.test",
+    "esim": "ESIM-00642",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 125,
+    "nome": "RezendeEvil",
+    "email": "cliente0125@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 871,
+    "nome": "Cecília Rocha",
+    "email": "cliente0871@example.test",
+    "esim": "ESIM-00871",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 235,
+    "nome": "Gabi Guimarães",
+    "email": "cliente0235@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 494,
+    "nome": "Ryuk",
+    "email": "cliente0494@example.test",
+    "esim": "ESIM-00494",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 146,
+    "nome": "Maicon Küster",
+    "email": "cliente0146@example.test",
+    "esim": "ESIM-00146",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 482,
+    "nome": "Megumi Fushiguro",
+    "email": "cliente0482@example.test",
+    "esim": "ESIM-00482",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 440,
+    "nome": "Denver",
+    "email": "cliente0440@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 638,
+    "nome": "E. O. Wilson",
+    "email": "cliente0638@example.test",
+    "esim": "ESIM-00638",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 735,
+    "nome": "Alice Freitas",
+    "email": "cliente0735@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 992,
+    "nome": "Helena Moura",
+    "email": "cliente0992@example.test",
+    "esim": "ESIM-00992",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 687,
+    "nome": "Ivan Pavlov",
+    "email": "cliente0687@example.test",
+    "esim": "ESIM-00687",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 536,
+    "nome": "Ludmilla",
+    "email": "cliente0536@example.test",
+    "esim": "ESIM-00536",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 722,
+    "nome": "Adriana Sampaio",
+    "email": "cliente0722@example.test",
+    "esim": "ESIM-00722",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 51,
+    "nome": "Robert Downey Jr.",
+    "email": "cliente0051@example.test",
+    "esim": "ESIM-00051",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 838,
+    "nome": "Camila Lima",
+    "email": "cliente0838@example.test",
+    "esim": "ESIM-00838",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 133,
+    "nome": "Renato Garcia",
+    "email": "cliente0133@example.test",
+    "esim": "ESIM-00133",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 785,
+    "nome": "Beatriz Freitas",
+    "email": "cliente0785@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 230,
+    "nome": "Rafaela Silva",
+    "email": "cliente0230@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 590,
+    "nome": "Karol G",
+    "email": "cliente0590@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 929,
+    "nome": "Estela Cardoso",
+    "email": "cliente0929@example.test",
+    "esim": "ESIM-00929",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 950,
+    "nome": "Estela Vieira",
+    "email": "cliente0950@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 531,
+    "nome": "Ivete Sangalo",
+    "email": "cliente0531@example.test",
+    "esim": "ESIM-00531",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 947,
+    "nome": "Estela Sampaio",
+    "email": "cliente0947@example.test",
+    "esim": "ESIM-00947",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 491,
+    "nome": "Light Yagami",
+    "email": "cliente0491@example.test",
+    "esim": "ESIM-00491",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 578,
+    "nome": "Bruce Springsteen",
+    "email": "cliente0578@example.test",
+    "esim": "ESIM-00578",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 985,
+    "nome": "Helena Freitas",
+    "email": "cliente0985@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 865,
+    "nome": "Cecília Medeiros",
+    "email": "cliente0865@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 265,
+    "nome": "Monteiro Lobato",
+    "email": "cliente0265@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 538,
+    "nome": "Liniker",
+    "email": "cliente0538@example.test",
+    "esim": "ESIM-00538",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 408,
+    "nome": "John Locke",
+    "email": "cliente0408@example.test",
+    "esim": "ESIM-00408",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 959,
+    "nome": "Gabriela Farias",
+    "email": "cliente0959@example.test",
+    "esim": "ESIM-00959",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 897,
+    "nome": "Daniela Sampaio",
+    "email": "cliente0897@example.test",
+    "esim": "ESIM-00897",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 615,
+    "nome": "Cecilia Payne-Gaposchkin",
+    "email": "cliente0615@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 888,
+    "nome": "Daniela Lima",
+    "email": "cliente0888@example.test",
+    "esim": "ESIM-00888",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 769,
+    "nome": "Amanda Pacheco",
+    "email": "cliente0769@example.test",
+    "esim": "ESIM-00769",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 822,
+    "nome": "Bianca Sampaio",
+    "email": "cliente0822@example.test",
+    "esim": "ESIM-00822",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 519,
+    "nome": "Nara Leão",
+    "email": "cliente0519@example.test",
+    "esim": "ESIM-00519",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 436,
+    "nome": "Professor",
+    "email": "cliente0436@example.test",
+    "esim": "ESIM-00436",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 120,
+    "nome": "Gustavo Guanabara",
+    "email": "cliente0120@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 889,
+    "nome": "Daniela Matos",
+    "email": "cliente0889@example.test",
+    "esim": "ESIM-00889",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 511,
+    "nome": "Gal Costa",
+    "email": "cliente0511@example.test",
+    "esim": "ESIM-00511",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 568,
+    "nome": "Ariana Grande",
+    "email": "cliente0568@example.test",
+    "esim": "ESIM-00568",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 600,
+    "nome": "IU",
+    "email": "cliente0600@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 961,
+    "nome": "Gabriela Garcia",
+    "email": "cliente0961@example.test",
+    "esim": "ESIM-00961",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 409,
+    "nome": "James “Sawyer” Ford",
+    "email": "cliente0409@example.test",
+    "esim": "ESIM-00409",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 93,
+    "nome": "Helen Mirren",
+    "email": "cliente0093@example.test",
+    "esim": "ESIM-00093",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 433,
+    "nome": "Hughie Campbell",
+    "email": "cliente0433@example.test",
+    "esim": "ESIM-00433",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 473,
+    "nome": "Roy Mustang",
+    "email": "cliente0473@example.test",
+    "esim": "ESIM-00473",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 373,
+    "nome": "Dustin Henderson",
+    "email": "cliente0373@example.test",
+    "esim": "ESIM-00373",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 378,
+    "nome": "Jim Halpert",
+    "email": "cliente0378@example.test",
+    "esim": "ESIM-00378",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 728,
+    "nome": "Alice Campos",
+    "email": "cliente0728@example.test",
+    "esim": "ESIM-00728",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 869,
+    "nome": "Cecília Pacheco",
+    "email": "cliente0869@example.test",
+    "esim": "ESIM-00869",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 26,
+    "nome": "Cate Blanchett",
+    "email": "cliente0026@example.test",
+    "esim": "ESIM-00026",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 317,
+    "nome": "Hermann Hesse",
+    "email": "cliente0317@example.test",
+    "esim": "ESIM-00317",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 592,
+    "nome": "Céline Dion",
+    "email": "cliente0592@example.test",
+    "esim": "ESIM-00592",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 734,
+    "nome": "Alice Farias",
+    "email": "cliente0734@example.test",
+    "esim": "ESIM-00734",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 721,
+    "nome": "Adriana Rocha",
+    "email": "cliente0721@example.test",
+    "esim": "ESIM-00721",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 661,
+    "nome": "Alan Turing",
+    "email": "cliente0661@example.test",
+    "esim": "ESIM-00661",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 898,
+    "nome": "Daniela Teixeira",
+    "email": "cliente0898@example.test",
+    "esim": "ESIM-00898",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 145,
+    "nome": "Orochinho",
+    "email": "cliente0145@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 469,
+    "nome": "Levi Ackerman",
+    "email": "cliente0469@example.test",
+    "esim": "ESIM-00469",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 967,
+    "nome": "Gabriela Moura",
+    "email": "cliente0967@example.test",
+    "esim": "ESIM-00967",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 300,
+    "nome": "Toni Morrison",
+    "email": "cliente0300@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 551,
+    "nome": "Michael Jackson",
+    "email": "cliente0551@example.test",
+    "esim": "ESIM-00551",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 571,
+    "nome": "Freddie Mercury",
+    "email": "cliente0571@example.test",
+    "esim": "ESIM-00571",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 92,
+    "nome": "Gary Oldman",
+    "email": "cliente0092@example.test",
+    "esim": "ESIM-00092",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 349,
+    "nome": "Stephen King",
+    "email": "cliente0349@example.test",
+    "esim": "ESIM-00349",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 741,
+    "nome": "Alice Monteiro",
+    "email": "cliente0741@example.test",
+    "esim": "ESIM-00741",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 79,
+    "nome": "Lee Jung-jae",
+    "email": "cliente0079@example.test",
+    "esim": "ESIM-00079",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 654,
+    "nome": "Carl Friedrich Gauss",
+    "email": "cliente0654@example.test",
+    "esim": "ESIM-00654",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 526,
+    "nome": "Péricles",
+    "email": "cliente0526@example.test",
+    "esim": "ESIM-00526",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 764,
+    "nome": "Amanda Matos",
+    "email": "cliente0764@example.test",
+    "esim": "ESIM-00764",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 386,
+    "nome": "Jake Peralta",
+    "email": "cliente0386@example.test",
+    "esim": "ESIM-00386",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 825,
+    "nome": "Bianca Vieira",
+    "email": "cliente0825@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 366,
+    "nome": "Rhaenyra Targaryen",
+    "email": "cliente0366@example.test",
+    "esim": "ESIM-00366",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 952,
+    "nome": "Gabriela Barreto",
+    "email": "cliente0952@example.test",
+    "esim": "ESIM-00952",
+    "pacote": 102,
+    "status": "inativo"
+  },
+  {
+    "id": 357,
+    "nome": "Kim Wexler",
+    "email": "cliente0357@example.test",
+    "esim": "ESIM-00357",
+    "pacote": 101,
+    "status": "inativo"
+  },
+  {
+    "id": 258,
+    "nome": "José de Alencar",
+    "email": "cliente0258@example.test",
+    "esim": "ESIM-00258",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 407,
+    "nome": "Kate Austen",
+    "email": "cliente0407@example.test",
+    "esim": "ESIM-00407",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 216,
+    "nome": "Kohei Uchimura",
+    "email": "cliente0216@example.test",
+    "esim": "ESIM-00216",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 322,
+    "nome": "Alexandre Dumas",
+    "email": "cliente0322@example.test",
+    "esim": "ESIM-00322",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 696,
+    "nome": "Louis Leakey",
+    "email": "cliente0696@example.test",
+    "esim": "ESIM-00696",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 977,
+    "nome": "Helena Barreto",
+    "email": "cliente0977@example.test",
+    "esim": "ESIM-00977",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 702,
+    "nome": "Adriana Barreto",
+    "email": "cliente0702@example.test",
+    "esim": "ESIM-00702",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 913,
+    "nome": "Elisa Lima",
+    "email": "cliente0913@example.test",
+    "esim": "ESIM-00913",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 835,
+    "nome": "Camila Freitas",
+    "email": "cliente0835@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 12,
+    "nome": "Marco Nanini",
+    "email": "cliente0012@example.test",
+    "esim": "ESIM-00012",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 461,
+    "nome": "Goku",
+    "email": "cliente0461@example.test",
+    "esim": "ESIM-00461",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 101,
+    "nome": "Felipe Neto",
+    "email": "cliente0101@example.test",
+    "esim": "ESIM-00101",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 837,
+    "nome": "Camila Lemos",
+    "email": "cliente0837@example.test",
+    "esim": "ESIM-00837",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 295,
+    "nome": "Louisa May Alcott",
+    "email": "cliente0295@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 114,
+    "nome": "Átila Iamarino",
+    "email": "cliente0114@example.test",
+    "esim": "ESIM-00114",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 83,
+    "nome": "Aamir Khan",
+    "email": "cliente0083@example.test",
+    "esim": "ESIM-00083",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 629,
+    "nome": "Jennifer Doudna",
+    "email": "cliente0629@example.test",
+    "esim": "ESIM-00629",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 3,
+    "nome": "Selton Mello",
+    "email": "cliente0003@example.test",
+    "esim": "ESIM-00003",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 246,
+    "nome": "Rayssa Leal",
+    "email": "cliente0246@example.test",
+    "esim": "ESIM-00246",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 452,
+    "nome": "Sasuke Uchiha",
+    "email": "cliente0452@example.test",
+    "esim": "ESIM-00452",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 601,
+    "nome": "Isaac Newton",
+    "email": "cliente0601@example.test",
+    "esim": "ESIM-00601",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 792,
+    "nome": "Beatriz Moura",
+    "email": "cliente0792@example.test",
+    "esim": "ESIM-00792",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 770,
+    "nome": "Amanda Ribeiro",
+    "email": "cliente0770@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 503,
+    "nome": "Chico Buarque",
+    "email": "cliente0503@example.test",
+    "esim": "ESIM-00503",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 787,
+    "nome": "Beatriz Lemos",
+    "email": "cliente0787@example.test",
+    "esim": "ESIM-00787",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 796,
+    "nome": "Beatriz Rocha",
+    "email": "cliente0796@example.test",
+    "esim": "ESIM-00796",
+    "pacote": 102,
+    "status": "ativo"
+  },
+  {
+    "id": 749,
+    "nome": "Alice Viana",
+    "email": "cliente0749@example.test",
+    "esim": "ESIM-00749",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 863,
+    "nome": "Cecília Lima",
+    "email": "cliente0863@example.test",
+    "esim": "ESIM-00863",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 561,
+    "nome": "Madonna",
+    "email": "cliente0561@example.test",
+    "esim": "ESIM-00561",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 587,
+    "nome": "Celia Cruz",
+    "email": "cliente0587@example.test",
+    "esim": "ESIM-00587",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 803,
+    "nome": "Bianca Campos",
+    "email": "cliente0803@example.test",
+    "esim": "ESIM-00803",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 431,
+    "nome": "Capitão Pátria",
+    "email": "cliente0431@example.test",
+    "esim": "ESIM-00431",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 570,
+    "nome": "Sia",
+    "email": "cliente0570@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 637,
+    "nome": "Jane Goodall",
+    "email": "cliente0637@example.test",
+    "esim": "ESIM-00637",
+    "pacote": 301,
+    "status": "inativo"
+  },
+  {
+    "id": 616,
+    "nome": "Vera Rubin",
+    "email": "cliente0616@example.test",
+    "esim": "ESIM-00616",
+    "pacote": 201,
+    "status": "inativo"
+  },
+  {
+    "id": 917,
+    "nome": "Elisa Moura",
+    "email": "cliente0917@example.test",
+    "esim": "ESIM-00917",
+    "pacote": 202,
+    "status": "inativo"
+  },
+  {
+    "id": 229,
+    "nome": "Ronda Rousey",
+    "email": "cliente0229@example.test",
+    "esim": "ESIM-00229",
+    "pacote": 202,
+    "status": "ativo"
+  },
+  {
+    "id": 906,
+    "nome": "Elisa Coelho",
+    "email": "cliente0906@example.test",
+    "esim": "ESIM-00906",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 106,
+    "nome": "Christian Figueiredo",
+    "email": "cliente0106@example.test",
+    "esim": "ESIM-00106",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 976,
+    "nome": "Helena Azevedo",
+    "email": "cliente0976@example.test",
+    "esim": "ESIM-00976",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 881,
+    "nome": "Daniela Coelho",
+    "email": "cliente0881@example.test",
+    "esim": "ESIM-00881",
+    "pacote": 301,
+    "status": "ativo"
+  },
+  {
+    "id": 663,
+    "nome": "Edsger Dijkstra",
+    "email": "cliente0663@example.test",
+    "esim": "ESIM-00663",
+    "pacote": 101,
+    "status": "ativo"
+  },
+  {
+    "id": 525,
+    "nome": "Seu Jorge",
+    "email": "cliente0525@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "inativo"
+  },
+  {
+    "id": 975,
+    "nome": "Gabriela Vieira",
+    "email": "cliente0975@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 515,
+    "nome": "Elza Soares",
+    "email": "cliente0515@example.test",
+    "esim": null,
+    "pacote": null,
+    "status": "ativo"
+  },
+  {
+    "id": 328,
+    "nome": "Albert Camus",
+    "email": "cliente0328@example.test",
+    "esim": "ESIM-00328",
+    "pacote": 201,
+    "status": "ativo"
+  },
+  {
+    "id": 122,
+    "nome": "BRKsEDU",
+    "email": "cliente0122@example.test",
+    "esim": "ESIM-00122",
+    "pacote": 201,
+    "status": "ativo"
+  }
+]
