@@ -2,7 +2,7 @@ class BTreeNode:
     def __init__(self, leaf=True):
         self.leaf = leaf
         self.keys = []
-        self.records = []
+        self.positions = []
         self.children = []
 
 
@@ -34,7 +34,7 @@ class BTree:
             index += 1
 
         if index < len(node.keys) and client_id == node.keys[index]:
-            return node.records[index].copy()
+            return node.positions[index]
 
         if node.leaf:
             return None
@@ -56,33 +56,31 @@ class BTree:
         new_child = BTreeNode(leaf=child.leaf)
 
         median_key = child.keys[t - 1]
-        median_record = child.records[t - 1]
+        median_position = child.positions[t - 1]
 
         new_child.keys = child.keys[t:]
-        new_child.records = child.records[t:]
+        new_child.positions = child.positions[t:]
 
         child.keys = child.keys[:t - 1]
-        child.records = child.records[:t - 1]
+        child.positions = child.positions[:t - 1]
 
         if not child.leaf:
             new_child.children = child.children[t:]
             child.children = child.children[:t]
 
         parent.keys.insert(index, median_key)
-        parent.records.insert(index, median_record)
+        parent.positions.insert(index, median_position)
         parent.children.insert(index + 1, new_child)
 
         self._splits += 1
 
 
-    def insert(self, record):
-        if not isinstance(record, dict):
-            raise ValueError("O cliente deve ser um dicionário.")
-
-        client_id = record.get("id")
-
+    def insert(self, client_id, position):
         if type(client_id) is not int:
             raise ValueError("O ID do cliente deve ser um número inteiro.")
+
+        if type(position) is not int or position < 0:
+            raise ValueError("A posição deve ser um inteiro não negativo.")
 
         if self._find_node(self.root, client_id) is not None:
             raise ValueError("Já existe um cliente com esse ID.")
@@ -97,13 +95,11 @@ class BTree:
 
             self.root = new_root
 
-        self._insert_non_full(self.root, record.copy())
+        self._insert_non_full(self.root, client_id, position)
 
         self._size += 1
 
-    def _insert_non_full(self, node, record):
-        client_id = record["id"]
-
+    def _insert_non_full(self, node, client_id, position):
         index = 0
 
         while index < len(node.keys) and client_id > node.keys[index]:
@@ -111,7 +107,7 @@ class BTree:
 
         if node.leaf:
             node.keys.insert(index, client_id)
-            node.records.insert(index, record)
+            node.positions.insert(index, position)
             return
 
         if len(node.children[index].keys) == 2 * self.min_degree - 1:
@@ -120,63 +116,36 @@ class BTree:
             if client_id > node.keys[index]:
                 index += 1
 
-        self._insert_non_full(node.children[index], record)
+        self._insert_non_full(
+            node.children[index],
+            client_id,
+            position
+        )
 
 
     def list_all(self):
-        records = []
+        positions = []
 
-        self._collect_in_order(self.root, records)
+        self._collect_in_order(self.root, positions)
 
-        return records
+        return positions
 
-    def _collect_in_order(self, node, records):
-        for index, record in enumerate(node.records):
+    def _collect_in_order(self, node, positions):
+        for index, position in enumerate(node.positions):
 
             if not node.leaf:
                 self._collect_in_order(
                     node.children[index],
-                    records
+                    positions
                 )
 
-            records.append(record.copy())
+            positions.append(position)
 
         if not node.leaf:
             self._collect_in_order(
                 node.children[len(node.keys)],
-                records
+                positions
             )
-
-
-    def update(self, client_id, record):
-        if type(client_id) is not int:
-            raise ValueError("O ID do cliente deve ser um número inteiro.")
-
-        if not isinstance(record, dict):
-            raise ValueError("O cliente deve ser um dicionário.")
-
-        if type(record.get("id")) is not int or record["id"] != client_id:
-            raise ValueError("O ID do cliente não pode ser alterado.")
-
-        updated = self._update_node(self.root, client_id, record)
-
-        if not updated:
-            raise LookupError("Cliente não encontrado.")
-
-    def _update_node(self, node, client_id, record):
-        index = 0
-
-        while index < len(node.keys) and client_id > node.keys[index]:
-            index += 1
-
-        if index < len(node.keys) and client_id == node.keys[index]:
-            node.records[index] = record.copy()
-            return True
-
-        if node.leaf:
-            return False
-
-        return self._update_node(node.children[index], client_id, record)
 
 
     def _height(self):
