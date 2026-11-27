@@ -1,4 +1,3 @@
-
 from copy import deepcopy
 from threading import RLock
 
@@ -12,19 +11,30 @@ class ClientService:
     def __init__(self, path):
         self.path = path
         self.tree = BTree()
+        self.clients = []
         self.lock = RLock()
 
         for record in clients_json.load(self.path):
             client = validate_client(record)
-            self.tree.insert(client)
+            self._insert_record(client)
 
     def find(self, client_id):
         with self.lock:
-            return self.tree.find(normalize_id(client_id))
+            position = self.tree.find(normalize_id(client_id))
+
+            if position is None:
+                return None
+
+            return self.clients[position].copy()
 
     def list_all(self):
         with self.lock:
-            return self.tree.list_all()
+            positions = self.tree.list_all()
+
+            return [
+                self.clients[position].copy()
+                for position in positions
+            ]
 
     def statistics(self):
         with self.lock:
@@ -32,26 +42,36 @@ class ClientService:
 
     def _mutate(self, operation, *args):
         with self.lock:
-            previous = deepcopy(self.tree)
+            previous_tree = deepcopy(self.tree)
+            previous_clients = deepcopy(self.clients)
 
             try:
                 operation(*args)
-                clients_json.save(self.path, self.tree.list_all())
+                clients_json.save(self.path, self.clients)
 
             except Exception:
-                self.tree = previous
+                self.tree = previous_tree
+                self.clients = previous_clients
                 raise
+
+    def _insert_record(self, client):
+        position = len(self.clients)
+
+        self.tree.insert(client["id"], position)
+        self.clients.append(client)
 
     def create(self, record):
         with self.lock:
             client = validate_client(record)
-            self._mutate(self.tree.insert, client)
+            self._mutate(self._insert_record, client)
 
     def _update_record(self, client_id, changes):
-        current = self.tree.find(client_id)
+        position = self.tree.find(client_id)
 
-        if current is None:
+        if position is None:
             raise LookupError("Cliente não encontrado.")
+
+        current = self.clients[position]
 
         updated = dict(current)
         updated.update(changes)
@@ -61,7 +81,7 @@ class ClientService:
         if client["id"] != client_id:
             raise ValueError("Não é permitido alterar o ID do cliente.")
 
-        self.tree.update(client_id, client)
+        self.clients[position] = client
 
     def update(self, client_id, changes):
         with self.lock:

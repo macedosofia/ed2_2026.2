@@ -11,6 +11,16 @@ A Etapa 2 amplia o GlobalSIM para gerenciar clientes, eSIMs e pacotes com uma Á
 
 A referência do checklist é o enunciado `TrabalhoPratico-2026.2.pdf`. As páginas 4–6 especificam a Etapa 2. As páginas 2 e 9 definem as regras gerais e a persistência. A página 10 lista os critérios de avaliação e as responsabilidades na apresentação.
 
+## Correção posterior à entrega
+
+Após a apresentação da Etapa 2, a implementação foi revisada para utilizar a Árvore B como índice dos registros de clientes, conforme a orientação recebida da professora.
+
+A árvore passou a armazenar os IDs e as posições dos registros em um array mantido pelo `ClientService`, separando a responsabilidade de indexação da responsabilidade de armazenamento.
+
+A correção foi desenvolvida na branch `fix/b-tree-indexing`, preservando os algoritmos de busca, inserção, divisão, balanceamento e percurso em ordem.
+
+A interface pública do serviço de clientes permaneceu inalterada, mantendo a integração com Flask, Tabela Hash, catálogo de pacotes e Planejador Multidestinos.
+
 ## Execução e testes
 
 Use Python 3.10 ou superior. Na raiz do repositório, instale as dependências e inicie a aplicação.
@@ -35,9 +45,15 @@ python -m unittest discover -s tests -q
 
 Na revisão `7951f69` da branch `dev`, após a integração dos PRs #18 e #19, a suíte completa passou com **225 testes automatizados**.
 
+Após a correção da Árvore B como índice de posições, em 27/11/2026, a suíte completa passou com **240 testes automatizados**, sem falhas ou erros, utilizando Python 3.10.12.
+
 Os testes abrangem a Tabela Hash, a Árvore B, os serviços, a persistência em JSON, as rotas Flask, o Planejador Multidestinos e a geração da base demonstrativa.
 
-A aplicação também foi verificada manualmente pelo navegador. O Planejador recebeu uma viagem com origem BR, destinos PT, FR e IT, duração de 25 dias e consumo de 8 GB, recomendando corretamente o pacote Europa Plus (102), com 10 GB e validade de 30 dias.
+Os testes específicos da correção verificam a correspondência entre IDs e posições, o acesso direto aos registros, a preservação das associações durante divisões, a estabilidade das posições, a reconstrução do índice e o rollback.
+
+Durante a validação original, a aplicação também foi verificada manualmente pelo navegador. O Planejador recebeu uma viagem com origem BR, destinos PT, FR e IT, duração de 25 dias e consumo de 8 GB, recomendando corretamente o pacote Europa Plus (102), com 10 GB e validade de 30 dias.
+
+Após a correção, foram verificadas manualmente as páginas inicial, de clientes e de países, além do fluxo de busca, edição e consulta integrada de cobertura.
 
 ## Arquitetura e estruturas
 
@@ -53,11 +69,15 @@ Os [testes](../tests/) exercitam estruturas, serviços, persistência e fluxos F
 
 ```mermaid
 flowchart TD
-    Web["Flask e rotas"] --> Services["Serviços"]
-    Services --> Hash["Tabela Hash de países"]
-    Services --> BTree["Árvore B de clientes"]
-    Services --> Packages["Catálogo de pacotes"]
-    Services --> JSON["Leitura e gravação de JSON"]
+    Web["Flask e rotas"] --> CountryService["CountryService"]
+    Web --> ClientService["ClientService"]
+    Web --> Packages["Catálogo de pacotes"]
+    CountryService --> Hash["Tabela Hash de países"]
+    ClientService --> BTree["Árvore B: ID e posição"]
+    ClientService --> Array["Array de clientes"]
+    BTree --> Array
+    CountryService --> JSON["Persistência em JSON"]
+    ClientService --> JSON
     Web --> Views["Templates Jinja"]
 ```
 
@@ -77,20 +97,99 @@ O `dict` trata colisões internamente. A aplicação mede operações da Hash.
 
 [`BTree`](../globalsim/structures/b_tree.py) é uma árvore balanceada com várias chaves por nó e folhas no mesmo nível. Esse agrupamento reduz a quantidade de níveis que uma busca precisa percorrer.
 
-Cada chave é o ID inteiro, positivo, único e imutável do cliente.
+Cada chave representa o ID inteiro, positivo, único e imutável de um cliente.
 
-O grau mínimo `t` padrão é 3, o que permite até `2t − 1` chaves por nó, ou cinco. Um nó que fica abaixo da raiz tem pelo menos `t − 1` chaves.
+A informação associada à chave é a posição do registro no array mantido pelo `ClientService`.
 
-- **Busca.** Compara o ID com as chaves do nó em ordem. Se encontrar uma igualdade, devolve uma cópia do registro. Caso contrário, desce pelo filho correspondente ao intervalo, ou retorna ausência ao chegar a uma folha.
-- **Inserção.** Verifica se o ID já existe, divide a raiz cheia se necessário e, durante a descida, divide um filho cheio antes de entrar nele. A chave mediana e seu registro sobem para o pai, e as chaves restantes são repartidas em dois nós. Uma divisão da raiz acrescenta um nível.
-- **Listagem e alteração.** O percurso em ordem visita cada filho intercalado com as chaves do nó e devolve os clientes em ordem crescente de ID. Na edição, o [serviço de clientes](../globalsim/services/clients.py) valida os campos e substitui o registro associado à mesma chave.
-- **Métricas.** `/clients/instrumentation` mostra clientes, altura em níveis, quantidade de nós, divisões e buscas. As divisões feitas na carga também contam. O total de buscas inclui acertos, buscas sem resultado e chamadas a `find()` nas atualizações. A busca Web por um ID existente redireciona à tela de detalhes, que consulta o mesmo ID novamente.
+Os nós possuem listas de chaves, posições e referências para os filhos, além de um indicador de nó folha.
+
+O grau mínimo `t` padrão é 3, o que permite até `2t - 1` chaves por nó, ou cinco. Um nó que fica abaixo da raiz tem pelo menos `t - 1` chaves.
+
+- **Busca.** Compara o ID com as chaves do nó em ordem. Se encontrar uma igualdade, devolve a posição correspondente. Caso contrário, desce pelo filho correspondente ao intervalo, ou retorna `None` ao chegar a uma folha sem encontrar a chave.
+
+- **Inserção.** Recebe o ID e a posição do registro. Verifica se o ID já existe, divide a raiz cheia se necessário e, durante a descida, divide um filho cheio antes de entrar nele. A chave mediana e sua posição sobem para o pai, e as chaves e posições restantes são repartidas em dois nós. Uma divisão da raiz acrescenta um nível.
+
+- **Listagem.** O percurso em ordem visita cada filho intercalado com as chaves do nó e devolve as posições correspondentes aos IDs em ordem crescente.
+
+- **Métricas.** `/clients/instrumentation` mostra clientes indexados, altura em níveis, quantidade de nós, divisões e buscas. As divisões feitas na carga também contam. O total de buscas inclui acertos, buscas sem resultado e chamadas a `find()` nas atualizações. A busca Web por um ID existente redireciona à tela de detalhes, que consulta o mesmo ID novamente.
+
+A Árvore B não armazena os registros completos nem conhece diretamente o arquivo JSON.
+
+### Array de clientes e indexação
+
+O [serviço de clientes](../globalsim/services/clients.py) mantém os registros completos em uma lista Python utilizada como array dinâmico.
+
+Cada posição do array possui um registro correspondente a um ID indexado na Árvore B.
+
+Exemplo:
+
+| Posição no array | ID do cliente |
+|---:|---:|
+| 0 | 30 |
+| 1 | 10 |
+| 2 | 20 |
+
+A árvore organiza as associações:
+
+| ID | Posição |
+|---:|---:|
+| 10 | 1 |
+| 20 | 2 |
+| 30 | 0 |
+
+Ao consultar o ID 20, a árvore retorna a posição 2. O serviço recupera diretamente o registro armazenado em `self.clients[2]`.
+
+A posição zero é válida e não pode ser confundida com `None`, que representa a ausência de uma chave.
+
+O cadastro utiliza a quantidade atual de registros para determinar a próxima posição. O novo registro é acrescentado ao final do array, preservando as posições dos clientes existentes.
+
+Na listagem, o serviço recupera os registros seguindo as posições retornadas pelo percurso em ordem da árvore.
+
+Na edição, o serviço valida os campos e substitui o registro na mesma posição do array. O ID permanece imutável, e a atualização não exige reorganização ou reinserção na árvore.
+
+O array não é ordenado durante essas operações, pois isso alteraria as posições utilizadas pelo índice.
+
+### Fluxo de busca por ID
+
+```mermaid
+flowchart TD
+    Input["ID informado"] --> Service["ClientService.find"]
+    Service --> Search["BTree.find"]
+    Search --> Found{"ID encontrado?"}
+    Found -->|Sim| Position["Posição no array"]
+    Position --> Record["Acesso direto ao registro"]
+    Record --> Result["Cópia do registro"]
+    Found -->|Não| Missing["None"]
+```
+
+A busca individual não percorre linearmente os registros do array.
+
+### Complexidade das operações
+
+Considerando o grau mínimo da Árvore B fixo e registros com quantidade fixa de campos:
+
+| Operação | Complexidade |
+|---|---|
+| Busca na Árvore B | O(log n) |
+| Inserção de uma associação na árvore | O(log n) |
+| Acesso direto ao array | O(1) |
+| Acréscimo ao final do array | O(1) amortizado |
+| Busca completa pelo ClientService | O(log n) |
+| Percurso e listagem completa | O(n) |
+| Cadastro com persistência e rollback | O(n) |
+| Atualização com persistência e rollback | O(n) |
+
+O custo linear das mutações completas decorre da gravação dos registros em JSON e das cópias das estruturas utilizadas para restaurar o estado anterior em caso de falha.
 
 ### Persistência e catálogo
 
-Na inicialização, `CountryService` e `ClientService` leem e validam os JSONs e inserem os registros nas estruturas.
+Na inicialização, `CountryService` e `ClientService` leem e validam os JSONs.
 
-Um arquivo de clientes ausente inicia a árvore vazia, e um JSON inválido interrompe a carga.
+O serviço de países armazena os registros na Tabela Hash.
+
+O serviço de clientes armazena os registros completos em um array e constrói o índice da Árvore B utilizando as posições correspondentes.
+
+Um arquivo de clientes ausente inicia a árvore e o array vazios, e um JSON inválido interrompe a carga.
 
 O [catálogo](../globalsim/services/packages.py) valida os pacotes uma vez e os mantém em um dicionário por código.
 
@@ -98,9 +197,11 @@ As consultas posteriores usam os serviços e os dados em memória.
 
 Depois de uma mutação, os serviços de países e clientes gravam os registros completos em um arquivo temporário e substituem o destino atomicamente com `os.replace()`.
 
-Se a operação falhar, restauram a cópia anterior da estrutura e das métricas.
+No serviço de clientes, o JSON é gravado preservando a ordem do array.
 
-O JSON guarda os registros. Na próxima inicialização, a árvore é reconstruída e os contadores são recalculados para a nova instância.
+Se a operação falhar, o serviço de países restaura o estado anterior da Hash, enquanto o serviço de clientes restaura o estado anterior da Árvore B, do array e das métricas.
+
+O JSON guarda os registros completos, não a organização interna da árvore. Na próxima inicialização, o array é carregado, o índice é reconstruído e os contadores são recalculados para a nova instância.
 
 O enunciado permite armazenar os pacotes em JSON ou lista. O [catálogo simulado](../globalsim/data/packages.json) contém os cinco pacotes da tabela.
 
@@ -118,7 +219,7 @@ A Etapa 2 inclui uma base demonstrativa versionada em [`globalsim/data/clients.d
 
 O arquivo contém 1.000 registros com IDs únicos de 1 a 1.000. Cada registro possui nome, e-mail, eSIM, pacote e status.
 
-O [gerador](../scripts/generate_clients_demo.py) utiliza uma semente fixa para reproduzir o embaralhamento dos registros, permitindo carregar a Árvore B em uma ordem diferente da sequência crescente dos IDs.
+O [gerador](../scripts/generate_clients_demo.py) utiliza uma semente fixa para reproduzir o embaralhamento dos registros, permitindo construir o índice da Árvore B em uma ordem diferente da sequência crescente dos IDs.
 
 A base apresenta:
 
@@ -130,13 +231,13 @@ A base apresenta:
 - Ordem de inserção embaralhada.
 - E-mails demonstrativos no domínio `example.test`.
 
-O carregamento é realizado pelo `ClientService`, utilizando a mesma implementação da Árvore B usada pela aplicação.
+O carregamento é realizado pelo `ClientService`, que armazena os registros no array e indexa suas posições na Árvore B.
 
 A [documentação específica](client_seed.md) apresenta o processo de geração, as proteções contra sobrescrita e os testes.
 
 ### Consulta cliente × país
 
-Em [`/clients/coverage`](../globalsim/routes/clients.py), o ID localiza o cliente na Árvore B, e o código localiza o país na Tabela Hash.
+Em [`/clients/coverage`](../globalsim/routes/clients.py), o ID é consultado na Árvore B para recuperar a posição do cliente no array, e o código localiza o país na Tabela Hash.
 
 O serviço de pacotes consulta o código associado ao cliente.
 
@@ -156,7 +257,7 @@ Entre os elegíveis, prioriza a menor franquia suficiente, a menor validade exce
 
 A tela exibe a cobertura de cada destino, o pacote recomendado, quando houver, e a justificativa da seleção ou da ausência de opção.
 
-A Árvore B localiza o cliente informado para mostrar o eSIM e o pacote atual.
+O `ClientService` utiliza a Árvore B para localizar a posição do cliente informado e recupera o registro no array para mostrar o eSIM e o pacote atual.
 
 A recomendação é consultiva e usa um único pacote simulado. A verificação de conectividade e de rotas por trecho fica para a Etapa 3.
 
@@ -177,6 +278,18 @@ A recomendação é consultiva e usa um único pacote simulado. A verificação 
 | Repositório e README com equipe, execução, estruturas e diferencial (p. 10) | [README](../README.md), este guia | Confira a identificação e execute os comandos da raiz do repositório. | Preparado para revisão |
 | Demonstração funcional e domínio de todos os integrantes (p. 10) | [Roteiro](#roteiro-de-demonstração) e [perguntas](#preparação-para-a-apresentação) | Cada integrante explica as estruturas, a ligação com Flask e a decisão do recomendador. | Roteiro pronto. Ensaio da equipe pendente |
 | Grafo ponderado, BFS, DFS, Dijkstra, visualização e integração com a rede (p. 6–8, 10) | Escopo da entrega de 01/12/2026 | Demonstrar conectividade e rota de menor latência na entrega final. | Reservado para a Etapa 3 |
+
+### Checklist da correção posterior à entrega
+
+| Orientação | Implementação | Situação |
+|---|---|---|
+| Utilizar a Árvore B como índice | Associação entre ID e posição | Concluído e verificado |
+| Armazenar os registros separadamente | Array mantido pelo ClientService | Concluído e verificado |
+| Recuperar os registros por meio do índice | Busca na árvore seguida de acesso direto ao array | Concluído e verificado |
+| Preservar o balanceamento | Divisões mantêm chaves e posições associadas | Concluído e verificado |
+| Preservar as funcionalidades existentes | Interface pública do ClientService mantida | Concluído e verificado |
+| Validar a consistência das estruturas | Testes de cadastro, busca, atualização e rollback | Concluído e verificado |
+| Validar o sistema completo | 240 testes automatizados aprovados | Concluído e verificado |
 
 ## Roteiro de demonstração
 
@@ -230,9 +343,13 @@ Esse é um registro de ensaio criado durante a apresentação, fora do intervalo
 
 Após o cadastro, a aplicação deverá conter 1.001 clientes.
 
+O novo registro será armazenado na posição 1.000 do array, e a Árvore B estabelecerá a associação entre o ID 58372 e essa posição, considerando que nenhum outro cliente tenha sido cadastrado anteriormente durante o ensaio.
+
 Busque o ID em `/clients/search?id=58372` e abra a edição para associar o eSIM `ESIM-DEMO-01` e o pacote **Europa Plus (102)**.
 
-Reinicie a aplicação utilizando o mesmo diretório temporário e consulte `/clients/58372` para comprovar a persistência.
+A atualização preserva a posição do registro e a chave existente na árvore.
+
+Reinicie a aplicação utilizando o mesmo diretório temporário e consulte `/clients/58372` para comprovar a persistência e a reconstrução do índice.
 
 ### 3. Carga e instrumentação com grande volume
 
@@ -240,9 +357,9 @@ Abra `/clients/instrumentation` logo após iniciar a aplicação, antes do cadas
 
 Confira a quantidade carregada, a altura, o número de nós e as divisões.
 
-Na base demonstrativa versionada, os resultados documentados da carga são:
+Na base demonstrativa versionada, os resultados de referência documentados da carga são:
 
-| Métrica | Resultado inicial |
+| Métrica | Resultado inicial esperado |
 |---|---:|
 | Clientes | 1.000 |
 | Altura | 5 |
@@ -253,6 +370,8 @@ Na base demonstrativa versionada, os resultados documentados da carga são:
 Os valores podem mudar após inserções ou consultas realizadas durante a demonstração.
 
 Em `/clients`, mostre que os registros aparecem em ordem crescente de ID, mesmo que a ordem de inserção original tenha sido embaralhada.
+
+Explique que o array preserva a ordem de carregamento, enquanto o percurso da Árvore B fornece as posições em ordem crescente das chaves.
 
 Busque um cliente existente, como o ID `1`.
 
@@ -266,6 +385,48 @@ Se o cliente de ensaio `58372` já tiver sido cadastrado, a quantidade total ser
 
 A geração e a validação da base são explicadas em [Base demonstrativa de clientes](client_seed.md).
 
+### Demonstração complementar da indexação
+
+Para demonstrar diretamente a separação entre armazenamento e indexação, execute na raiz do repositório, com o ambiente virtual ativo:
+
+```bash
+python - <<'PY'
+from globalsim.services.clients import ClientService
+
+service = ClientService(
+    "globalsim/data/clients.demo.json"
+)
+
+client_id = 500
+
+position = service.tree.find(client_id)
+
+assert position is not None
+
+record = service.clients[position]
+
+assert record["id"] == client_id
+
+print("ID:", client_id)
+print("Posição no array:", position)
+print("Registro completo:", record)
+
+print(
+    "Quantidade de registros:",
+    len(service.clients)
+)
+
+print(
+    "Quantidade de chaves indexadas:",
+    service.statistics()["size"]
+)
+PY
+```
+
+Essa demonstração não modifica o arquivo original.
+
+O objetivo é mostrar que a Árvore B retorna uma posição, enquanto o registro completo é recuperado diretamente do array.
+
 ### 4. Consulta integrada
 
 Abra `/clients/coverage?client_id=58372&codigo=IT` após criar o cliente da demonstração 2.
@@ -276,7 +437,7 @@ Mostre Itália, a operadora, a tecnologia 5G e a compatibilidade geográfica.
 
 Em seguida, troque IT por JP para mostrar um país com cobertura cadastrada e fora do pacote Europa Plus.
 
-A Árvore B localiza o cliente, a Hash localiza o país e a rota verifica a compatibilidade com os dados do catálogo.
+A Árvore B localiza a posição do cliente, o serviço recupera o registro no array, a Hash localiza o país e a rota verifica a compatibilidade com os dados do catálogo.
 
 ### 5. Planejador
 
@@ -303,26 +464,3 @@ O pacote Global também é elegível, mas possui franquia maior.
 Mostre o caso principal e escolha uma variação.
 
 Para evidenciar a integração com a Árvore B, utilize o cliente cadastrado durante a demonstração.
-
-## Preparação para a apresentação
-
-| Pergunta | Resposta curta |
-|---|---|
-| Por que usar uma Árvore B? | Um nó acomoda várias chaves ordenadas. O balanceamento limita a altura e permite buscar um ID descendo apenas pelo intervalo correspondente. |
-| O que é grau mínimo e quando se divide um nó? | Com `t = 3`, cada nó suporta até cinco chaves. A inserção divide um nó cheio antes de descer e sobe a chave mediana ao pai. |
-| Por que a listagem ordena os IDs? Qual a diferença entre altura e nós? | O percurso em ordem intercala filhos e chaves. A altura conta os níveis entre raiz e folhas, e a contagem de nós soma os nós da estrutura. |
-| Como localizar um país e o que acontece com um código ausente? | O código normalizado é a chave em um `dict`. A busca média é O(1). Uma chave ausente retorna `None` e conta como busca sem resultado. |
-| Como Flask usa as estruturas? | A fábrica inicializa os serviços e os Blueprints. As rotas chamam os serviços compartilhados, e os templates renderizam os resultados. |
-| Por que JSON e o que acontece no reinício ou em caso de falha? | O enunciado permite JSON para guardar os registros. A inicialização reconstrói a Hash e a Árvore B, que atendem às buscas. Se a gravação falhar, o serviço restaura a estrutura e seus contadores. |
-| Por que usar duas estruturas? Qual o papel do catálogo? | A Hash atende à consulta direta por código. A Árvore B consulta IDs e devolve os clientes em ordem. O catálogo recupera por código o pacote associado e fornece seus países e limites. |
-| Como a recomendação é escolhida? Por que é determinística e dispensa IA? | Regras explícitas filtram cobertura, franquia e validade. A menor franquia, a menor validade excedente e o menor código resolvem a escolha com o mesmo resultado para os mesmos dados. |
-| O que a tela mostra sem uma opção compatível? | Se um destino estiver ausente da Hash, a tela identifica o destino sem cobertura. Se todos estiverem cobertos, ela informa que o catálogo não atende à viagem. |
-| O que o Grafo acrescentará? | A rede simulada terá países como vértices e conexões ponderadas por latência. BFS e DFS percorrem a rede, e Dijkstra calcula a rota de menor latência por trecho. |
-
-## Pendências da entrega
-
-- Validar a demonstração da base de 1.000 clientes no Flask, utilizando os arquivos temporários e conferindo a instrumentação.
-- Ensaiar o roteiro com todos os integrantes da equipe.
-- Confirmar a submissão do projeto pelo canal definido pela professora.
-
-A implementação funcional e os testes automatizados da Etapa 2 estão concluídos. A conectividade por Grafo permanece reservada para a Etapa 3.

@@ -51,7 +51,26 @@ A base inicial já contém os oito países de demonstração. A versão final da
 
 **Entrega:** 24/11/2026.
 
-A Árvore B armazena e busca clientes pelo ID único. A aplicação permite cadastrar, listar e editar clientes, associar eSIMs e pacotes e gravar as alterações em JSON.
+A Árvore B funciona como índice dos clientes, utilizando o ID único como chave e associando cada chave à posição do registro em um array mantido em memória pelo `ClientService`.
+
+Os registros completos são armazenados separadamente da árvore. A busca por ID percorre a Árvore B, recupera a posição correspondente e permite acessar diretamente o registro no array.
+
+A aplicação permite cadastrar, listar e editar clientes, associar eSIMs e pacotes e gravar as alterações em JSON.
+
+### Organização dos dados
+
+- Árvore B: armazena IDs e posições dos registros.
+- Array de clientes: armazena os registros completos.
+- JSON: mantém os registros de forma persistente.
+- ClientService: coordena as operações e mantém a consistência entre a árvore e o array.
+
+Durante a inicialização, os registros são carregados do JSON para o array e seus IDs são indexados na Árvore B.
+
+Novos clientes são acrescentados ao final do array, preservando as posições existentes. A listagem utiliza o percurso em ordem da árvore, sem reorganizar o array.
+
+As atualizações preservam o ID e a posição do cliente, modificando apenas o registro correspondente.
+
+Em caso de falha durante uma mutação, o serviço restaura o estado anterior da árvore, do array e das métricas.
 
 A consulta cliente × destino combina a Árvore B, a Tabela Hash e o catálogo de pacotes. A instrumentação mostra o tamanho, a altura, o número de nós, as divisões e as buscas da árvore.
 
@@ -59,7 +78,8 @@ A aplicação também disponibiliza:
 
 - Carregamento de clientes a partir de arquivos JSON.
 - Base demonstrativa de 1.000 clientes gerados automaticamente.
-- Busca por ID e listagem ordenada pela Árvore B.
+- Busca por ID utilizando a Árvore B como índice.
+- Listagem ordenada pelo percurso da árvore.
 - Instrumentação da carga e das consultas.
 - Planejador Multidestinos integrado à aplicação Flask.
 - Testes automatizados de estruturas, serviços, persistência e rotas.
@@ -105,6 +125,10 @@ python -m unittest discover -s tests -q
 
 Na revisão `7951f69` da branch `dev`, a suíte completa foi executada com **225 testes aprovados**, incluindo os testes de integração do Planejador e os testes da base demonstrativa de clientes.
 
+Após a correção da Árvore B para funcionar como índice de posições, em 27/11/2026, a suíte completa foi executada com **240 testes aprovados**, sem falhas ou erros, utilizando Python 3.10.12.
+
+Os testes adicionais verificam a consistência entre a Árvore B e o array, a preservação das posições, o acesso direto aos registros, a reconstrução do índice e o rollback, inclusive após divisões de nós.
+
 O [guia da Etapa 2](docs/stage2_delivery.md#execução-e-testes) apresenta a arquitetura, o checklist de requisitos e o roteiro de demonstração.
 
 ## Diferencial da equipe
@@ -134,6 +158,7 @@ A próxima etapa acrescentará a rede internacional ponderada por latência, a v
 - [Etapa 2 — checklist do enunciado, arquitetura e roteiro de demonstração](docs/stage2_delivery.md)
 - [Base demonstrativa de 1.000 clientes](docs/client_seed.md)
 - [Gerenciamento Web de clientes](docs/client_web.md)
+- [Contratos dos serviços](docs/contracts.md)
 - [Descrição do diferencial](docs/differential.md)
 - [Documentação histórica da Etapa 1](globalsim/README.md)
 - [Checklist e roteiro da primeira entrega](docs/delivery_1.md)
